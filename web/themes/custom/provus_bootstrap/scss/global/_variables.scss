@@ -1,58 +1,95 @@
 /* VARIABLES */
 
+/* Colors Variables Export */
+$background-colors-background-grey: #d6d6d6;
+$background-colors-background-light: #fbfbfc;
+$background-colors-background-lightblue: #eff6ff;
+$background-colors-background-lightteal: #e7f6f9;
+$background-colors-background-white: #ffffff;
+$primary-colors-primary: #2563eb;
+$primary-colors-primary-accent: #1c2b54;
+$primary-colors-primary-contrast: #ffffff;
+$primary-colors-primary-hover: #114cae;
+$secondary-colors-secondary: #00869e;
+$secondary-colors-secondary-accent: #5bcde2;
+$secondary-colors-secondary-contrast: #404758;
+$secondary-colors-secondary-hover: #045f70;
+$system-error-contrast: #422424;
+$system-error-light: #fee2e2;
+$system-error-medium: #b63546;
+$system-error-primary: #d83a52;
+$system-info-contrast: #35290f;
+$system-info-light: #e8f7ff;
+$system-info-medium: #1a5aac;
+$system-info-primary: #3491fa;
+$system-success-contrast: #024825;
+$system-success-light: #d1fae5;
+$system-success-medium: #007038;
+$system-success-primary: #258750;
+$system-warning-contrast: #35290f;
+$system-warning-light: #fffbd1;
+$system-warning-medium: #946800;
+$system-warning-primary: #f7ce55;
+$text-colors-body-color: #2c2e30;
+$text-colors-text-contrast: #ffffff;
+$text-colors-text-hint: #747474;
+$text-colors-text-primary: #2c2e30;
+$text-colors-text-secondary: #646f79;
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap');
 $font-body: 'Inter', sans-serif;
 $font-heading: 'Inter', sans-serif;
 
-// Primary Colors.
-$primary: #2563EB;
-$primary-hover: #114CAE;
-$primary-contrast: #ffffff;
-$primary-accent: #1C2B54;
+// Primary Color Mappings.
+$primary: $primary-colors-primary;
+$primary-hover: $primary-colors-primary-hover;
+$primary-contrast: $primary-colors-primary-contrast;
+$primary-accent: $primary-colors-primary-accent;
 
-// Secondary Colors.
-$secondary: #00869E;
-$secondary-hover: #045F70;
-$secondary-contrast: #404758;
-$secondary-accent: #5BCDE2;
+// Secondary Color Mappings.
+$secondary: $secondary-colors-secondary;
+$secondary-hover: $secondary-colors-secondary-hover;
+$secondary-contrast: $secondary-colors-secondary-contrast;
+$secondary-accent: $secondary-colors-secondary-accent;
 
-// Background Colors.
-$background-white: #ffffff;
-$background-light: #FBFBFC;
-$background-grey: #D6D6D6;
-$background-lightblue: #EFF6FF;
-$background-lightteal: #E7F6F9;
+// Background Color Mappings.
+$background-white: $background-colors-background-white;
+$background-light: $background-colors-background-light;
+$background-grey: $background-colors-background-grey;
+$background-lightblue: $background-colors-background-lightblue;
+$background-lightteal: $background-colors-background-lightteal;
 $background-gradient: linear-gradient(45deg, #2BAEC6, #094FC2);
 
-// Text.
-$text-primary: #2C2E30;
-$text-secondary: #646F79;
-$text-contrast: #FFFFFF;
-$text-hint: #747474;
-$body-color: #2C2E30;
+// Text Color Mappings.
+$text-primary: $text-colors-text-primary;
+$text-secondary: $text-colors-text-secondary;
+$text-contrast: $text-colors-text-contrast;
+$text-hint: $text-colors-text-hint;
+$body-color: $text-colors-body-color;
 
-// Accent.
+// Accent Color Mappings.
 $accent-light: $secondary-accent;
 $accent-dark: $secondary-contrast;
 
-// System/Alert Colors.
-$success-light: #D1FAE5;
-$success-primary: #258750;
-$success-medium: #007038;
-$success-contrast: #024825;
-$error-light: #FEE2E2;
-$error-primary: #D83A52;
-$error-medium: #B63546;
-$error-contrast: #422424;
-$warning-light: #FFFBD1;
-$warning-primary: #F7CE55;
-$warning-medium: #946800;
-$warning-contrast: #35290F;
-$system-light: #E8F7FF;
-$system-primary: #3491FA;
-$system-medium: #1A5AAC;
-$system-contrast: #35290F;
+// System/Alert Color Mappings.
+$success-light: $system-success-light;
+$success-primary: $system-success-primary;
+$success-medium: $system-success-medium;
+$success-contrast: $system-success-contrast;
+$error-light: $system-error-light;
+$error-primary: $system-error-primary;
+$error-medium: $system-error-medium;
+$error-contrast: $system-error-contrast;
+$warning-light: $system-warning-light;
+$warning-primary: $system-warning-primary;
+$warning-medium: $system-warning-medium;
+$warning-contrast: $system-warning-contrast;
+$system-light: $system-info-light;
+$system-primary: $system-info-primary;
+$system-medium: $system-info-medium;
+$system-contrast: $system-info-contrast;
+
 
 // Bootstrap fixes.
 $primary-light: $primary-contrast;

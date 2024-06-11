@@ -2,26 +2,258 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.provus_accordion
+    - block_content.type.provus_banner
+    - block_content.type.provus_basic_text
+    - block_content.type.provus_button
+    - block_content.type.provus_card
+    - block_content.type.provus_cta
+    - block_content.type.provus_divider_line
+    - block_content.type.provus_faq_group
+    - block_content.type.provus_faq_item
+    - block_content.type.provus_files_list
+    - block_content.type.provus_group
+    - block_content.type.provus_group_automatic
+    - block_content.type.provus_heading
+    - block_content.type.provus_list
+    - block_content.type.provus_list_item
+    - block_content.type.provus_media
+    - block_content.type.provus_person_list
+    - block_content.type.provus_photo_gallery
+    - block_content.type.provus_slideshow
+    - block_content.type.provus_slideshow_item
+    - block_content.type.provus_stat_group
+    - block_content.type.provus_stat_item
+    - block_content.type.provus_tab_item
+    - block_content.type.provus_tabs
+    - block_content.type.provus_testimonial
+    - block_content.type.webform
+    - core.entity_view_display.node.provus_landing_page.default
+    - media.type.document
+    - media.type.image
+    - media.type.local_video
+    - media.type.remote_video
+    - node.type.bootstrap_site_alert
+    - node.type.provus_blog
+    - node.type.provus_event
+    - node.type.provus_faq_page
+    - node.type.provus_landing_page
+    - node.type.provus_news
+    - node.type.provus_person
     - workflows.workflow.basic
   module:
+    - block_content
     - content_moderation
+    - exclude_node_title
+    - layout_builder
     - media
     - node
     - system
     - toastify
+    - toolbar
     - tour
+_core:
+  default_config_hash: UaPUorwi_BcfXWlqDawTeqxhS357DeIU725OHCS67-w
 id: content_approver
 label: 'Content Approver'
 weight: 4
 is_admin: null
 permissions:
+  - 'access block library'
   - 'access content overview'
   - 'access toolbar'
   - 'access tour'
+  - 'administer block content'
   - 'administer media'
   - 'administer nodes'
+  - 'configure all provus_landing_page node layout overrides'
+  - 'configure any layout'
+  - 'configure editable provus_landing_page node layout overrides'
+  - 'create and edit custom blocks'
+  - 'create bootstrap_site_alert content'
+  - 'create document media'
+  - 'create image media'
+  - 'create local_video media'
+  - 'create provus_accordion block content'
+  - 'create provus_banner block content'
+  - 'create provus_basic_text block content'
+  - 'create provus_blog content'
+  - 'create provus_button block content'
+  - 'create provus_card block content'
+  - 'create provus_cta block content'
+  - 'create provus_divider_line block content'
+  - 'create provus_event content'
+  - 'create provus_faq_group block content'
+  - 'create provus_faq_item block content'
+  - 'create provus_faq_page content'
+  - 'create provus_files_list block content'
+  - 'create provus_group block content'
+  - 'create provus_group_automatic block content'
+  - 'create provus_heading block content'
+  - 'create provus_landing_page content'
+  - 'create provus_list block content'
+  - 'create provus_list_item block content'
+  - 'create provus_media block content'
+  - 'create provus_news content'
+  - 'create provus_person content'
+  - 'create provus_person_list block content'
+  - 'create provus_photo_gallery block content'
+  - 'create provus_slideshow block content'
+  - 'create provus_slideshow_item block content'
+  - 'create provus_stat_group block content'
+  - 'create provus_stat_item block content'
+  - 'create provus_tab_item block content'
+  - 'create provus_tabs block content'
+  - 'create provus_testimonial block content'
+  - 'create remote_video media'
+  - 'create webform block content'
   - 'delete all revisions'
+  - 'delete any bootstrap_site_alert content'
+  - 'delete any provus_accordion block content'
+  - 'delete any provus_accordion block content revisions'
+  - 'delete any provus_banner block content'
+  - 'delete any provus_banner block content revisions'
+  - 'delete any provus_basic_text block content'
+  - 'delete any provus_basic_text block content revisions'
+  - 'delete any provus_blog content'
+  - 'delete any provus_button block content'
+  - 'delete any provus_button block content revisions'
+  - 'delete any provus_card block content'
+  - 'delete any provus_card block content revisions'
+  - 'delete any provus_cta block content'
+  - 'delete any provus_cta block content revisions'
+  - 'delete any provus_divider_line block content'
+  - 'delete any provus_divider_line block content revisions'
+  - 'delete any provus_event content'
+  - 'delete any provus_faq_group block content'
+  - 'delete any provus_faq_group block content revisions'
+  - 'delete any provus_faq_item block content'
+  - 'delete any provus_faq_item block content revisions'
+  - 'delete any provus_faq_page content'
+  - 'delete any provus_files_list block content'
+  - 'delete any provus_files_list block content revisions'
+  - 'delete any provus_group block content'
+  - 'delete any provus_group block content revisions'
+  - 'delete any provus_group_automatic block content'
+  - 'delete any provus_group_automatic block content revisions'
+  - 'delete any provus_heading block content'
+  - 'delete any provus_heading block content revisions'
+  - 'delete any provus_landing_page content'
+  - 'delete any provus_list block content'
+  - 'delete any provus_list block content revisions'
+  - 'delete any provus_list_item block content'
+  - 'delete any provus_list_item block content revisions'
+  - 'delete any provus_media block content'
+  - 'delete any provus_media block content revisions'
+  - 'delete any provus_news content'
+  - 'delete any provus_person content'
+  - 'delete any provus_person_list block content'
+  - 'delete any provus_person_list block content revisions'
+  - 'delete any provus_photo_gallery block content'
+  - 'delete any provus_photo_gallery block content revisions'
+  - 'delete any provus_slideshow block content'
+  - 'delete any provus_slideshow block content revisions'
+  - 'delete any provus_slideshow_item block content'
+  - 'delete any provus_slideshow_item block content revisions'
+  - 'delete any provus_stat_group block content'
+  - 'delete any provus_stat_group block content revisions'
+  - 'delete any provus_stat_item block content'
+  - 'delete any provus_stat_item block content revisions'
+  - 'delete any provus_tab_item block content'
+  - 'delete any provus_tab_item block content revisions'
+  - 'delete any provus_tabs block content'
+  - 'delete any provus_tabs block content revisions'
+  - 'delete any provus_testimonial block content'
+  - 'delete any provus_testimonial block content revisions'
+  - 'delete any webform block content'
+  - 'delete any webform block content revisions'
+  - 'delete own bootstrap_site_alert content'
+  - 'delete own provus_blog content'
+  - 'delete own provus_event content'
+  - 'delete own provus_faq_page content'
+  - 'delete own provus_landing_page content'
+  - 'delete own provus_news content'
+  - 'delete own provus_person content'
+  - 'delete provus_blog revisions'
+  - 'delete provus_event revisions'
+  - 'delete provus_faq_page revisions'
+  - 'delete provus_landing_page revisions'
+  - 'delete provus_news revisions'
+  - 'delete provus_person revisions'
+  - 'edit any provus_accordion block content'
+  - 'edit any provus_banner block content'
+  - 'edit any provus_basic_text block content'
+  - 'edit any provus_blog content'
+  - 'edit any provus_button block content'
+  - 'edit any provus_card block content'
+  - 'edit any provus_cta block content'
+  - 'edit any provus_divider_line block content'
+  - 'edit any provus_event content'
+  - 'edit any provus_faq_group block content'
+  - 'edit any provus_faq_item block content'
+  - 'edit any provus_faq_page content'
+  - 'edit any provus_files_list block content'
+  - 'edit any provus_group block content'
+  - 'edit any provus_group_automatic block content'
+  - 'edit any provus_heading block content'
+  - 'edit any provus_landing_page content'
+  - 'edit any provus_list block content'
+  - 'edit any provus_list_item block content'
+  - 'edit any provus_media block content'
+  - 'edit any provus_news content'
+  - 'edit any provus_person content'
+  - 'edit any provus_person_list block content'
+  - 'edit any provus_photo_gallery block content'
+  - 'edit any provus_slideshow block content'
+  - 'edit any provus_slideshow_item block content'
+  - 'edit any provus_stat_group block content'
+  - 'edit any provus_stat_item block content'
+  - 'edit any provus_tab_item block content'
+  - 'edit any provus_tabs block content'
+  - 'edit any provus_testimonial block content'
+  - 'edit any webform block content'
+  - 'edit own bootstrap_site_alert content'
+  - 'edit own provus_blog content'
+  - 'edit own provus_event content'
+  - 'edit own provus_faq_page content'
+  - 'edit own provus_landing_page content'
+  - 'edit own provus_news content'
+  - 'edit own provus_person content'
+  - 'exclude any node title'
+  - 'exclude own node title'
   - 'revert all revisions'
+  - 'revert any provus_accordion block content revisions'
+  - 'revert any provus_banner block content revisions'
+  - 'revert any provus_basic_text block content revisions'
+  - 'revert any provus_button block content revisions'
+  - 'revert any provus_card block content revisions'
+  - 'revert any provus_cta block content revisions'
+  - 'revert any provus_divider_line block content revisions'
+  - 'revert any provus_faq_group block content revisions'
+  - 'revert any provus_faq_item block content revisions'
+  - 'revert any provus_files_list block content revisions'
+  - 'revert any provus_group block content revisions'
+  - 'revert any provus_group_automatic block content revisions'
+  - 'revert any provus_heading block content revisions'
+  - 'revert any provus_list block content revisions'
+  - 'revert any provus_list_item block content revisions'
+  - 'revert any provus_media block content revisions'
+  - 'revert any provus_person_list block content revisions'
+  - 'revert any provus_photo_gallery block content revisions'
+  - 'revert any provus_slideshow block content revisions'
+  - 'revert any provus_slideshow_item block content revisions'
+  - 'revert any provus_stat_group block content revisions'
+  - 'revert any provus_stat_item block content revisions'
+  - 'revert any provus_tab_item block content revisions'
+  - 'revert any provus_tabs block content revisions'
+  - 'revert any provus_testimonial block content revisions'
+  - 'revert any webform block content revisions'
+  - 'revert provus_blog revisions'
+  - 'revert provus_event revisions'
+  - 'revert provus_faq_page revisions'
+  - 'revert provus_landing_page revisions'
+  - 'revert provus_news revisions'
+  - 'revert provus_person revisions'
   - 'show toastify messages'
   - 'use basic transition create_new_draft'
   - 'use basic transition publish'
@@ -29,7 +261,39 @@ permissions:
   - 'use basic transition send_to_needs_review'
   - 'use basic transition unpublish'
   - 'view all revisions'
+  - 'view any provus_accordion block content history'
+  - 'view any provus_banner block content history'
+  - 'view any provus_basic_text block content history'
+  - 'view any provus_button block content history'
+  - 'view any provus_card block content history'
+  - 'view any provus_cta block content history'
+  - 'view any provus_divider_line block content history'
+  - 'view any provus_faq_group block content history'
+  - 'view any provus_faq_item block content history'
+  - 'view any provus_files_list block content history'
+  - 'view any provus_group block content history'
+  - 'view any provus_group_automatic block content history'
+  - 'view any provus_heading block content history'
+  - 'view any provus_list block content history'
+  - 'view any provus_list_item block content history'
+  - 'view any provus_media block content history'
+  - 'view any provus_person_list block content history'
+  - 'view any provus_photo_gallery block content history'
+  - 'view any provus_slideshow block content history'
+  - 'view any provus_slideshow_item block content history'
+  - 'view any provus_stat_group block content history'
+  - 'view any provus_stat_item block content history'
+  - 'view any provus_tab_item block content history'
+  - 'view any provus_tabs block content history'
+  - 'view any provus_testimonial block content history'
   - 'view any unpublished content'
+  - 'view any webform block content history'
   - 'view latest version'
   - 'view own unpublished content'
+  - 'view provus_blog revisions'
+  - 'view provus_event revisions'
+  - 'view provus_faq_page revisions'
+  - 'view provus_landing_page revisions'
+  - 'view provus_news revisions'
+  - 'view provus_person revisions'
   - 'view the administration theme'

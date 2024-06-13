@@ -5,6 +5,14 @@
   }
 }
 
+.navbar {
+  .container {
+    @include media-breakpoint-up(xxxl) {
+      max-width: rem-calc(1510);
+    }
+  }
+}
+
 // Top nav provus styles
 #navbar-top {
   background: $primary-accent;

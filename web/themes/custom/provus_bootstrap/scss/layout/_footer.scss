@@ -3,6 +3,11 @@ footer.site-footer {
   padding: rem-calc(60 0);
   color: $text-primary;
   font-size: rem-calc(14);
+  .container {
+    @include media-breakpoint-up(xxxl) {
+      max-width: rem-calc(1510);
+    }
+  }
   h2 {
     @include heading-small;
   }

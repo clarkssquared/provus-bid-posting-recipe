@@ -98,7 +98,7 @@
         "drupal/search_api": "^1.30",
         "drupal/section_library": "1.1.1",
         "drupal/simple_sitemap": "^4.1",
-        "drupal/sitemap": "dev-2.x",
+        "drupal/sitemap": "^2.0@beta",
         "drupal/slick": "2.11",
         "drupal/smart_date": "4.0.3",
         "drupal/smart_trim": "2.1.1",

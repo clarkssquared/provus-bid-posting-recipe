@@ -1,15 +1,15 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/31?_format=hal_json"
+            "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/70?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/block_content\/provus_button"
+            "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_button"
         }
     },
     "id": [
         {
-            "value": 31
+            "value": 70
         }
     ],
     "uuid": [
@@ -42,7 +42,7 @@
     ],
     "info": [
         {
-            "value": "(Button) - 1364306990",
+            "value": "(Button) - 1958042230",
             "lang": "en"
         }
     ],
@@ -75,7 +75,7 @@
             "tag": "meta",
             "attributes": {
                 "name": "title",
-                "content": "| Provus"
+                "content": "| PROVUS"
             },
             "lang": "en"
         },
@@ -83,7 +83,7 @@
             "tag": "link",
             "attributes": {
                 "rel": "canonical",
-                "href": "http:\/\/provus-3432651.docksal.site\/homepage"
+                "href": "http:\/\/provus.docksal.site\/homepage"
             },
             "lang": "en"
         }

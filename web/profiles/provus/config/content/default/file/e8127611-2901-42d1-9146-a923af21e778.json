@@ -4,12 +4,12 @@
             "href": ""
         },
         "type": {
-            "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/file\/file"
+            "href": "http:\/\/provus.docksal.site\/rest\/type\/file\/file"
         }
     },
     "fid": [
         {
-            "value": 3
+            "value": 7
         }
     ],
     "uuid": [
@@ -29,8 +29,8 @@
     ],
     "uri": [
         {
-            "value": "public:\/\/2023-09\/foods-to-stockup-135583514-770x533-1_1.jpeg",
-            "url": "\/sites\/default\/files\/2023-09\/foods-to-stockup-135583514-770x533-1_1.jpeg"
+            "value": "public:\/\/2023-09\/foods-to-stockup-135583514-770x533-1_1_15.jpeg",
+            "url": "\/sites\/default\/files\/2023-09\/foods-to-stockup-135583514-770x533-1_1_15.jpeg"
         }
     ],
     "filemime": [

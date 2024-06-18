@@ -1,0 +1,144 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/61?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_group"
+        },
+        "http:\/\/provus.docksal.site\/rest\/relation\/block_content\/provus_group\/field_provus_block_items": [
+            {
+                "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/5?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/12?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 61
+        }
+    ],
+    "uuid": [
+        {
+            "value": "8ec3e894-5180-4bd8-9137-a4333dd7eea6"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "provus_group"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-06-17T08:50:12+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "(Group) - 887113219",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-06-18T02:11:21+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "title",
+                "content": "| PROVUS"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "link",
+            "attributes": {
+                "rel": "canonical",
+                "href": "http:\/\/provus.docksal.site\/homepage"
+            },
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/provus.docksal.site\/rest\/relation\/block_content\/provus_group\/field_provus_block_items": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/5?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_card"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4aab6bd4-252e-48c7-994b-6e6cfbd64dc9"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/12?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_card"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6521c17a-d125-44a2-b97b-9164fbcdeffa"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_provus_group_display": [
+        {
+            "value": "grid_2"
+        }
+    ],
+    "field_provus_item_display": [
+        {
+            "value": "provus_card",
+            "lang": "en"
+        }
+    ]
+}

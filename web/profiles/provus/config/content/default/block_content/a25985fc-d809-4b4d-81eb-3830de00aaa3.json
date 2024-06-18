@@ -1,0 +1,115 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/69?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_media"
+        },
+        "http:\/\/provus.docksal.site\/rest\/relation\/block_content\/provus_media\/field_provus_media": [
+            {
+                "href": "http:\/\/provus.docksal.site\/media\/7\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 69
+        }
+    ],
+    "uuid": [
+        {
+            "value": "a25985fc-d809-4b4d-81eb-3830de00aaa3"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "provus_media"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-06-17T08:45:59+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "(Media) - 1144884787",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-06-18T02:11:21+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "title",
+                "content": "| PROVUS"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "link",
+            "attributes": {
+                "rel": "canonical",
+                "href": "http:\/\/provus.docksal.site\/homepage"
+            },
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/provus.docksal.site\/rest\/relation\/block_content\/provus_media\/field_provus_media": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/provus.docksal.site\/media\/7\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "0f953ebe-fc40-4058-9c13-c24f80c03063"
+                    }
+                ]
+            }
+        ]
+    }
+}

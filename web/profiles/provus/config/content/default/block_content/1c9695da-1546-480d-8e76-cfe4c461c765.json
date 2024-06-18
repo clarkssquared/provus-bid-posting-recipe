@@ -1,20 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/33?_format=hal_json"
+            "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/76?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/block_content\/provus_media"
+            "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_media"
         },
-        "http:\/\/provus-3432651.docksal.site\/rest\/relation\/block_content\/provus_media\/field_provus_media": [
+        "http:\/\/provus.docksal.site\/rest\/relation\/block_content\/provus_media\/field_provus_media": [
             {
-                "href": "http:\/\/provus-3432651.docksal.site\/media\/1\/edit?_format=hal_json"
+                "href": "http:\/\/provus.docksal.site\/media\/5\/edit?_format=hal_json"
             }
         ]
     },
     "id": [
         {
-            "value": 33
+            "value": 76
         }
     ],
     "uuid": [
@@ -47,13 +47,13 @@
     ],
     "info": [
         {
-            "value": "(Media) - 430168830",
+            "value": "(Media) - 2145922980",
             "lang": "en"
         }
     ],
     "changed": [
         {
-            "value": "2024-03-25T12:37:13+00:00",
+            "value": "2024-06-18T02:11:21+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -80,7 +80,7 @@
             "tag": "meta",
             "attributes": {
                 "name": "title",
-                "content": "| Provus"
+                "content": "| PROVUS"
             },
             "lang": "en"
         },
@@ -88,20 +88,20 @@
             "tag": "link",
             "attributes": {
                 "rel": "canonical",
-                "href": "http:\/\/provus-3432651.docksal.site\/homepage"
+                "href": "http:\/\/provus.docksal.site\/homepage"
             },
             "lang": "en"
         }
     ],
     "_embedded": {
-        "http:\/\/provus-3432651.docksal.site\/rest\/relation\/block_content\/provus_media\/field_provus_media": [
+        "http:\/\/provus.docksal.site\/rest\/relation\/block_content\/provus_media\/field_provus_media": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/media\/1\/edit?_format=hal_json"
+                        "href": "http:\/\/provus.docksal.site\/media\/5\/edit?_format=hal_json"
                     },
                     "type": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/media\/image"
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/media\/image"
                     }
                 },
                 "uuid": [

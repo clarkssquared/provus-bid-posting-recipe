@@ -1,0 +1,106 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/75?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_basic_text"
+        }
+    },
+    "id": [
+        {
+            "value": 75
+        }
+    ],
+    "uuid": [
+        {
+            "value": "5891ca4a-b026-4b15-b4ca-25d6c75933b2"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "provus_basic_text"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-06-17T08:47:33+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "Leverage and customize no-code award winning templates to create beautiful engaging webpages in minutes. (Basic Text) - 2057177574",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-06-17T08:47:33+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "title",
+                "content": "| PROVUS"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "link",
+            "attributes": {
+                "rel": "canonical",
+                "href": "http:\/\/provus.docksal.site\/homepage"
+            },
+            "lang": "en"
+        }
+    ],
+    "field_provus_body": [
+        {
+            "value": "<h5>&nbsp;<\/h5><drupal-media data-entity-type=\"media\" data-entity-uuid=\"083a9411-8285-45c5-a974-4af4bf9a862f\" data-align=\"center\">&nbsp;<\/drupal-media>",
+            "format": "full_html",
+            "processed": "<h5>&nbsp;<\/h5><div class=\"align-center\">\n  \n  \n            <div class=\"field field--name-thumbnail field--type-image field--label-hidden field__item\">    <picture>\n                  <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_desktop_1x\/public\/2024-06\/Meridian_14.webp?itok=EpOm-zch 1x, \/sites\/default\/files\/styles\/provus_media_defaults_desktop_2x\/public\/2024-06\/Meridian_14.webp?itok=tiTYUiEC 2x\" media=\"all and (min-width: 1400px)\" type=\"image\/webp\" width=\"700\" height=\"409\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_desktop_1x\/public\/2024-06\/Meridian_14.webp?itok=EpOm-zch 1x, \/sites\/default\/files\/styles\/provus_media_defaults_desktop_2x\/public\/2024-06\/Meridian_14.webp?itok=tiTYUiEC 2x\" media=\"all and (min-width: 1200px)\" type=\"image\/webp\" width=\"700\" height=\"409\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_tablet_1x\/public\/2024-06\/Meridian_14.webp?itok=31kxmwDS 1x, \/sites\/default\/files\/styles\/provus_media_defaults_tablet_2x\/public\/2024-06\/Meridian_14.webp?itok=4Zw8d0z5 2x\" media=\"all and (min-width: 992px)\" type=\"image\/webp\" width=\"522\" height=\"305\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_tablet_1x\/public\/2024-06\/Meridian_14.webp?itok=31kxmwDS 1x, \/sites\/default\/files\/styles\/provus_media_defaults_tablet_2x\/public\/2024-06\/Meridian_14.webp?itok=4Zw8d0z5 2x\" media=\"all and (min-width: 768px)\" type=\"image\/webp\" width=\"522\" height=\"305\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_mobile_1x\/public\/2024-06\/Meridian_14.webp?itok=gE8-tejS 1x, \/sites\/default\/files\/styles\/provus_media_defaults_mobile_2x\/public\/2024-06\/Meridian_14.webp?itok=ilK05Pdm 2x\" media=\"all and (max-width: 576px)\" type=\"image\/webp\" width=\"412\" height=\"241\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_mobile_1x\/public\/2024-06\/Meridian_14.webp?itok=gE8-tejS 1x, \/sites\/default\/files\/styles\/provus_media_defaults_mobile_2x\/public\/2024-06\/Meridian_14.webp?itok=ilK05Pdm 2x\" type=\"image\/webp\" width=\"412\" height=\"241\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_desktop_1x\/public\/2024-06\/Meridian_14.png?itok=EpOm-zch 1x, \/sites\/default\/files\/styles\/provus_media_defaults_desktop_2x\/public\/2024-06\/Meridian_14.png?itok=tiTYUiEC 2x\" media=\"all and (min-width: 1400px)\" type=\"image\/png\" width=\"700\" height=\"409\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_desktop_1x\/public\/2024-06\/Meridian_14.png?itok=EpOm-zch 1x, \/sites\/default\/files\/styles\/provus_media_defaults_desktop_2x\/public\/2024-06\/Meridian_14.png?itok=tiTYUiEC 2x\" media=\"all and (min-width: 1200px)\" type=\"image\/png\" width=\"700\" height=\"409\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_tablet_1x\/public\/2024-06\/Meridian_14.png?itok=31kxmwDS 1x, \/sites\/default\/files\/styles\/provus_media_defaults_tablet_2x\/public\/2024-06\/Meridian_14.png?itok=4Zw8d0z5 2x\" media=\"all and (min-width: 992px)\" type=\"image\/png\" width=\"522\" height=\"305\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_tablet_1x\/public\/2024-06\/Meridian_14.png?itok=31kxmwDS 1x, \/sites\/default\/files\/styles\/provus_media_defaults_tablet_2x\/public\/2024-06\/Meridian_14.png?itok=4Zw8d0z5 2x\" media=\"all and (min-width: 768px)\" type=\"image\/png\" width=\"522\" height=\"305\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_mobile_1x\/public\/2024-06\/Meridian_14.png?itok=gE8-tejS 1x, \/sites\/default\/files\/styles\/provus_media_defaults_mobile_2x\/public\/2024-06\/Meridian_14.png?itok=ilK05Pdm 2x\" media=\"all and (max-width: 576px)\" type=\"image\/png\" width=\"412\" height=\"241\">\n              <source srcset=\"\/sites\/default\/files\/styles\/provus_media_defaults_mobile_1x\/public\/2024-06\/Meridian_14.png?itok=gE8-tejS 1x, \/sites\/default\/files\/styles\/provus_media_defaults_mobile_2x\/public\/2024-06\/Meridian_14.png?itok=ilK05Pdm 2x\" type=\"image\/png\" width=\"412\" height=\"241\">\n                  <img loading=\"lazy\" src=\"\/sites\/default\/files\/styles\/provus_media_defaults_tablet_1x\/public\/2024-06\/Meridian_14.png?itok=31kxmwDS\" width=\"522\" height=\"305\" alt=\"Meridian\">\n\n  <\/picture>\n\n<\/div>\n      \n<\/div>\n",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_provus_title": [
+        {
+            "value": "Leverage and customize no-code award winning templates to create beautiful engaging webpages in minutes.",
+            "lang": "en"
+        }
+    ]
+}

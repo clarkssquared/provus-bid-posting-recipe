@@ -1,26 +1,26 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/provus-3432651.docksal.site\/homepage?_format=hal_json"
+            "href": "http:\/\/provus.docksal.site\/homepage?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/node\/provus_landing_page"
+            "href": "http:\/\/provus.docksal.site\/rest\/type\/node\/provus_landing_page"
         },
-        "http:\/\/provus-3432651.docksal.site\/rest\/relation\/node\/provus_landing_page\/revision_uid": [
+        "http:\/\/provus.docksal.site\/rest\/relation\/node\/provus_landing_page\/revision_uid": [
             {
-                "href": "http:\/\/provus-3432651.docksal.site\/user\/1?_format=hal_json"
+                "href": "http:\/\/provus.docksal.site\/user\/0?_format=hal_json"
             }
         ],
-        "http:\/\/provus-3432651.docksal.site\/rest\/relation\/node\/provus_landing_page\/uid": [
+        "http:\/\/provus.docksal.site\/rest\/relation\/node\/provus_landing_page\/uid": [
             {
-                "href": "http:\/\/provus-3432651.docksal.site\/user\/0?_format=hal_json",
+                "href": "http:\/\/provus.docksal.site\/user\/0?_format=hal_json",
                 "lang": "en"
             }
         ]
     },
     "nid": [
         {
-            "value": 4
+            "value": 10
         }
     ],
     "uuid": [
@@ -41,47 +41,52 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2024-03-25T12:41:14+00:00",
+            "value": "2024-06-18T02:22:20+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "_embedded": {
-        "http:\/\/provus-3432651.docksal.site\/rest\/relation\/node\/provus_landing_page\/revision_uid": [
+        "http:\/\/provus.docksal.site\/rest\/relation\/node\/provus_landing_page\/revision_uid": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/user\/1?_format=hal_json"
+                        "href": "http:\/\/provus.docksal.site\/user\/0?_format=hal_json"
                     },
                     "type": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/user\/user"
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/user\/user"
                     }
                 },
                 "uuid": [
                     {
-                        "value": "236ab5c1-e3cc-48a7-8ba0-71f15e2fdd80"
+                        "value": "fc2a758d-36c1-4835-8626-e7e5609ae3f2"
                     }
                 ]
             }
         ],
-        "http:\/\/provus-3432651.docksal.site\/rest\/relation\/node\/provus_landing_page\/uid": [
+        "http:\/\/provus.docksal.site\/rest\/relation\/node\/provus_landing_page\/uid": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/user\/0?_format=hal_json"
+                        "href": "http:\/\/provus.docksal.site\/user\/0?_format=hal_json"
                     },
                     "type": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/user\/user"
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/user\/user"
                     }
                 },
                 "uuid": [
                     {
-                        "value": "065a6045-6d5f-4a4c-80e0-734fc9c4a851"
+                        "value": "fc2a758d-36c1-4835-8626-e7e5609ae3f2"
                     }
                 ],
                 "lang": "en"
             }
         ]
     },
+    "revision_log": [
+        {
+            "value": "Changed moderation state to Published."
+        }
+    ],
     "status": [
         {
             "value": true,
@@ -96,14 +101,14 @@
     ],
     "created": [
         {
-            "value": "2023-08-11T20:50:19+00:00",
+            "value": "2024-06-17T07:59:18+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2024-03-25T12:41:14+00:00",
+            "value": "2024-06-18T02:22:20+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -121,12 +126,6 @@
         }
     ],
     "default_langcode": [
-        {
-            "value": true,
-            "lang": "en"
-        }
-    ],
-    "revision_translation_affected": [
         {
             "value": true,
             "lang": "en"
@@ -151,7 +150,7 @@
             "tag": "link",
             "attributes": {
                 "rel": "canonical",
-                "href": "http:\/\/provus-3432651.docksal.site\/homepage"
+                "href": "http:\/\/provus.docksal.site\/homepage"
             },
             "lang": "en"
         }
@@ -159,7 +158,7 @@
     "path": [
         {
             "alias": "\/homepage",
-            "pid": 20,
+            "pid": 17,
             "langcode": "en",
             "lang": "en"
         }
@@ -175,7 +174,314 @@
                     "container_wrapper": {
                         "bootstrap_styles": {
                             "background": {
-                                "background_type": "color"
+                                "background_type": "image"
+                            },
+                            "background_color": {
+                                "class": null
+                            },
+                            "background_media": {
+                                "image": {
+                                    "media_id": "2"
+                                },
+                                "video": {
+                                    "media_id": null
+                                },
+                                "background_options": {
+                                    "background_position": "center",
+                                    "background_repeat": "no-repeat",
+                                    "background_attachment": "not_fixed",
+                                    "background_size": "cover"
+                                }
+                            },
+                            "padding": {
+                                "class": "_none"
+                            },
+                            "padding_left": {
+                                "class": "_none"
+                            },
+                            "padding_top": {
+                                "class": "_none"
+                            },
+                            "padding_right": {
+                                "class": "_none"
+                            },
+                            "padding_bottom": {
+                                "class": "_none"
+                            },
+                            "margin": {
+                                "class": "_none"
+                            },
+                            "margin_left": {
+                                "class": "_none"
+                            },
+                            "margin_top": {
+                                "class": "_none"
+                            },
+                            "margin_right": {
+                                "class": "_none"
+                            },
+                            "margin_bottom": {
+                                "class": "_none"
+                            }
+                        }
+                    },
+                    "container_wrapper_bg_color_class": "",
+                    "container_wrapper_bg_media": null,
+                    "container": "container",
+                    "section_classes": "",
+                    "section_attributes": null,
+                    "regions_classes": {
+                        "blb_region_col_1": ""
+                    },
+                    "regions_attributes": {
+                        "blb_region_col_1": null
+                    },
+                    "breakpoints": [],
+                    "layout_regions_classes": [],
+                    "remove_gutters": "1",
+                    "context_mapping": []
+                },
+                "components": [
+                    {
+                        "uuid": "1d407456-9b63-40e3-96a9-c91e38dcedae",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_heading",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_heading",
+                            "uuid": "9785b2a0-c6f8-4c74-a657-a35889355df0",
+                            "block_uuid": "9785b2a0-c6f8-4c74-a657-a35889355df0"
+                        },
+                        "weight": "-2",
+                        "additional": []
+                    },
+                    {
+                        "uuid": "4b80b2c8-6011-442c-a843-5d173366a3b6",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_media",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_media",
+                            "uuid": "b9f76458-a075-4d1b-a9a7-662d2b601b9a",
+                            "block_uuid": "b9f76458-a075-4d1b-a9a7-662d2b601b9a"
+                        },
+                        "weight": "0",
+                        "additional": []
+                    },
+                    {
+                        "uuid": "b481ea0a-f098-4805-a58b-3c1e917857dd",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_basic_text",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_basic_text",
+                            "uuid": "b73fe2d6-63eb-4c8b-b53c-3370b95dbc3d",
+                            "block_uuid": "b73fe2d6-63eb-4c8b-b53c-3370b95dbc3d"
+                        },
+                        "weight": "-1",
+                        "additional": []
+                    }
+                ],
+                "third_party_settings": []
+            }
+        },
+        {
+            "section": {
+                "layout_id": "bootstrap_layout_builder:blb_col_2",
+                "layout_settings": {
+                    "label": "",
+                    "container_wrapper_classes": "",
+                    "container_wrapper_attributes": null,
+                    "container_wrapper": {
+                        "bootstrap_styles": {
+                            "background": {
+                                "background_type": null
+                            },
+                            "background_color": {
+                                "class": null
+                            },
+                            "background_media": {
+                                "image": {
+                                    "media_id": null
+                                },
+                                "video": {
+                                    "media_id": null
+                                },
+                                "background_options": {
+                                    "background_position": "center",
+                                    "background_repeat": "no-repeat",
+                                    "background_attachment": "not_fixed",
+                                    "background_size": "cover"
+                                }
+                            },
+                            "padding": {
+                                "class": "_none"
+                            },
+                            "padding_left": {
+                                "class": "_none"
+                            },
+                            "padding_top": {
+                                "class": "_none"
+                            },
+                            "padding_right": {
+                                "class": "_none"
+                            },
+                            "padding_bottom": {
+                                "class": "_none"
+                            },
+                            "margin": {
+                                "class": "_none"
+                            },
+                            "margin_left": {
+                                "class": "_none"
+                            },
+                            "margin_top": {
+                                "class": "_none"
+                            },
+                            "margin_right": {
+                                "class": "_none"
+                            },
+                            "margin_bottom": {
+                                "class": "_none"
+                            }
+                        }
+                    },
+                    "container_wrapper_bg_color_class": "",
+                    "container_wrapper_bg_media": null,
+                    "container": "container",
+                    "section_classes": "",
+                    "section_attributes": null,
+                    "regions_classes": {
+                        "blb_region_col_1": "",
+                        "blb_region_col_2": ""
+                    },
+                    "regions_attributes": {
+                        "blb_region_col_1": null,
+                        "blb_region_col_2": null
+                    },
+                    "breakpoints": {
+                        "desktop": "blb_col_6_6",
+                        "tablet": "blb_col_6_6",
+                        "mobile": "blb_col_12"
+                    },
+                    "layout_regions_classes": {
+                        "blb_region_col_1": [
+                            "col-lg-6",
+                            "col-md-6",
+                            "col-12"
+                        ],
+                        "blb_region_col_2": [
+                            "col-lg-6",
+                            "col-md-6",
+                            "col-12"
+                        ]
+                    },
+                    "remove_gutters": "0",
+                    "context_mapping": []
+                },
+                "components": [
+                    {
+                        "uuid": "a528e3b1-9ac1-4b1e-8dcb-a33e2d1185f2",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_heading",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_heading",
+                            "uuid": "183885b9-8af8-4f43-89a7-6eff16cd4ef3",
+                            "block_uuid": "183885b9-8af8-4f43-89a7-6eff16cd4ef3"
+                        },
+                        "weight": "-2",
+                        "additional": []
+                    },
+                    {
+                        "uuid": "cf705de9-e728-4567-ab31-624340794c7c",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_button",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_button",
+                            "uuid": "3fbc93a4-768f-442c-83a2-cacc774c1bd3",
+                            "block_uuid": "3fbc93a4-768f-442c-83a2-cacc774c1bd3"
+                        },
+                        "weight": "0",
+                        "additional": []
+                    },
+                    {
+                        "uuid": "2098490d-9b0f-41db-b148-859e4f956485",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_basic_text",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_basic_text",
+                            "uuid": "0bf97448-f5f3-4995-9329-3bad6ccd9087",
+                            "block_uuid": "0bf97448-f5f3-4995-9329-3bad6ccd9087"
+                        },
+                        "weight": "-1",
+                        "additional": []
+                    },
+                    {
+                        "uuid": "17b13703-cb75-443d-a65b-6945b707b2cd",
+                        "region": "blb_region_col_2",
+                        "configuration": {
+                            "id": "inline_block:provus_media",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_media",
+                            "uuid": "50b58900-d6a3-47ec-aaa6-ff98423417e9",
+                            "block_uuid": "50b58900-d6a3-47ec-aaa6-ff98423417e9"
+                        },
+                        "weight": 0,
+                        "additional": []
+                    }
+                ],
+                "third_party_settings": []
+            }
+        },
+        {
+            "section": {
+                "layout_id": "bootstrap_layout_builder:blb_col_1",
+                "layout_settings": {
+                    "label": "",
+                    "container_wrapper_classes": "",
+                    "container_wrapper_attributes": null,
+                    "container_wrapper": {
+                        "bootstrap_styles": {
+                            "background": {
+                                "background_type": null
                             },
                             "background_color": {
                                 "class": null
@@ -239,46 +545,42 @@
                     },
                     "breakpoints": [],
                     "layout_regions_classes": [],
-                    "remove_gutters": "0",
+                    "remove_gutters": "1",
                     "context_mapping": []
                 },
                 "components": [
                     {
-                        "uuid": "540c7ce4-1661-47d1-ab08-0c6c5ea2227e",
+                        "uuid": "1c0cabcd-e6f3-4039-99d4-ce51ca200c8f",
                         "region": "blb_region_col_1",
                         "configuration": {
-                            "id": "field_block:node:provus_landing_page:body",
-                            "label": "Body",
-                            "label_display": "0",
-                            "provider": "layout_builder",
-                            "context_mapping": {
-                                "entity": "layout_builder.entity",
-                                "view_mode": "view_mode"
-                            },
-                            "formatter": {
-                                "type": "text_default",
-                                "label": "hidden",
-                                "settings": [],
-                                "third_party_settings": []
-                            }
-                        },
-                        "weight": 0,
-                        "additional": []
-                    },
-                    {
-                        "uuid": "0b1627ca-422d-4cb7-8abd-afbab3a69cbf",
-                        "region": "blb_region_col_1",
-                        "configuration": {
-                            "id": "inline_block:provus_banner",
+                            "id": "inline_block:provus_heading",
                             "label": "%AutoEntityLabel%",
                             "label_display": false,
                             "provider": "layout_builder",
                             "view_mode": "full",
                             "block_serialized": null,
                             "context_mapping": [],
-                            "type": "provus_banner",
-                            "uuid": "dab08c43-0c7a-4c53-b1ed-f44c1d0e81fb",
-                            "block_uuid": "dab08c43-0c7a-4c53-b1ed-f44c1d0e81fb"
+                            "type": "provus_heading",
+                            "uuid": "a3bc0303-ad00-43fb-b955-ca433a624874",
+                            "block_uuid": "a3bc0303-ad00-43fb-b955-ca433a624874"
+                        },
+                        "weight": 0,
+                        "additional": []
+                    },
+                    {
+                        "uuid": "f4dfc370-0530-442f-8603-d7f0a07a9593",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_group",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_group",
+                            "uuid": "8ec3e894-5180-4bd8-9137-a4333dd7eea6",
+                            "block_uuid": "8ec3e894-5180-4bd8-9137-a4333dd7eea6"
                         },
                         "weight": 1,
                         "additional": []
@@ -297,7 +599,7 @@
                     "container_wrapper": {
                         "bootstrap_styles": {
                             "background": {
-                                "background_type": "color"
+                                "background_type": null
                             },
                             "background_color": {
                                 "class": null
@@ -338,13 +640,13 @@
                                 "class": "_none"
                             },
                             "margin_top": {
-                                "class": "bs-mt-5"
+                                "class": "_none"
                             },
                             "margin_right": {
                                 "class": "_none"
                             },
                             "margin_bottom": {
-                                "class": "bs-mb-5"
+                                "class": "_none"
                             }
                         }
                     },
@@ -383,7 +685,7 @@
                 },
                 "components": [
                     {
-                        "uuid": "01f6b7b5-e902-4ebb-b7bd-af413f55b208",
+                        "uuid": "f4e5e49b-a4cd-4820-ba96-a7d034283d97",
                         "region": "blb_region_col_1",
                         "configuration": {
                             "id": "inline_block:provus_media",
@@ -394,14 +696,14 @@
                             "block_serialized": null,
                             "context_mapping": [],
                             "type": "provus_media",
-                            "uuid": "c6fae549-3d5b-437c-9125-9e916117ca9e",
-                            "block_uuid": "c6fae549-3d5b-437c-9125-9e916117ca9e"
+                            "uuid": "99098eff-dc21-4f8b-9dae-26a010e6c3db",
+                            "block_uuid": "99098eff-dc21-4f8b-9dae-26a010e6c3db"
                         },
                         "weight": 0,
                         "additional": []
                     },
                     {
-                        "uuid": "65973fba-31cb-40e3-948a-c0b80fe54c41",
+                        "uuid": "fda95691-2bd6-4495-8e9c-9318f4706afe",
                         "region": "blb_region_col_2",
                         "configuration": {
                             "id": "inline_block:provus_heading",
@@ -412,14 +714,14 @@
                             "block_serialized": null,
                             "context_mapping": [],
                             "type": "provus_heading",
-                            "uuid": "c206ae2e-4558-430b-99b1-edf99af4dd58",
-                            "block_uuid": "c206ae2e-4558-430b-99b1-edf99af4dd58"
+                            "uuid": "ff866c9f-e68f-4d89-8e27-84d41521fd11",
+                            "block_uuid": "ff866c9f-e68f-4d89-8e27-84d41521fd11"
                         },
                         "weight": 0,
                         "additional": []
                     },
                     {
-                        "uuid": "b5b997d0-2086-4b24-be6d-9986e3162d28",
+                        "uuid": "8fc693f2-3744-441e-a6bc-6857dc9a1214",
                         "region": "blb_region_col_2",
                         "configuration": {
                             "id": "inline_block:provus_basic_text",
@@ -430,28 +732,10 @@
                             "block_serialized": null,
                             "context_mapping": [],
                             "type": "provus_basic_text",
-                            "uuid": "3d801777-5f6d-45e6-86aa-2fafb896c51a",
-                            "block_uuid": "3d801777-5f6d-45e6-86aa-2fafb896c51a"
+                            "uuid": "91d4519a-f341-4583-8ccf-d6b5ca4cd032",
+                            "block_uuid": "91d4519a-f341-4583-8ccf-d6b5ca4cd032"
                         },
-                        "weight": 3,
-                        "additional": []
-                    },
-                    {
-                        "uuid": "7da0f92d-166f-4e48-9d87-3644e8fd3e7d",
-                        "region": "blb_region_col_2",
-                        "configuration": {
-                            "id": "inline_block:provus_button",
-                            "label": "%AutoEntityLabel%",
-                            "label_display": false,
-                            "provider": "layout_builder",
-                            "view_mode": "full",
-                            "block_serialized": null,
-                            "context_mapping": [],
-                            "type": "provus_button",
-                            "uuid": "7d9937bb-6de4-43a8-800b-6175173db7e6",
-                            "block_uuid": "7d9937bb-6de4-43a8-800b-6175173db7e6"
-                        },
-                        "weight": 5,
+                        "weight": 1,
                         "additional": []
                     }
                 ],
@@ -537,21 +821,39 @@
                 },
                 "components": [
                     {
-                        "uuid": "3a9ebcb4-bf61-4675-8e96-896c2decac4f",
+                        "uuid": "3a15a660-4323-4685-9082-569c81b31460",
                         "region": "blb_region_col_1",
                         "configuration": {
-                            "id": "inline_block:provus_stat_group",
+                            "id": "inline_block:provus_heading",
                             "label": "%AutoEntityLabel%",
                             "label_display": false,
                             "provider": "layout_builder",
                             "view_mode": "full",
                             "block_serialized": null,
                             "context_mapping": [],
-                            "type": "provus_stat_group",
-                            "uuid": "3d05469f-9004-48ed-a7f8-8749e536d99a",
-                            "block_uuid": "3d05469f-9004-48ed-a7f8-8749e536d99a"
+                            "type": "provus_heading",
+                            "uuid": "8cc193b6-4de3-4734-943e-cb9b5c6e2f0b",
+                            "block_uuid": "8cc193b6-4de3-4734-943e-cb9b5c6e2f0b"
                         },
                         "weight": 0,
+                        "additional": []
+                    },
+                    {
+                        "uuid": "1ae04c8e-bc8d-47a7-8dcc-35d39f0d7a98",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_list",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_list",
+                            "uuid": "bedf25e5-523b-4c61-bf6e-9f6fa8577a35",
+                            "block_uuid": "bedf25e5-523b-4c61-bf6e-9f6fa8577a35"
+                        },
+                        "weight": 1,
                         "additional": []
                     }
                 ],
@@ -560,7 +862,7 @@
         },
         {
             "section": {
-                "layout_id": "bootstrap_layout_builder:blb_col_1",
+                "layout_id": "bootstrap_layout_builder:blb_col_2",
                 "layout_settings": {
                     "label": "",
                     "container_wrapper_classes": "",
@@ -568,7 +870,7 @@
                     "container_wrapper": {
                         "bootstrap_styles": {
                             "background": {
-                                "background_type": "color"
+                                "background_type": null
                             },
                             "background_color": {
                                 "class": null
@@ -609,13 +911,184 @@
                                 "class": "_none"
                             },
                             "margin_top": {
-                                "class": "bs-mt-5"
+                                "class": "_none"
                             },
                             "margin_right": {
                                 "class": "_none"
                             },
                             "margin_bottom": {
-                                "class": "bs-mb-5"
+                                "class": "_none"
+                            }
+                        }
+                    },
+                    "container_wrapper_bg_color_class": "",
+                    "container_wrapper_bg_media": null,
+                    "container": "container",
+                    "section_classes": "",
+                    "section_attributes": null,
+                    "regions_classes": {
+                        "blb_region_col_1": "",
+                        "blb_region_col_2": ""
+                    },
+                    "regions_attributes": {
+                        "blb_region_col_1": null,
+                        "blb_region_col_2": null
+                    },
+                    "breakpoints": {
+                        "desktop": "blb_col_6_6",
+                        "tablet": "blb_col_6_6",
+                        "mobile": "blb_col_12"
+                    },
+                    "layout_regions_classes": {
+                        "blb_region_col_1": [
+                            "col-lg-6",
+                            "col-md-6",
+                            "col-12"
+                        ],
+                        "blb_region_col_2": [
+                            "col-lg-6",
+                            "col-md-6",
+                            "col-12"
+                        ]
+                    },
+                    "remove_gutters": "0",
+                    "context_mapping": []
+                },
+                "components": [
+                    {
+                        "uuid": "ce5dad8e-3216-483d-a6e3-4e4e81a86632",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_heading",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_heading",
+                            "uuid": "1d9e26b0-f769-472d-8546-a6c993d1a788",
+                            "block_uuid": "1d9e26b0-f769-472d-8546-a6c993d1a788"
+                        },
+                        "weight": 0,
+                        "additional": []
+                    },
+                    {
+                        "uuid": "af9d3434-a0ea-46a1-9ccb-fc57c639cc0b",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_basic_text",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_basic_text",
+                            "uuid": "b0841f13-e8e0-49dd-9de1-229bf85fc170",
+                            "block_uuid": "b0841f13-e8e0-49dd-9de1-229bf85fc170"
+                        },
+                        "weight": 1,
+                        "additional": []
+                    },
+                    {
+                        "uuid": "97809fde-e206-4014-8333-2e3292eca2cb",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:provus_button",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_button",
+                            "uuid": "ae62e047-c1e4-45fe-9c9d-66e46f302c2c",
+                            "block_uuid": "ae62e047-c1e4-45fe-9c9d-66e46f302c2c"
+                        },
+                        "weight": 2,
+                        "additional": []
+                    },
+                    {
+                        "uuid": "c12f7cfb-1803-4e1c-8408-ca0bc1c0a25b",
+                        "region": "blb_region_col_2",
+                        "configuration": {
+                            "id": "inline_block:provus_media",
+                            "label": "%AutoEntityLabel%",
+                            "label_display": false,
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "provus_media",
+                            "uuid": "a25985fc-d809-4b4d-81eb-3830de00aaa3",
+                            "block_uuid": "a25985fc-d809-4b4d-81eb-3830de00aaa3"
+                        },
+                        "weight": 0,
+                        "additional": []
+                    }
+                ],
+                "third_party_settings": []
+            }
+        },
+        {
+            "section": {
+                "layout_id": "bootstrap_layout_builder:blb_col_1",
+                "layout_settings": {
+                    "label": "",
+                    "container_wrapper_classes": "",
+                    "container_wrapper_attributes": null,
+                    "container_wrapper": {
+                        "bootstrap_styles": {
+                            "background": {
+                                "background_type": null
+                            },
+                            "background_color": {
+                                "class": null
+                            },
+                            "background_media": {
+                                "image": {
+                                    "media_id": null
+                                },
+                                "video": {
+                                    "media_id": null
+                                },
+                                "background_options": {
+                                    "background_position": "center",
+                                    "background_repeat": "no-repeat",
+                                    "background_attachment": "not_fixed",
+                                    "background_size": "cover"
+                                }
+                            },
+                            "padding": {
+                                "class": "_none"
+                            },
+                            "padding_left": {
+                                "class": "_none"
+                            },
+                            "padding_top": {
+                                "class": "_none"
+                            },
+                            "padding_right": {
+                                "class": "_none"
+                            },
+                            "padding_bottom": {
+                                "class": "_none"
+                            },
+                            "margin": {
+                                "class": "_none"
+                            },
+                            "margin_left": {
+                                "class": "_none"
+                            },
+                            "margin_top": {
+                                "class": "_none"
+                            },
+                            "margin_right": {
+                                "class": "_none"
+                            },
+                            "margin_bottom": {
+                                "class": "_none"
                             }
                         }
                     },
@@ -637,39 +1110,121 @@
                 },
                 "components": [
                     {
-                        "uuid": "78c9d565-90ab-47d6-9cb5-b9df99a652e4",
+                        "uuid": "480843ae-568b-4e1b-923c-efde8b310fc0",
                         "region": "blb_region_col_1",
                         "configuration": {
-                            "id": "inline_block:provus_accordion",
+                            "id": "inline_block:provus_faq_group",
                             "label": "%AutoEntityLabel%",
                             "label_display": false,
                             "provider": "layout_builder",
                             "view_mode": "full",
                             "block_serialized": null,
                             "context_mapping": [],
-                            "type": "provus_accordion",
-                            "uuid": "7e28be0c-4c2d-4fef-bb33-dcc33c37d8b0",
-                            "block_uuid": "7e28be0c-4c2d-4fef-bb33-dcc33c37d8b0"
-                        },
-                        "weight": 1,
-                        "additional": []
-                    },
-                    {
-                        "uuid": "4ed4f732-e07d-4c5c-b41b-9280ef1da1e0",
-                        "region": "blb_region_col_1",
-                        "configuration": {
-                            "id": "inline_block:provus_heading",
-                            "label": "%AutoEntityLabel%",
-                            "label_display": false,
-                            "provider": "layout_builder",
-                            "view_mode": "full",
-                            "block_serialized": null,
-                            "context_mapping": [],
-                            "type": "provus_heading",
-                            "uuid": "4751ab13-84fd-4a07-b55d-f123a704becb",
-                            "block_uuid": "4751ab13-84fd-4a07-b55d-f123a704becb"
+                            "type": "provus_faq_group",
+                            "uuid": "5848326f-670c-4592-93e4-0cba1a563969",
+                            "block_uuid": "5848326f-670c-4592-93e4-0cba1a563969"
                         },
                         "weight": 0,
+                        "additional": []
+                    }
+                ],
+                "third_party_settings": []
+            }
+        },
+        {
+            "section": {
+                "layout_id": "bootstrap_layout_builder:blb_col_1",
+                "layout_settings": {
+                    "label": "",
+                    "container_wrapper_classes": "",
+                    "container_wrapper_attributes": null,
+                    "container_wrapper": {
+                        "bootstrap_styles": {
+                            "background": {
+                                "background_type": "image"
+                            },
+                            "background_color": {
+                                "class": null
+                            },
+                            "background_media": {
+                                "image": {
+                                    "media_id": "10"
+                                },
+                                "video": {
+                                    "media_id": null
+                                },
+                                "background_options": {
+                                    "background_position": "center",
+                                    "background_repeat": "no-repeat",
+                                    "background_attachment": "not_fixed",
+                                    "background_size": "cover"
+                                }
+                            },
+                            "padding": {
+                                "class": "_none"
+                            },
+                            "padding_left": {
+                                "class": "_none"
+                            },
+                            "padding_top": {
+                                "class": "_none"
+                            },
+                            "padding_right": {
+                                "class": "_none"
+                            },
+                            "padding_bottom": {
+                                "class": "_none"
+                            },
+                            "margin": {
+                                "class": "_none"
+                            },
+                            "margin_left": {
+                                "class": "_none"
+                            },
+                            "margin_top": {
+                                "class": "_none"
+                            },
+                            "margin_right": {
+                                "class": "_none"
+                            },
+                            "margin_bottom": {
+                                "class": "_none"
+                            }
+                        }
+                    },
+                    "container_wrapper_bg_color_class": "",
+                    "container_wrapper_bg_media": null,
+                    "container": "container",
+                    "section_classes": "",
+                    "section_attributes": null,
+                    "regions_classes": {
+                        "blb_region_col_1": ""
+                    },
+                    "regions_attributes": {
+                        "blb_region_col_1": null
+                    },
+                    "breakpoints": [],
+                    "layout_regions_classes": [],
+                    "remove_gutters": "0",
+                    "context_mapping": []
+                },
+                "components": [
+                    {
+                        "uuid": "783f95c8-3b02-4351-ad2e-2ef7185b096b",
+                        "region": "blb_region_col_1",
+                        "configuration": {
+                            "id": "inline_block:webform",
+                            "label": "Demo Provus On-Demand Now!",
+                            "label_display": "visible",
+                            "provider": "layout_builder",
+                            "view_mode": "full",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "webform",
+                            "uuid": "ae52e87e-4534-468c-a48f-1d7ec27d0512",
+                            "block_uuid": "ae52e87e-4534-468c-a48f-1d7ec27d0512"
+                        },
+                        "weight": "1",
                         "additional": []
                     }
                 ],

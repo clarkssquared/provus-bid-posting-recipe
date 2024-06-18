@@ -1,0 +1,134 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/45?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_card"
+        },
+        "http:\/\/provus.docksal.site\/rest\/relation\/block_content\/provus_card\/field_provus_media_image": [
+            {
+                "href": "http:\/\/provus.docksal.site\/media\/2\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 45
+        }
+    ],
+    "uuid": [
+        {
+            "value": "515549eb-08bf-46df-9f24-56655c5f1487"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "provus_card"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-06-17T08:15:33+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "Government (Card) - 2012078653",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-06-18T02:11:21+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "title",
+                "content": "| PROVUS"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "link",
+            "attributes": {
+                "rel": "canonical",
+                "href": "http:\/\/provus.docksal.site\/homepage"
+            },
+            "lang": "en"
+        }
+    ],
+    "field_provus_body": [
+        {
+            "value": "<p>ProvusGov the secure open-source solution for municipalities that empowers all content creators to improve constituent communication, ease administrative burden and provide the highest level of access to public services for its citizens.&nbsp;<\/p>",
+            "format": "basic_html",
+            "processed": "<p>ProvusGov the secure open-source solution for municipalities that empowers all content creators to improve constituent communication, ease administrative burden and provide the highest level of access to public services for its citizens.&nbsp;<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_provus_item_display": [
+        {
+            "value": "provus_card"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/provus.docksal.site\/rest\/relation\/block_content\/provus_card\/field_provus_media_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/provus.docksal.site\/media\/2\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "631538b0-3cf6-408b-862d-71eddf48c554"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_provus_title": [
+        {
+            "value": "Government"
+        }
+    ]
+}

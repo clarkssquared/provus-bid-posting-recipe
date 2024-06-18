@@ -1,29 +1,29 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/32?_format=hal_json"
+            "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/73?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/block_content\/provus_accordion"
+            "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_accordion"
         },
-        "http:\/\/provus-3432651.docksal.site\/rest\/relation\/block_content\/provus_accordion\/field_provus_items": [
+        "http:\/\/provus.docksal.site\/rest\/relation\/block_content\/provus_accordion\/field_provus_items": [
             {
-                "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/4?_format=hal_json"
+                "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/11?_format=hal_json"
             },
             {
-                "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/5?_format=hal_json"
+                "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/14?_format=hal_json"
             },
             {
-                "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/26?_format=hal_json"
+                "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/59?_format=hal_json"
             },
             {
-                "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/12?_format=hal_json"
+                "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/33?_format=hal_json"
             }
         ]
     },
     "id": [
         {
-            "value": 32
+            "value": 73
         }
     ],
     "uuid": [
@@ -56,13 +56,13 @@
     ],
     "info": [
         {
-            "value": "(Accordion) - 861989357",
+            "value": "(Accordion) - 23324002",
             "lang": "en"
         }
     ],
     "changed": [
         {
-            "value": "2024-03-25T12:37:13+00:00",
+            "value": "2024-06-18T02:11:21+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -89,7 +89,7 @@
             "tag": "meta",
             "attributes": {
                 "name": "title",
-                "content": "| Provus"
+                "content": "| PROVUS"
             },
             "lang": "en"
         },
@@ -97,20 +97,20 @@
             "tag": "link",
             "attributes": {
                 "rel": "canonical",
-                "href": "http:\/\/provus-3432651.docksal.site\/homepage"
+                "href": "http:\/\/provus.docksal.site\/homepage"
             },
             "lang": "en"
         }
     ],
     "_embedded": {
-        "http:\/\/provus-3432651.docksal.site\/rest\/relation\/block_content\/provus_accordion\/field_provus_items": [
+        "http:\/\/provus.docksal.site\/rest\/relation\/block_content\/provus_accordion\/field_provus_items": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/4?_format=hal_json"
+                        "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/11?_format=hal_json"
                     },
                     "type": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/block_content\/provus_basic_text"
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_basic_text"
                     }
                 },
                 "uuid": [
@@ -122,10 +122,10 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/5?_format=hal_json"
+                        "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/14?_format=hal_json"
                     },
                     "type": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/block_content\/provus_basic_text"
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_basic_text"
                     }
                 },
                 "uuid": [
@@ -137,10 +137,10 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/26?_format=hal_json"
+                        "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/59?_format=hal_json"
                     },
                     "type": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/block_content\/provus_basic_text"
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_basic_text"
                     }
                 },
                 "uuid": [
@@ -152,10 +152,10 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/admin\/content\/block\/12?_format=hal_json"
+                        "href": "http:\/\/provus.docksal.site\/admin\/content\/block\/33?_format=hal_json"
                     },
                     "type": {
-                        "href": "http:\/\/provus-3432651.docksal.site\/rest\/type\/block_content\/provus_basic_text"
+                        "href": "http:\/\/provus.docksal.site\/rest\/type\/block_content\/provus_basic_text"
                     }
                 },
                 "uuid": [

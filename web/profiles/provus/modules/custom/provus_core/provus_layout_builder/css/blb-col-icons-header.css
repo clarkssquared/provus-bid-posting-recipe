@@ -1,0 +1,16 @@
+form[action*="blb_col_2_header"] div[class*="layout-breakpoints"] label.glb-option,
+form[action*="blb_col_3_header"] div[class*="layout-breakpoints"] label.glb-option,
+form[action*="blb_col_4_header"] div[class*="layout-breakpoints"] label.glb-option {
+  flex-wrap: wrap;
+}
+
+#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon,
+#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#drupal-off-canvas label:hover .bs_tooltip,
+#layout-builder-modal label:hover .bs_tooltip {
+  text-indent: 0;
+}

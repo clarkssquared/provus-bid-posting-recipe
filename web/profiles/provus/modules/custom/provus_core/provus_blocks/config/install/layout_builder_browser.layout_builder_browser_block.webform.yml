@@ -5,6 +5,6 @@ id: webform
 block_id: 'inline_block:webform'
 category: provus_grouped_content
 label: Webform
-image_path: ''
+image_path: /themes/custom/provus_bootstrap/images/components/Webform.svg
 image_alt: ''
-weight: null
+weight: -1

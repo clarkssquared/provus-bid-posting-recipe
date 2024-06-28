@@ -1,14 +1,20 @@
+@use 'sass:math';
+
 //rem-calc
 $rem-base: 16px;
 
 /* stylelint-disable */
 
 @function strip-unit($num) {
-  @return $num / ($num * 0 + 1);
+  @if type-of($num) == 'number' and not unitless($num) {
+    @return math.div($num, ($num * 0 + 1));
+  }
+
+  @return $num;
 }
 
 @function convert-to-rem($value, $base-value: $rem-base)  {
-  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  $value: calc(strip-unit($value) / strip-unit($base-value)) * 1rem;
   @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
   @return $value;
 }

@@ -1,6 +1,5 @@
 let gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  sassGlob = require('gulp-sass-glob'),
+  sass = require('gulp-sass')(require('sass')),
   sourcemaps = require('gulp-sourcemaps'),
   $ = require('gulp-load-plugins')(),
   cleanCss = require('gulp-clean-css'),
@@ -9,15 +8,15 @@ let gulp = require('gulp'),
   autoprefixer = require('autoprefixer'),
   postcssInlineSvg = require('postcss-inline-svg'),
   pxtorem = require('postcss-pxtorem'),
-	postcssProcessors = [
-		postcssInlineSvg({
+  postcssProcessors = [
+    postcssInlineSvg({
       removeFill: true,
       paths: ['./node_modules/bootstrap-icons/icons']
     }),
-		pxtorem({
-			propList: ['font', 'font-size', 'line-height', 'letter-spacing', '*margin*', '*padding*'],
-			mediaQuery: true
-		})
+    pxtorem({
+      propList: ['font', 'font-size', 'line-height', 'letter-spacing', '*margin*', '*padding*'],
+      mediaQuery: true
+    })
   ];
 
 const paths = {
@@ -39,7 +38,6 @@ const paths = {
 function styles () {
   return gulp.src([paths.scss.bootstrap, paths.scss.src])
     .pipe(sourcemaps.init())
-    .pipe(sassGlob())
     .pipe(sass({
       includePaths: [
         './node_modules/bootstrap/scss',
@@ -77,10 +75,13 @@ function serve () {
   gulp.watch([paths.scss.watch, paths.scss.bootstrap],{interval: 1000, usePolling: true}, styles)
 }
 
-const build = gulp.series(styles, gulp.parallel(js, serve))
+const build_watch = gulp.series(styles, gulp.parallel(js, serve))
+
+const build = gulp.series(styles, gulp.parallel(js))
 
 exports.styles = styles
 exports.js = js
 exports.serve = serve
+exports.build_watch = build_watch
 
 exports.default = build

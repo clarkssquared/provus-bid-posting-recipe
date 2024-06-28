@@ -41,6 +41,10 @@ footer.site-footer {
       > * {
         width: auto;
       }
+      .block {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
     }
     ul.nav {
       gap: rem-calc(32);

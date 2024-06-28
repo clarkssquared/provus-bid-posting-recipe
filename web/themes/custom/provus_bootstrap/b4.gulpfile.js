@@ -1,6 +1,5 @@
 let gulp = require('gulp'),
   sass = require('gulp-sass'),
-  sassGlob = require('gulp-sass-glob'),
   sourcemaps = require('gulp-sourcemaps'),
   $ = require('gulp-load-plugins')(),
   cleanCss = require('gulp-clean-css'),
@@ -9,16 +8,16 @@ let gulp = require('gulp'),
   autoprefixer = require('autoprefixer'),
   postcssInlineSvg = require('postcss-inline-svg'),
   browserSync = require('browser-sync').create()
-  pxtorem = require('postcss-pxtorem'),
-	postcssProcessors = [
-		postcssInlineSvg({
+pxtorem = require('postcss-pxtorem'),
+  postcssProcessors = [
+    postcssInlineSvg({
       removeFill: true,
       paths: ['./node_modules/bootstrap-icons/icons']
     }),
-		pxtorem({
-			propList: ['font', 'font-size', 'line-height', 'letter-spacing', '*margin*', '*padding*'],
-			mediaQuery: true
-		})
+    pxtorem({
+      propList: ['font', 'font-size', 'line-height', 'letter-spacing', '*margin*', '*padding*'],
+      mediaQuery: true
+    })
   ];
 
 const paths = {
@@ -42,7 +41,6 @@ const paths = {
 function styles () {
   return gulp.src([paths.scss.bootstrap, paths.scss.src])
     .pipe(sourcemaps.init())
-    .pipe(sassGlob())
     .pipe(sass({
       includePaths: [
         './node_modules/bootstrap/scss',

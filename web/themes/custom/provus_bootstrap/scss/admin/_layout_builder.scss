@@ -1363,7 +1363,37 @@ a > .layout-builder__link-wrapped {
 
 
 .icons-selector {
-  color: #383A40;
+  color: #383A40 !important;
+
+  .selected-icon {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.fip-grey {
+    .selector-button {
+      i {
+        color: #383A40 !important;
+      }
+    }
+    .selector-search {
+      .icons-search-input {
+        &::placeholder {
+          color: #383A40 !important;
+        }
+      }
+      i {
+        color: #383A40 !important;
+      }
+    }
+
+    .selector-footer {
+      span, i {
+        color: #383A40 !important;
+      }
+    }
+  }  
 }
 
 .layout-builder__layout {

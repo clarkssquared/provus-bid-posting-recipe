@@ -14,3 +14,30 @@ form[action*="blb_col_4_header"] div[class*="layout-breakpoints"] label.glb-opti
 #layout-builder-modal label:hover .bs_tooltip {
   text-indent: 0;
 }
+
+.icons-selector {
+  color: #383A40 !important;
+}
+
+.icons-selector .selected-icon {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons-selector.fip-grey .selector-button i {
+  color: #383A40 !important;
+}
+
+.icons-selector.fip-grey .selector-search .icons-search-input::placeholder {
+  color: #383A40 !important;
+}
+
+.icons-selector.fip-grey .selector-search i {
+  color: #383A40 !important;
+}
+
+.icons-selector.fip-grey .selector-footer span,
+.icons-selector.fip-grey .selector-footer i {
+  color: #383A40 !important;
+}

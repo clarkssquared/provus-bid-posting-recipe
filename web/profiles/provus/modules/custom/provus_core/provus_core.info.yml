@@ -16,6 +16,7 @@ dependencies:
   - layout_builder_browser
   - layout_builder_iframe_modal
   - layout_builder_restrictions
+  - lb_copy_section
   - pathauto
   - section_library
   - smart_trim

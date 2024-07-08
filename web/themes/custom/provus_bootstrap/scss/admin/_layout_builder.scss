@@ -608,13 +608,23 @@ $lb-window-gray-dark: #d9d9d9;
     }
   }
 
-  &.layout-builder__link--import-from-library  {
+  &.layout-builder__link--import-from-library {
     &:hover,
     &:focus {
       width: rem-calc(190);
       background: transparent !important;
     }
   }
+
+  &.layout-builder__link--paste-section {
+    word-wrap: break-word;
+    &:hover,
+    &:focus {
+      width: rem-calc(180);
+      background: transparent !important;
+    }
+  }
+  
 }
 
 a > .layout-builder__link-wrapped {
@@ -1078,6 +1088,12 @@ a > .layout-builder__link-wrapped {
       .layout-builder__link--configure,
       .layout-builder__link--add-section-to-library {
         opacity: 1;
+      }
+    }
+
+    a.layout-builder__link--copy-section {
+      &:hover {
+        width: rem-calc(170);
       }
     }
   }

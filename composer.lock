@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c4ec13549d790bd0c8a1c569761192c",
+    "content-hash": "2217530fb1cfd37f60104ba744c2cf5f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4550,6 +4550,59 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/layout_builder_restrictions",
                 "issues": "https://www.drupal.org/project/issues/layout_builder_restrictions"
+            }
+        },
+        {
+            "name": "drupal/lb_copy_section",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/lb_copy_section.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/lb_copy_section-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "a60bea25da9c78d9164d90dbb2f88f1ed4dff2f5"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1709738578",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Robbe De Cooman",
+                    "homepage": "https://www.drupal.org/u/robbevb",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides functionality to copy and paste layout builder sections within or between pages.",
+            "homepage": "https://www.drupal.org/project/lb_copy_section",
+            "keywords": [
+                "Drupal",
+                "Layout Builder",
+                "copy",
+                "paste",
+                "section"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/lb_copy_section",
+                "issues": "https://www.drupal.org/project/issues/lb_copy_section"
             }
         },
         {
@@ -17401,5 +17454,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

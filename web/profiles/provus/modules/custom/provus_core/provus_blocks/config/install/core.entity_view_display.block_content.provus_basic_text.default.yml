@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.provus_basic_text
+    - field.field.block_content.provus_basic_text.field_provus_hide_title
     - field.field.block_content.provus_basic_text.field_provus_body
     - field.field.block_content.provus_basic_text.field_provus_title
   module:
@@ -12,12 +13,22 @@ targetEntityType: block_content
 bundle: provus_basic_text
 mode: default
 content:
+  field_provus_hide_title:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_provus_body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_provus_title:
     type: string
@@ -27,4 +38,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

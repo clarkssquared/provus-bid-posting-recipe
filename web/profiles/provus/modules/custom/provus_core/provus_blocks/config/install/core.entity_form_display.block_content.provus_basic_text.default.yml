@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.provus_basic_text
     - field.field.block_content.provus_basic_text.field_provus_body
+    - field.field.block_content.provus_basic_text.field_provus_hide_title
     - field.field.block_content.provus_basic_text.field_provus_title
   module:
     - text
@@ -14,13 +15,20 @@ mode: default
 content:
   field_provus_body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 3
     region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  field_provus_hide_title:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_provus_title:
     type: string_textfield

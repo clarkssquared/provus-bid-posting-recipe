@@ -6,3 +6,6 @@ https://www.drupal.org/project/provus
 For installation and general usage, please read full documentation here
 https://promet-source.gitbook.io/provus/
 
+## Rules
+
+1. Do not include composer.lock

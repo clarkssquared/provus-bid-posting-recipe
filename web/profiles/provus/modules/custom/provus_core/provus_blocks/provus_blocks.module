@@ -286,6 +286,29 @@ function provus_blocks_form_alter(&$form, FormStateInterface $form_state, $form_
       $form['settings']['view_mode']['#access'] = FALSE;
     }
   }
+  // Alter duplicate form to fix styles and format.
+  if ($form_id == 'layout_builder_block_clone.clone_block_form') {
+    $form['#attributes']['class'][] = 'ui-dialog';
+    $form['#attributes']['class'][] = 'ui-dialog-titlebar';
+    if (!empty($form['copy_subject'])) {
+      $form['copy_subject']['#attributes']['class'][] = 'mt-3';
+    }
+    if (!empty($form['reusable'])) {
+      unset($form['reusable']);
+    }
+    if (!empty($form['config_clone'])) {
+      unset($form['config_clone']);
+    }
+    if (!empty($form['actions']['submit'])) {
+      $form['actions']['submit']['#attributes']['class'][] = 'mx-2';
+    }
+    if (!empty($form['actions']['cancel'])) {
+      $form['actions']['cancel']['#attributes']['class'][] = 'btn';
+      $form['actions']['cancel']['#attributes']['class'][] = 'btn-';
+      $form['actions']['cancel']['#attributes']['class'][] = 'p-3';
+      $form['actions']['cancel']['#attributes']['class'][] = 'form-control';
+    }
+  }
 }
 
 /**

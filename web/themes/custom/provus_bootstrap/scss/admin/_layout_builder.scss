@@ -1139,6 +1139,20 @@ a > .layout-builder__link-wrapped {
     }
   }
 
+  .layout-builder__link.layout-builder__link--rearrange {
+    display: flex !important;
+    border: none !important;
+
+    &:nth-of-type(2):before {
+      background: url('../images/minus_icon.svg') no-repeat;
+      background-size: contain;
+    }
+
+    .layout-builder__link-wrapped {
+      z-index: 0;
+    }
+  }
+
   // Markup block.
   .c--markup-block-block {
     min-height: 50px;

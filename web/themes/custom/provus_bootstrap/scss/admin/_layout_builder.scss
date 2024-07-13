@@ -552,11 +552,12 @@ $lb-window-gray-dark: #d9d9d9;
 // LAYOUT BUILDER
 // =============================================================================
 
-.layout-builder-active .layout-builder__section > a.layout-builder__link {
+.layout-builder-active .layout-builder__section > a.layout-builder__link,
+.layout-builder-active .layout-builder__section > div > a.layout-builder__link {
   overflow: hidden;
   padding-top: 13px !important;
   transition: all 0.3s ease-in-out;
-  background: white !important;
+  background-color: white !important;
 
   &.layout-builder__link--remove {
     &:hover,
@@ -565,7 +566,6 @@ $lb-window-gray-dark: #d9d9d9;
       width: rem-calc(180);
       box-shadow: none !important;
       height: 40px;
-      border-radius: 0 !important;
     }
   }
   &.layout-builder__link--configure {
@@ -576,7 +576,6 @@ $lb-window-gray-dark: #d9d9d9;
       z-index: 99;
       box-shadow: none !important;
       height: 40px;
-      border-radius: 0 !important;
     }
   }
   &.layout-builder__link--add-section-to-library {
@@ -587,7 +586,16 @@ $lb-window-gray-dark: #d9d9d9;
       z-index: 99;
       box-shadow: none !important;
       height: 40px;
-      border-radius: 0 !important;
+    }
+  }
+  &.layout-builder__link--rearrange {
+    &:hover,
+    &:focus {
+      background: $white !important;
+      width: rem-calc(150);
+      z-index: 99;
+      box-shadow: none !important;
+      height: 40px;
     }
   }
 }
@@ -597,7 +605,6 @@ $lb-window-gray-dark: #d9d9d9;
   overflow: hidden;
   padding-top: 13px !important;
   transition: all 0.3s ease-in-out;
-  background: transparent !important;
   margin-bottom: -6px !important;
 
   &.layout-builder__link--add {
@@ -810,7 +817,7 @@ a > .layout-builder__link-wrapped {
 
 
       &:hover {
-        background-color: transparent !important;
+        background-color: white !important;
         text-decoration: none;
       }
 
@@ -909,7 +916,6 @@ a > .layout-builder__link-wrapped {
     }
 
     &:hover {
-      background: transparent !important;
       text-decoration: underline;
       color: $primary !important;
 
@@ -959,12 +965,26 @@ a > .layout-builder__link-wrapped {
         background-size: contain;
       }
     }
+    &.layout-builder__link--copy-section {
+      &:before {
+        background: url('../images/layout_builder/section/clone.svg') no-repeat;
+        background-size: contain;
+      }
+    }
+    &.layout-builder__link--paste-section {
+      &:before {
+        background: url('../images/layout_builder/section/paste.svg') no-repeat;
+        background-size: contain;
+      }
+    }
   }
 
   // Remove and configure.
   .layout-builder__link--remove,
   .layout-builder__link--configure,
-  .layout-builder__link--add-section-to-library {
+  .layout-builder__link--add-section-to-library,
+  .layout-builder__link.layout-builder__link--rearrange,
+  .layout-builder__link--copy-section {
     /*opacity: 0;*/
     transition: opacity .3s ease;
     top: 25px;
@@ -1139,17 +1159,73 @@ a > .layout-builder__link-wrapped {
     }
   }
 
-  .layout-builder__link.layout-builder__link--rearrange {
-    display: flex !important;
-    border: none !important;
+  // Rearrange
+  .layout-builder__link.layout-builder__link--rearrange,
+  .layout-builder__link.layout-builder__link--rearrange:not(:focus) {
+    border: 1px solid $lb-border-color !important;
+    border-radius: 5px !important;
+    left: 10px;
 
-    &:nth-of-type(2):before {
-      background: url('../images/minus_icon.svg') no-repeat;
-      background-size: contain;
+    &:hover {
+      text-decoration: none;
+      color: $primary !important;
     }
 
-    .layout-builder__link-wrapped {
-      z-index: 0;
+    &:nth-of-type(1) {
+      border-radius: 5px 0 0 5px !important;
+      border-right: 0 !important;
+    }
+
+    &:nth-of-type(2) {
+      border-radius: 0 5px 5px 0 !important;
+    }
+
+    &:nth-of-type(1):before {
+      background: url('../images/layout_builder/section/arrow_up.svg') no-repeat;
+      background-size: contain;
+      left: 9px !important;
+    }
+
+    &:nth-of-type(2):before {
+      background: url('../images/layout_builder/section/arrow_down.svg') no-repeat;
+      background-size: contain;
+      left: 8px !important;
+    }
+
+    /*.layout-builder__link-wrapped {
+      position: relative;
+      top: unset;
+      left: unset;
+    }*/
+  }
+
+  // Add section to library.
+  .layout-builder__link--copy-section,
+  .layout-builder__link--copy-section:visited {
+    border-radius: $card-border-radius !important;
+    border: 2px solid transparent !important;
+    box-shadow: 0 2px 8px 0 rgba($black, .35) !important;
+    color: $white !important;
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 700;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 10px 15px !important;
+    text-decoration: none;
+    transition: border-color .3s ease;
+    display: inline-block !important;
+    position: absolute !important;
+    right: 10px;
+
+    // Hover and focus.
+    &:focus {
+      border-color: rgba($white, .75) !important;
+      text-decoration: underline;
+    }
+    &:hover {
+      text-decoration: underline;
+      background-color: white !important;
     }
   }
 

@@ -1,23 +1,20 @@
+uuid: 96e290eb-c2ae-4aee-940f-1e01ba13134a
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.provus_media
-    - field.field.block_content.provus_media.field_provus_alt_text
     - field.field.block_content.provus_media.field_provus_media
+    - field.field.block_content.provus_media.field_provus_media_style
+  module:
+    - options
+_core:
+  default_config_hash: VuxidtgQ4xyWVCXua5op0B3RcZpCijfvv4_ANTxIqaU
 id: block_content.provus_media.default
 targetEntityType: block_content
 bundle: provus_media
 mode: default
 content:
-  field_provus_alt_text:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_provus_media:
     type: entity_reference_entity_view
     label: hidden
@@ -27,4 +24,12 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+  field_provus_media_style:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

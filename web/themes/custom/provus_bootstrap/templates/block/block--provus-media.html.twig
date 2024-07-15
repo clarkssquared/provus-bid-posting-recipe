@@ -36,6 +36,10 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
+{% if image_style_src %}
+  {% set classes = classes|merge(['image_styles']) %}
+{% endif %}
+
 {# Process Media variables. #}
 {% set default_alt = '' %}
 {% set image_uri = '' %}
@@ -66,7 +70,11 @@
   {{ title_suffix }}
   {% block content %}
     <div{{ content_attributes.addClass('content') }}>
-      {{ responsive_image }}
+      {% if image_style_src %}
+        <img src="{{ image_style_src }}" class="image_size" alt = "{{ alt_text }}"  />
+      {% else %}
+        {{ responsive_image }}
+      {% endif %}
     </div>
   {% endblock %}
 </div>

@@ -78,6 +78,7 @@
         "drupal/devel": "5.0.2",
         "drupal/entity": "1.4",
         "drupal/exclude_node_title": "1.4",
+        "drupal/field_image_style": "^2.0",
         "drupal/focal_point": "2.0.3",
         "drupal/fontawesome": "2.26",
         "drupal/fullcalendar_block": "1.0.5",

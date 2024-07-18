@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.provus_media
+    - field.field.block_content.provus_media.field_provus_alt_text
     - field.field.block_content.provus_media.field_provus_media
     - field.field.block_content.provus_media.field_provus_media_style
   module:

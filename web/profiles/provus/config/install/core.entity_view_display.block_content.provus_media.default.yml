@@ -16,6 +16,14 @@ targetEntityType: block_content
 bundle: provus_media
 mode: default
 content:
+  field_provus_alt_text:
+      type: string
+      label: hidden
+      settings:
+        link_to_entity: false
+      third_party_settings: {  }
+      weight: 1
+      region: content
   field_provus_media:
     type: entity_reference_entity_view
     label: hidden

@@ -1646,3 +1646,7 @@ body.js-off-canvas-dialog-open::after {
   position: absolute;
   z-index: 100;
 }
+
+.ck-source-editing-area textarea {
+  height: 100% !important;
+}

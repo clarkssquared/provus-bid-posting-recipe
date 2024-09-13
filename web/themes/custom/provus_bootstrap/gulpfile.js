@@ -57,10 +57,10 @@ function styles () {
         'Android >= 4',
         'Opera >= 12']
     })]))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.scss.dest))
-    .pipe(cleanCss())
-    .pipe(rename({ suffix: '.min' }))
+    // .pipe(sourcemaps.write())
+    // .pipe(gulp.dest(paths.scss.dest))
+    // .pipe(cleanCss())
+    // .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.scss.dest))
 }
 

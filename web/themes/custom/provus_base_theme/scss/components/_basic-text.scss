@@ -1,8 +1,46 @@
 // Styling for Basic Text Block.
 
-.block-provus-basic-text p{
-  @include text-style-body-body-1();
-  color: $text-secondary;
+.block-provus-basic-text {
+  p {
+    @include text-style-body-body-1();
+    color: $text-colors-text-secondary;
+  }
+
+  ul li {
+    @include text-style-subheadline-sub-1();
+    color: $text-secondary;
+    margin-bottom: $padding-padding-sm;
+  }
+
+  ol li {
+    @include text-style-subheadline-sub-1();
+    color: $text-secondary;
+    margin-bottom: $padding-padding-sm;
+  }
+
+  h2, h3, h4, h5, h6 {
+    color: #000000;
+    margin-bottom: $padding-padding-lg;
+  }
+
+  blockquote {
+    border-left: solid $padding-padding-xxxs $primary-colors-primary;
+    margin: 0;
+    padding-left: $padding-padding-lg;
+    padding-right: $padding-padding-lg;
+
+    > * {
+      position: relative;
+      color: $text-colors-text-primary;
+      @include text-style-headline-h-3();
+      margin-bottom: $padding-padding-sm;
+
+      &:nth-child(2) {
+        color: $text-secondary;
+        @include text-style-subheadline-sub-2();
+      }
+    }
+  }
 }
 
 .ck-balloon-panel {

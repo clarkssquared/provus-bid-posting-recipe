@@ -2,115 +2,85 @@
   max-width: 100%;
   flex: 0 0 100%;
   height: auto;
+  text-align: center;
+  margin-bottom: $padding-padding-xlg;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   .cta-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: rem-calc(32px 27);
+    padding: $padding-padding-xlg $padding-padding-md;
+    border-radius: $radius-radius-xxs;
 
     @include media-breakpoint-up(md) {
-      padding: rem-calc(62 39 37);
+      padding: $padding-padding-xxlg $padding-padding-xlg;
     }
 
     .btn-default {
-      background-color: $primary;
+      @extend .btn;
+      @extend .btn-outlined;
     }
 
-    &.Primary {
+    .cta-links {
+      a:not(.btn) {
+        @extend .btn;
+        @extend .btn-outlined;
+      }
+    }
+
+    &.Primary, &.Secondary {
       background-color: $primary-shade;
 
       .cta-title,
       .cta-sub-title,
       .cta-body {
-        color: $white;
+        color: $primary-colors-primary-contrast;
       }
 
       .cta-links {
-        a {
-          border-color: $white;
-          color: $white;
+        a:not(.btn) {
+          @extend .btn;
+          @extend .btn-outlined;
         }
       }
     }
     &.Secondary {
       background-color: $secondary-shade;
-
-      .cta-links {
-        a {
-          color: $body-color;
-          border-color: $body-color;
-        }
-      }
     }
 
     .cta-title {
-      margin: rem-calc(0 0 24);
-      font-weight: 400;
-      font-size: rem-calc(24);
-      line-height: rem-calc(35);
+      @include text-style-headline-h-3;
+      margin-top: 0;
+      margin-bottom: $padding-padding-lg;
       background-color: transparent;
 
       div.field {
         background-color: transparent;
       }
-
-      @include media-breakpoint-up(md) {
-        margin: rem-calc(0 0 30);
-        font-weight: 400;
-        font-size: rem-calc(28);
-        line-height: rem-calc(40);
-      }
     }
 
     .cta-sub-title {
-      text-align: center;
-      font-size: rem-calc(18);
-      line-height: rem-calc(21);
-      margin-bottom: 0;
+      @include text-style-eyebrow-eyebrow-1;
+      margin-bottom: $padding-padding-xxs;
     }
 
     .cta-body {
-      text-align: center;
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: rem-calc(25);
-      margin-bottom: rem-calc(8);
-
-      @include media-breakpoint-up(md) {
-        margin-bottom: rem-calc(36);
-
+      @include text-style-body-body-1;
+      
+      p {
+        margin-bottom: $padding-padding-xxlg;
       }
     }
 
     .cta-links {
-      .field__item {
-        margin: 0;
-        margin-bottom: rem-calc(10);
-      }
-      a {
-        display: block;
-        border: solid 1px $body-color;
-        border-radius: $card-border-radius;
-        text-align: center;
-        font-family: $font-heading;
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: rem-calc(23);
-        letter-spacing: 0.03em;
-        padding: rem-calc(12 24);
-        text-decoration: none;
-        transition: all 0.3s linear;
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.3);
-          color: $white;
-        }
-
-        @include media-breakpoint-up(md) {
-          display: inline-block;
-        }
+      a:not(.btn) {
+        @extend .btn;
+        @extend .btn-outlined;
       }
     }
     &.has-bg-image {
@@ -125,9 +95,10 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        z-index: 1;
-        opacity: 0;
+        z-index: 2;
+        opacity: 1;
         transition: all 0.3s linear;
+        border-radius: $radius-radius-xxs;
 
         &:before {
           content: "";
@@ -138,7 +109,14 @@
           width: 100%;
           height: 100%;
           background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+          border-radius: $radius-radius-xxs;
         }
+      }
+
+      .cta-title,
+      .cta-sub-title,
+      .cta-body {
+        color: $white;
       }
 
       .cta-title,
@@ -152,19 +130,6 @@
       &:hover {
         .cta-bg-image-container {
           opacity: 1;
-        }
-
-        .cta-title,
-        .cta-sub-title,
-        .cta-body,
-        .cta-links {
-          color: $white;
-        }
-        .cta-links {
-          a {
-            color: $white;
-            border-color: $white;
-          }
         }
       }
     }

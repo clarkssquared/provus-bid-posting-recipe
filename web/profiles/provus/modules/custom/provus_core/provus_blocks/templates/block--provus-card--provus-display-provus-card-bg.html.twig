@@ -38,14 +38,6 @@
   'provus-card-bg',
 ]
 %}
-
-{%
-  set backgroundImagePath = ""
-%}
-{% if (file_url(content.field_provus_media_image[0]['#media'].field_media_image.entity.uri.value )) is not empty %}
-  {% set backgroundImagePath = content.field_provus_media_image[0]['#media'].field_media_image.entity.uri.value | image_style('provus_large_banner') %}
-{% endif %}
-
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
@@ -59,9 +51,7 @@
         <div{{ content_attributes.addClass('card') }}>
           {% if content.field_provus_media_image|render %}
             <div class="card-img-wrapper">
-              {% if backgroundImagePath is not empty %}
-              <div class="card-img-container" style="background-image: url({{ backgroundImagePath }})"></div>
-              {% endif %}
+              {{ content.field_provus_media_image }}
             </div>
           {% endif %}
           <div class="card-img-overlay">

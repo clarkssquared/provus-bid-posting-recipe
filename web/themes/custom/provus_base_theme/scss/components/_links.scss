@@ -1,11 +1,17 @@
 // Link styles.
 a {
-  color: $secondary-shade;
-  text-decoration: underline;
-  &:hover,
+  color: $primary;
+  
+  &:hover {
+    color: $system-info-medium;
+  }
+
+  &:active {
+    color: $primary-colors-primary-accent;
+  }
+
   &:focus {
-    color: $primary-shade;
-    text-decoration: none;
+    color: $primary-colors-primary-hover;
   }
 }
 

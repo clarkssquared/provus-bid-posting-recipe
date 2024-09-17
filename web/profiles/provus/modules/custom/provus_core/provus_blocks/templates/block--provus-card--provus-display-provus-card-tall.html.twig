@@ -48,20 +48,22 @@
   {% block content %}
     <a href="{{ content.field_provus_links[0]['#url'] }}" rel="bookmark">
     <div{{ content_attributes.addClass('card') }}>
-      {% if content.field_provus_media_image|render %}
-        <div class="card-img-top">
-          <img src="{{ file_url(content.field_provus_media_image.0['#item'].entity.uri.value | image_style('provus_card_tall')) }}" alt="card-image" />
+      <div class="card-wrapper">
+        {% if content.field_provus_media_image|render %}
+          <div class="card-img-top">
+            <img src="{{ file_url(content.field_provus_media_image.0['#item'].entity.uri.value | image_style('provus_card_tall')) }}" alt="card-image" />
+          </div>
+        {% endif %}
+        <div class="card-body">
+          {% if content.date is not empty %}
+            <div class="card-date">{{ content.date }}</div>
+          {% elseif content.field_provus_header|render %}
+            <div class="card-date">{{ content.field_provus_header }}</div>
+          {% endif %}
+          {% if content.field_provus_title|render %}
+            <h3 class="card-title">{{ content.field_provus_title }}</h3>
+          {% endif %}
         </div>
-      {% endif %}
-      <div class="card-body">
-        {% if content.date is not empty %}
-          <div class="card-date">{{ content.date }}</div>
-        {% elseif content.field_provus_header|render %}
-          <div class="card-date">{{ content.field_provus_header }}</div>
-        {% endif %}
-        {% if content.field_provus_title|render %}
-          <h3 class="card-title">{{ content.field_provus_title }}</h3>
-        {% endif %}
       </div>
     </div>
     </a>

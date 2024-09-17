@@ -154,10 +154,36 @@ $primary-dark: $primary-contrast;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
+  sm: 390px,
+  md: 480px,
+  lg: 960px, // lower burger menu
+  xl: 1216px,
+  xxl: 1512px,
   xxxl: 1680px
 );
+
+$container-max-widths: (
+  sm: 390px,
+  md: 480px,
+  lg: 960px,
+  xl: 1216px,
+  xxl: 1512px,
+);
+
+$padding-padding-xxxs: 4px;
+$padding-padding-xxs: 8px;
+$padding-padding-xs: 12px;
+$padding-padding-sm: 16px;
+$padding-padding-md: 20px;
+$padding-padding-lg: 24px;
+$padding-padding-xlg: 32px;
+$padding-padding-xxlg: 40px;
+$radius-radius-xxxs: 0px;
+$radius-radius-xxs: 4px;
+$radius-radius-xs: 8px;
+$radius-radius-sm: 16px;
+$radius-radius-md: 20px;
+$radius-radius-lg: 24px;
+$radius-radius-xl: 32px;
+$radius-radius-xxl: 40px;
+$radius-radius-xxxl: 100px;

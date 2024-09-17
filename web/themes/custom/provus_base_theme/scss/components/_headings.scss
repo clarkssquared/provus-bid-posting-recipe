@@ -5,33 +5,10 @@
 
 $color-heading: $text-primary;
 
-@mixin heading-xl($font-family: $font-heading, $font-size: $h1-font-size, $line-height: 5.5rem, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 600, $margin: 0) {
+@mixin heading-xl($color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $margin: 0) {
+  @include text-style-headline-h-1;
+
   color: $color;
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-style: normal;
-  font-size: $font-size;
-  line-height: $line-height;
-  margin: 1rem $margin;
-  width: auto;
-  letter-spacing: -1.776px;
-
-  &__link {
-    color: $color-link;
-
-    &:hover {
-      color: $color-link-hover;
-    }
-  }
-}
-
-@mixin heading-large($font-family: $font-heading, $font-size: $h2-font-size, $line-height: 2.75rem, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 500, $margin: 0) {
-  color: $color;
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-style: normal;
-  font-size: $font-size;
-  line-height: $line-height;
   margin: 1rem $margin;
   width: auto;
 
@@ -44,13 +21,10 @@ $color-heading: $text-primary;
   }
 }
 
-@mixin heading-medium($font-family: $font-heading, $font-size: $h3-font-size, $line-height: 2rem, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 600, $margin: 0) {
+@mixin heading-large($color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $margin: 0) {
+  @include text-style-headline-h-2;
+
   color: $color;
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-style: normal;
-  font-size: $font-size;
-  line-height: $line-height;
   margin: 1rem $margin;
   width: auto;
 
@@ -63,13 +37,10 @@ $color-heading: $text-primary;
   }
 }
 
-@mixin heading-small($font-family: $font-heading, $font-size: $h4-font-size, $line-height: 1.75rem, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 500, $margin: 0) {
+@mixin heading-medium($color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $margin: 0) {
+  @include text-style-headline-h-3;
+
   color: $color;
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-style: normal;
-  font-size: $font-size;
-  line-height: $line-height;
   margin: 1rem $margin;
   width: auto;
 
@@ -82,15 +53,28 @@ $color-heading: $text-primary;
   }
 }
 
-@mixin heading-xs($font-family: $font-heading, $font-size: $font-size-base, $line-height: 1.5rem, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 600, $margin: 0) {
+@mixin heading-small($color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $margin: 0) {
+  @include text-style-headline-h-4;
+
   color: $color;
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-style: normal;
-  font-size: $font-size;
-  line-height: $line-height;
+  margin: 1rem $margin;
+  width: auto;
+
+  &__link {
+    color: $color-link;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}
+
+@mixin heading-xs($color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $margin: 0) {
+  @include text-style-headline-h-5;
+
+  color: $color;
   margin: $margin;
-  margin-bottom: $font-size;
+  margin-bottom: $margin;
   width: auto;
 
   &__link {
@@ -174,12 +158,14 @@ a {
 .block-provus-heading {
   h1,h2,h3,h4,h5,h6 {
     position: relative;
+    margin: 0;
     div.field {
       position: relative;
       display: inline-block;
       z-index: 2;
     }
   }
+
   .line-on {
     h1,h2,h3,h4,h5,h6 {
       background: $white;
@@ -188,7 +174,7 @@ a {
         height: rem-calc(2);
         top: 50%;
         content: '';
-        background: $accent-shade;
+        background: $primary;
         z-index: 1;
         position: absolute;
       }
@@ -197,6 +183,7 @@ a {
       }
     }
   }
+
   .header-align-left {
     text-align: left;
     h1,h2,h3,h4,h5,h6 {
@@ -205,13 +192,54 @@ a {
       }
     }
     div.field {
-      padding-right: rem-calc(60);
+      padding-right: $padding-padding-xxlg;
+      width: rem-calc(272);
+
+      @include media-breakpoint-up(md) {
+        width: rem-calc(530);
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: auto;
+        max-width: rem-calc(750);
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: auto;
+        max-width: rem-calc(950);
+      }
+
+      @include media-breakpoint-up(xxl) {
+        width: auto;
+        max-width: none;
+      }
     }
   }
+
   .header-align-right {
     text-align: right;
-    div.field {
-      padding-left: rem-calc(60);
+    div.field--name-field-provus-title {
+      padding-left: $padding-padding-xxlg;
+      width: rem-calc(272);
+
+      @include media-breakpoint-up(md) {
+        width: rem-calc(530);
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: auto;
+        max-width: rem-calc(750);
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: auto;
+        max-width: rem-calc(950);
+      }
+
+      @include media-breakpoint-up(xxl) {
+        width: auto;
+        max-width: none;
+      }
     }
     &.line-on {
       h1,h2,h3,h4,h5,h6 {
@@ -221,6 +249,7 @@ a {
       }
     }
   }
+
   .header-align-center {
     width: 100%;
     display: block;
@@ -234,14 +263,42 @@ a {
         left: 0;
       }
       div.field {
-        padding-left: rem-calc(60);
-        padding-right: rem-calc(60);
+        padding-left: $padding-padding-md;
+        padding-right: $padding-padding-md;
+        width: rem-calc(240);
+
+        @include media-breakpoint-up(md) {
+          width: rem-calc(530);
+        }
+
+        @include media-breakpoint-up(lg) {
+          width: auto;
+          max-width: rem-calc(750);
+          padding-left: $padding-padding-xxlg;
+          padding-right: $padding-padding-xxlg;
+        }
+
+        @include media-breakpoint-up(xl) {
+          width: auto;
+          max-width: rem-calc(950);
+          padding-left: $padding-padding-xxlg;
+          padding-right: $padding-padding-xxlg;
+        }
+
+        @include media-breakpoint-up(xxl) {
+          width: auto;
+          max-width: none;
+          padding-left: $padding-padding-xxlg;
+          padding-right: $padding-padding-xxlg;
+        }
       }
     }
   }
+
   .subheading {
     @include text-style-eyebrow-eyebrow-1();
-    color: $secondary-shade;
+    color: $primary;
+    margin: $padding-padding-md 0;
   }
 }
 

@@ -1,207 +1,301 @@
-/* Banner */
-.short-banner {
-  @include breakout;
-  &-inner {
-    .short-banner-content {
-      padding-top: rem-calc(50);
-      padding-bottom: rem-calc(50);
-      h1 {
-        margin-bottom: rem-calc(15);
-        color: $primary-shade;
-      }
-      h2 {
-        margin-bottom: rem-calc(15);
-        color: $secondary-shade;
-      }
-      p {
-        font-size: rem-calc(20);
-        line-height: rem-calc(32);
+$banner-height-desktop-lg: 584px;
+$banner-height-desktop-sm: 420px;
+
+$banner-height-tablet-lg: 480px;
+$banner-height-tablet-sm: 400px;
+
+$banner-height-mobile-lg: 282px;
+$banner-height-mobile-sm: 232px;
+
+@mixin banner-background() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  opacity: 1;
+  transition: all 0.3s linear;
+  background-size: cover;
+}
+
+.banner-background, 
+.smaller-banner .banner-background {
+  overflow: hidden;
+  
+  .banner-title {
+    @include text-style-display-headline-display;
+    margin: 0 0 $padding-padding-xxs 0;
+  }
+
+  .banner-body {
+    @include text-style-subheadline-sub-1;
+  }
+
+  .banner-content {
+    padding: 0;
+  }
+
+  .banner-links {
+    margin-top: 48px;
+    .field--name-field-provus-links {
+      display: flex;
+      column-gap: $padding-padding-xxlg;
+    }
+  }
+
+  &.banner-color-primary {
+    background-color: $primary;
+
+    .banner-content {
+      h1, p, .subheading {
+        color: $text-contrast;
       }
     }
-    .short-banner-image {
-      div {
+
+    .btn-default {
+      @include button-outlined;
+    }
+  }
+
+  &.banner-color-secondary {
+    background-color: $secondary;
+
+    .banner-content {
+      h1, p, .subheading {
+        color: $text-contrast;
+      }
+    }
+
+    .btn-default {
+      @include button-outlined;
+    }
+  }
+
+  &.banner-color-light {
+    background-color: $background-colors-background-lightteal;
+
+    .btn-default {
+      @include button-primary;
+    }
+  }
+
+  &.banner-color-dark {
+    background-color: $primary-accent;
+
+    .banner-content {
+      h1, p, .subheading {
+        color: $text-contrast;
+      }
+    }
+
+    .btn-default {
+      @include button-outlined;
+    }
+  }
+
+  &.image-full {
+    .banner-image-container {
+      @include banner-background();
+    }
+  }
+
+  .banner-image-container {
+    height: $banner-height-mobile-lg;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-up(sm) {
+      height: $banner-height-tablet-lg;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 100%;
+      @include banner-background();
+
+      &.position-left {
+        width: 50%;
         height: 100%;
-        margin: 0;
       }
-      .field--type-image {
-        img {
-          margin: 0;
-          object-fit: cover;
-          height: 100%;
-        }
+
+      &.position-right {
+        width: 50%;
+        right: 0;
+        left: unset;
+        height: 100%;
       }
     }
   }
 }
 
-/* For mobile devices. */
-@media only screen and (max-width: 765px) {
-  .short-banner-title {
-      font-size: rem-calc(28);
-      line-height: rem-calc(30);
-  }
-  .short-banner-sub-title {
-      font-size: rem-calc(20);
-  }
-}
-
-/* For iPad devices */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
-        .short-banner-title {
-          font-size: rem-calc(58);
-        }
-  }
-
-
-/* Banner */
 .banner-background {
   @include breakout;
 
-  padding: rem-calc(102 0);
-  height: auto;
+  .gin--vertical-toolbar & {
+    margin-left: 0;
+  }
 
-  &.banner-color {
-    &-light {
-      background-color: $gray-lightest !important;
-      color: $body-color;
-      padding: 0;
-    }
-    &-primary {
-      background-color: $primary-shade !important;
-      color: $white;
-      padding: 0;
-      h1, h2 {
-        color: $white;
-      }
-    }
-    &-secondary {
-      background-color: $secondary-shade !important;
-      color: $white;
-      padding: 0;
-      h1, h2 {
-        color: $white;
-      }
-    }
-    &-white {
-      background-color: $white !important;
-      color: $body-color;
-      padding: 0;
-    }
-  }
-  &.image-left {
-    background-size: 45% 100% !important;
-    background-position: left !important;
-  }
-  &.image-right {
-    background-size: 45% 100% !important;
-    background-position: right !important;
-  }
-  &.image-left,
-  &.image-right {
-    .banner-inner {
-      img {
-        width: 100%;
+  .banner-inner {
+    display: flex;
+    align-items: center;
+    .banner-img {
+      height: unset;
+
+      @include media-breakpoint-up(lg) {
+        height: $banner-height-desktop-lg;
       }
     }
   }
+
   &.image-full {
     .banner-inner {
+      height: unset;
+
+      @include media-breakpoint-up(sm) {
+        height: $banner-height-tablet-lg;
+      }
+
+      @include media-breakpoint-up(lg) {
+        height: $banner-height-desktop-lg;
+      }
+      
       .banner-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        padding: $padding-padding-xxlg;
+        @include media-breakpoint-up(lg) {
+          padding: 0;
+        }
+
+        position: relative;
         width: 100%;
         h1, p, .subheading {
-          color: $white;
-          text-shadow: 0 0 rem-calc(8) $black, 0 0 rem-calc(20) $black;
+          color: $text-contrast;
+          text-shadow: 0px 0px 10px #00000025;
         }
       }
       .banner-img {
-        position: relative;
+        position: absolute;
+        right: 0;
         left: 0;
-        width: 100vw;
-        height: auto;
-        .field--type-entity-reference {
-          margin: 0;
-          picture {
-            width: 100%;
-            display: block;
-          }
-          img {
-            margin: 0;
-            width: 100%;
-          }
-        }
       }
     }
   }
-  .container .container {
-    padding: 0;
+
+  &.image-left, &.image-right {
+    .banner-inner {
+      height: auto;
+
+      @include media-breakpoint-up(lg) {
+        height: $banner-height-desktop-lg;
+      }
+    }
+    .banner-img {
+      position: relative;
+      overflow: hidden;
+    }
   }
+
+  &.image-left {
+    .banner-content-body {
+      padding: $padding-padding-xxlg;
+
+      @include media-breakpoint-up(lg) {
+        padding: $padding-padding-md;
+        padding-left: 100px;
+      }
+    }
+  }
+
+  &.image-right {
+    .banner-content-body {
+      padding: $padding-padding-xxlg;
+
+      @include media-breakpoint-up(lg) {
+        padding-left: 0px;
+        padding-right: 100px;
+        padding-top: $padding-padding-md;
+        padding-bottom: $padding-padding-md;
+      }
+    }
+  }
+}
+
+.smaller-banner .banner-background {
+  @include breakout;
+
+  .gin--vertical-toolbar & {
+    margin-left: 0;
+  }
+
+  .banner-image-container {
+    height: $banner-height-mobile-sm;
+
+    @include media-breakpoint-up(sm) {
+      height: $banner-height-tablet-sm;
+    }
+  }
+
   .banner-inner {
-    height: 100%;
+    display: flex;
     align-items: center;
-    .banner-content {
-      padding: rem-calc(50 0);
-      .banner-title {
-        @include text-style-display-headline-display;
-        height: max-content;
-      }
-      .banner-body {
-        @include text-style-subheadline-sub-1;
-        height: max-content;
-      }
-      .subheading {
-        @include text-style-eyebrow-eyebrow-1();
-        color: $secondary-shade;
-      }
-      h1 {
-        margin-bottom: rem-calc(30);
-      }
-      p {
-        font-size: rem-calc(18);
-        line-height: rem-calc(32);
-        font-weight: 500;
+    .banner-img {
+      height: auto;
+
+      @include media-breakpoint-up(lg) {
+        height: $banner-height-desktop-sm;
       }
     }
   }
 
-  .smaller-banner & {
-    padding: rem-calc(75 0);
-    height: auto;
+  .banner-links {
+    .field--name-field-provus-links {
+      display: flex;
+      column-gap: $padding-padding-md;
+    }
   }
-}
 
-// For mobile devices.
-@media (min-width: 300px) and (max-width: 900px) {
-  .banner-background {
-    h1 {
-      font-size: rem-calc(28);
-      line-height: rem-calc(30);
-    }
-    .banner-title {
-      width: 100% !important;
-      font-size: rem-calc(28) !important;
-      line-height: rem-calc(30) !important;
-    }
-    .banner-body {
-      width: 100% !important;
-      font-size: rem-calc(16) !important;
-      line-height: rem-calc(32) !important;
-    }
-  }
-  .banner-inner .banner-content p{
-      font-size: rem-calc(16);
-      line-height: rem-calc(32);
-  }
-}
+  &.image-full {
+    .banner-inner {
+      height: unset;
+      
+      @include media-breakpoint-up(md) {
+        height: $banner-height-tablet-sm;
+      }
 
-// For iPad devices.
-@media (min-width: 910px) and (max-width: 1400px) {
-  .banner-background {
-    .banner-title {
-      font-size: rem-calc(28) !important;
-      line-height: rem-calc(30) !important;
+      @include media-breakpoint-up(lg) {
+        height: $banner-height-desktop-sm;
+        padding: 0;
+      }
+    }
+  }
+
+  &.image-left, &.image-right {
+    .banner-inner {
+      height: unset;
+
+      @include media-breakpoint-up(lg) {
+        height: auto;
+      }
+
+      .banner-img {
+        height: unset;
+      }
+    }
+    
+    .banner-img {
+      position: relative;
+      overflow: hidden;
+
+      @include media-breakpoint-up(sm) {
+        height: $banner-height-tablet-sm;
+      }
+
+      @include media-breakpoint-up(lg) {
+        height: $banner-height-desktop-sm;
+      }
     }
   }
 }

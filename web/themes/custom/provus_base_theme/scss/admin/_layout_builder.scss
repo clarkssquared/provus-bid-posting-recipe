@@ -665,20 +665,11 @@ a > .layout-builder__link-wrapped {
       .nav-item, {
         flex-grow: 0;
         background-color: white;
-        border: 1px solid $lb-border-color;
-        border-right: 0;
-
-        &:first-child {
-          border-radius: 5px 0 0 5px;
-        }
-
-        &:last-child {
-          border-radius: 0 5px 5px 0;
-          border-right: 1px solid $lb-border-color;
-        }
+        border: 0.5px solid $background-colors-background-grey;
+        border-radius: $padding-padding-xxs $padding-padding-xxs 0 0;
 
         a {
-          font-size: 14px;
+          @include text-style-headline-h-5();
         }
 
         &.active {
@@ -686,8 +677,6 @@ a > .layout-builder__link-wrapped {
           border-color: $lb-border-color;
 
           a {
-            background-color: $lb-button-active;
-            border-color: $lb-button-active;
             border-radius: 0;
             margin-bottom: 0 !important;
             color: $primary;

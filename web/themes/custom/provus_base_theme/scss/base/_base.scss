@@ -45,6 +45,6 @@ body {
 hr {
   height: 1px;
   color: $primary-shade;
-  margin: rem-calc(80 0);
+  margin: rem-calc($padding-padding-xxlg 0);
   opacity: 1;
 }

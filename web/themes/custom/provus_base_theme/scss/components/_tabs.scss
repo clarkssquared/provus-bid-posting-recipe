@@ -1,32 +1,3 @@
-// Tabs color changes
-.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-  background: $primary-shade;
-  color: $white;
-}
-
-.nav-item {
-  .nav-link {
-    color: $secondary-shade;
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-      color: $primary-shade;
-    }
-  }
-}
-
-// Admin nav
-nav.tabs ul {
-  li.nav-item {
-    &.active {
-      a {
-        background: $primary-shade;
-        color: $white;
-      }
-    }
-  }
-}
-
 // Vertical Tabs
 
 .vertical-tabs {

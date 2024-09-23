@@ -153,22 +153,25 @@ $comment-spacer-y: 1.25em;
 // Bootstrap barrio variables.
 $primary-dark: $primary-contrast;
 
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
 $grid-breakpoints: (
   xs: 0,
-  sm: 390px,
-  md: 480px,
-  lg: 960px, // lower burger menu
-  xl: 1216px,
-  xxl: 1512px,
-  xxxl: 1680px
+  sm: 576px,
+  md: 768px,
+  lg: 992px, // lower burger menu
+  xl: 1440px,
+  xxl: 1680px
 );
 
+// Grid containers.
+// Define the maximum width of `.container` for different screen sizes.
 $container-max-widths: (
-  sm: 390px,
-  md: 480px,
-  lg: 960px,
-  xl: 1216px,
-  xxl: 1512px,
+  sm: 540px,
+  md: 744px,
+  lg: 984px,
+  xl: 1252px,
+  xxl: 1568px
 );
 
 $padding-padding-xxxs: 4px;

@@ -195,8 +195,12 @@ a {
       padding-right: $padding-padding-xxlg;
       width: rem-calc(272);
 
+      @include media-breakpoint-up(sm) {
+        width: rem-calc(450);
+      }
+
       @include media-breakpoint-up(md) {
-        width: rem-calc(530);
+        width: rem-calc(600);
       }
 
       @include media-breakpoint-up(lg) {
@@ -222,8 +226,12 @@ a {
       padding-left: $padding-padding-xxlg;
       width: rem-calc(272);
 
+      @include media-breakpoint-up(sm) {
+        width: rem-calc(450);
+      }
+
       @include media-breakpoint-up(md) {
-        width: rem-calc(530);
+        width: rem-calc(600);
       }
 
       @include media-breakpoint-up(lg) {
@@ -267,8 +275,14 @@ a {
         padding-right: $padding-padding-md;
         width: rem-calc(240);
 
+        @include media-breakpoint-up(sm) {
+          width: rem-calc(450);
+        }
+
         @include media-breakpoint-up(md) {
-          width: rem-calc(530);
+          padding-left: $padding-padding-xxlg;
+          padding-right: $padding-padding-xxlg;
+          width: rem-calc(600);
         }
 
         @include media-breakpoint-up(lg) {

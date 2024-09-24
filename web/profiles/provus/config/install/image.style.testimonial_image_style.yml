@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: testimonial_image_style
+label: 'Testimonial Image Style'
+effects:
+  3309f8ba-0c80-44c6-be08-1ed8425e4aa0:
+    uuid: 3309f8ba-0c80-44c6-be08-1ed8425e4aa0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 839
+      height: 580
+      anchor: center-center

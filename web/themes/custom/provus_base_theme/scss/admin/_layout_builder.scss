@@ -670,6 +670,8 @@ a > .layout-builder__link-wrapped {
 
         a {
           @include text-style-headline-h-5();
+          margin-top: 0;
+          margin-bottom: 0;
         }
 
         &.active {
@@ -680,6 +682,7 @@ a > .layout-builder__link-wrapped {
             border-radius: 0;
             margin-bottom: 0 !important;
             color: $primary;
+            margin-top: 0;
           }
         }
       }

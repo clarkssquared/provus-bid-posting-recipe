@@ -1,0 +1,26 @@
+.provus-image-radio .fieldset__wrapper--group .form-radios {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.provus-image-radio div {
+  padding: 5px;
+}
+.provus-image-radio img {
+  width: 200px;
+  height: auto;
+  margin-top: 5px;
+  background: var(--gin-bg-item-hover);
+}
+
+.provus-image-radio img:hover {
+  background: var(--gin-color-primary-light);
+}
+
+.provus-image-radio .fieldset__wrapper--group .form-radios input[type="radio"]:checked + label  div {
+  font-weight: 600;
+}
+
+.provus-image-radio .fieldset__wrapper--group .form-radios input[type="radio"]:checked + label img {
+  background: var(--gin-color-primary-light-active);
+}

@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Markup;
+
 /**
  * @file
  * Contains provus_layout_builder.module.
@@ -41,4 +44,105 @@ function provus_layout_builder_theme_suggestions_layout(array $variables) {
  */
 function provus_layout_builder_preprocess(&$vars) {
   $vars['#attached']['library'][] = 'provus_layout_builder/blb-col-icons-header';
+  $vars['#attached']['library'][] = 'provus_layout_builder/lb-inline-block-form';
 }
+
+/**
+ * Alter custom block forms rendered by Block Content and Layout Builder.
+ *
+ * E.g. Alter block forms for 'block_content' and 'inline_block' plugins.
+ *
+ * @param array $form
+ *   Nested array of form elements that comprise the form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state.
+ * @param string $block_type
+ *   The machine name of the custom block bundle.
+ */
+function provus_layout_builder_block_type_form_alter(
+  array &$form, 
+  FormStateInterface &$form_state, 
+  string $block_type) {
+
+  $radio_fields = [
+    [
+      'parent_block' => 'provus_button',
+      'name' => 'field_provus_button_arrangement',
+    ],
+    [
+      'parent_block' => 'provus_banner',
+      'name' => 'field_provus_image_position',
+    ],
+    [
+      'parent_block' => 'provus_card',
+      'name' => 'field_provus_item_display',
+    ],
+    [
+      'parent_block' => 'provus_testimonial',
+      'name' => 'field_provus_image_position',
+    ],
+    [
+      'parent_block' => 'provus_list',
+      'name' => 'field_provus_list_orientation',
+    ],
+    [
+      'parent_block' => 'provus_list',
+      'name' => 'field_provus_list_style',
+    ],
+    [
+      'parent_block' => 'provus_group',
+      'name' => 'field_provus_group_display',
+    ],
+    [
+      'parent_block' => 'provus_group',
+      'name' => 'field_provus_item_display',
+    ],
+    [
+      'parent_block' => 'provus_group_automatic',
+      'name' => 'field_provus_group_display',
+    ],
+    [
+      'parent_block' => 'provus_group_automatic',
+      'name' => 'field_provus_item_display',
+    ],
+  ];
+
+  foreach ($radio_fields as $field) {
+    if (isset($form[$field['name']]['widget']['#options']) && $block_type == $field['parent_block']) {
+      // Enforce field widget to radios.
+      $form[$field['name']]['widget']['#type'] = 'radios';
+      if (is_array($form[$field['name']]['widget']['#default_value']) &&
+        !empty($form[$field['name']]['widget']['#default_value'])) {
+        $form[$field['name']]['widget']['#default_value'] = reset($form[$field['name']]['widget']['#default_value']);
+      }
+
+      $form[$field['name']]['#attributes']['class'][] = 'provus-image-radio';
+      $options = $form[$field['name']]['widget']['#options'];
+      $new_options = [];
+      $img_path = \Drupal::service('extension.list.module')->getPath('provus_layout_builder');
+      foreach ($options as $key => $value) {
+        // Skip none.
+        if ($value == "- None -") {
+          continue;
+        }
+        $parent_block_name = str_replace(
+          'provus_group_automatic', 
+          'provus_group', 
+          $field['parent_block']
+        );
+        $img_src = implode(
+          "--",
+          [
+            $parent_block_name,
+            $field['name'],
+            $value,
+          ]
+        );
+        $markup = Markup::create('<img src="/'. $img_path . '/images/' . $img_src .'.svg"/>');
+        $new_options[$key] = '<div>' . $value . '</div>' . $markup;
+      }
+      $form[$field['name']]['widget']['#options'] = $new_options;
+    }
+  }
+}
+

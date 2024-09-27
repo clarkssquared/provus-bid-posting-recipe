@@ -33,6 +33,7 @@ install:
   - better_normalizers
   - better_exposed_filters
   - block_content
+  - block_form_alter
   - bootstrap_layout_builder
   - breakpoint
   - ckeditor5
@@ -48,6 +49,7 @@ install:
   - field_ui
   - file
   - focal_point
+  - form_options_attributes
   - gin_lb
   - gin_login
   - gin_toolbar

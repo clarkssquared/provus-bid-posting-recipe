@@ -7,3 +7,8 @@ blb-col-icons-header:
   dependencies:
     - core/drupal
     - core/jquery
+
+lb-inline-block-form:
+  css:
+    theme:
+      css/lb-inline-block-form.css: {}

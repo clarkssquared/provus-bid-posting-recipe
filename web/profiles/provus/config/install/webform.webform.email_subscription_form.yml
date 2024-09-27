@@ -16,6 +16,7 @@ elements: |-
     '#type': email
     '#title': Email
     '#title_display': invisible
+    '#placeholder': email@example.com
 css: ''
 javascript: ''
 settings:

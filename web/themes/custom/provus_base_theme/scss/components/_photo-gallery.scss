@@ -69,7 +69,7 @@ body.lg-on {
 
       @include media-breakpoint-up(xxl) {
         height: rem-calc(197);
-        width: rem-calc(352);
+        width:  rem-calc(352);
 
         &:only-child {
           height: rem-calc(412);

@@ -1,2 +1,1 @@
-ala_default_classes: "btn btn-default-sm|Default button small\r\nbtn btn-primary-sm|Primary button small\r\nbtn btn-secondary-sm|Secondary button small\r\nbtn btn-default-md|Default button medium\r\nbtn btn-primary-md|Primary button medium\r\nbtn btn-secondary-md|Secondary button medium\r\nbtn btn-default|Default button Large\r\nbtn btn-primary|Primary button Large\r\nbtn btn-secondary|Secondary button Large\r\n"
-ala_extra_attributes: ''
+ala_default_classes: "btn btn-default|Default\r\nbtn btn-primary|Primary\r\nbtn btn-secondary|Secondary\r\n"

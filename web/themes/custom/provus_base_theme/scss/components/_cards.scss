@@ -292,6 +292,9 @@
   .card {
     border: none;
     box-shadow: none;
+    max-width: 280px;
+    margin: 0 auto;
+
     .card-wrapper {
       margin: auto;
       padding: 0;
@@ -314,13 +317,12 @@
   }
   .card-img-top {
     border-radius: $card-border-radius;
-    max-height: 448px;
+    height: 448px;
+    width: 280px;
     overflow: hidden;
-    aspect-ratio: 1 / 2;
     
     img {
       width: 100%;
-      aspect-ratio: .625;
     }
   }
   a {
@@ -382,117 +384,10 @@
   }
 }
 
-// 4 Card featured
-.four-card-featured-group-wrapper {
-  display: block;
-  @include media-breakpoint-up(md) {
-    display: flex;
-  }
-  .card {
-    border: none;
-    
-  }
-
-  .content-left,
-  .content-right {
-    width: 100%;
-    @include media-breakpoint-up(md) {
-      width: 50%;
-    }
-
-    .row > * {
-      padding: 0;
-    }
-  }
-
-  .content-left {
-    @include media-breakpoint-up(md) {
-      margin-right: 140px;
-    }
-
-    .card-title {
-      @include text-style-headline-h-3;
-      margin-bottom: $padding-padding-xxs;
-    }
-  }
-  .content-right {
-    .card {
-      box-shadow: none;
-      border-radius: 0;
-    }
-
-    @include media-breakpoint-up(md) {
-      width: 50%;
-      border-left: 1px solid $primary;
-      padding-left: 140px;
-
-      .card {
-        .card-body {
-          padding-top: 0;
-        }
-        margin-bottom: $padding-padding-xlg;
-      }
-    }
-  }
-
-  .card-wrapper.provus-card-left,
-  .card-wrapper.provus-card-right {
-    .card-body {
-      margin: 0;
-      padding: $padding-padding-xxlg $padding-padding-xlg;
-      width: 100%;
-    }
-
-    .card-title {
-      @include text-style-headline-h-4;
-    }
-
-    .card-text {
-      display: none;
-    }
-  }
-
-  .card-wrapper.provus-card-left .card-img {
-    border-radius: 0 !important;
-  }
-}
-
-.block-inline-blockprovus-group,
-.block-inline-blockprovus-group-automatic {
-  .col {
-    display: flex;
-    flex-direction: row;
-    .card-wrapper {
-      display: flex;
-      .card {
-        display: flex;
-        flex-direction: column;
-        .card-img-top {
-          height: auto;
-        }
-        .card-body {
-          flex-grow: 1;
-          display: flex;
-          flex-direction: column;
-          .card-title {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-          }
-          .card-text {
-            flex-grow: 1;
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-
 .provus-card-basic,
 .provus-card-basic-plus {
   .card-title {
-    @include text-style-headline-h-4;   
+    @include text-style-headline-h-4;
     margin-bottom: $padding-padding-xxs;
   }
   .card-text {

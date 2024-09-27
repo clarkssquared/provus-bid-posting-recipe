@@ -30,17 +30,26 @@ lightslider:
     - core/jquery
     - core/once
 
+jquery-match-height:
+  js:
+    /libraries/jquery-match-height/dist/jquery.matchHeight-min.js : { minified: true }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - blazy/blazy
+
 carousel:
   js:
     js/carousel.js: {}
   dependencies:
-    - provus_base_theme/lightslider
+    - provus_bootstrap/lightslider
 
 carousel-3-item:
   js:
     js/carousel-3-items.js: {}
   dependencies:
-    - provus_base_theme/lightslider
+    - provus_bootstrap/lightslider
+    - provus_bootstrap/jquery-match-height
 
 lightgallery:
   remote: sachinchoolur/lightGallery
@@ -74,7 +83,7 @@ photogallery:
     - core/drupal
     - core/jquery
 
-    - provus_base_theme/lightgallery
+    - provus_bootstrap/lightgallery
 
 slick:
   js:
@@ -92,4 +101,4 @@ slideshow:
   js:
     js/slideshow.js : { minified: true }
   dependencies:
-    - provus_base_theme/slick
+    - provus_bootstrap/slick

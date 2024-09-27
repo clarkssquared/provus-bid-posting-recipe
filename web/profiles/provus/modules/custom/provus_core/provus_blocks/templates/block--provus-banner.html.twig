@@ -37,6 +37,15 @@
   'banner',
 ]
 %}
+
+{%
+  set bannerImage = ""
+%}
+
+{% if (file_url(content.field_provus_media_image[0]['#media'].field_media_image.entity.uri.value )) is not empty %}
+  {% set bannerImage = 'has-bg-image' %}
+{% endif %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
@@ -54,39 +63,30 @@
     {% elseif content.field_provus_image_position[0]['#markup'] == 'right' %}
       <div class="banner-color-{{ content.field_provus_background_color[0]['#markup'] }} banner-background image-right">
     {% endif %}
-      {% if content.field_provus_image_position[0]['#markup'] == 'left' or  content.field_provus_image_position[0]['#markup'] == 'right' %}
+      {% if content.field_provus_image_position[0]['#markup'] == 'left' or content.field_provus_image_position[0]['#markup'] == 'right' %}
         <div class="container">
           <div{{ content_attributes.addClass('banner-inner row') }}>
       {% else %}
         <div{{ content_attributes.addClass('banner-inner') }}>
       {% endif %}
           {% if content.field_provus_media_image|render %}
-            {% if content.field_provus_image_position[0]['#markup'] == 'left' %}
-              <div class="banner-img col-md-4">
-            {% elseif content.field_provus_image_position[0]['#markup'] == 'right' %}
-              <div class="banner-img col-md-4 order-2">
-            {% else %}
-              <div class="banner-img">
-            {% endif %}
-              {% if content.field_provus_image_position[0]['#markup'] == 'left' or  content.field_provus_image_position[0]['#markup'] == 'right' %}
-              <img src="{{ content.field_provus_media_image[0]['#media'].field_media_image.entity.uri.value | image_style('banner_align_left_right') }}">
-              {% else %}
-              {{ content.field_provus_media_image }}
-              {% endif %}
+            <div class="banner-image-container position-{{ content.field_provus_image_position[0]['#markup'] }}">
+              {{ content.field_provus_media_image.0 }}
             </div>
           {% endif %}
-        {% if content.field_provus_image_position[0]['#markup'] == 'left' or  content.field_provus_image_position[0]['#markup'] == 'right' %}
-        <div class="banner-content col-md-8">
+        {% if content.field_provus_image_position[0]['#markup'] == 'left' or content.field_provus_image_position[0]['#markup'] == 'right' %}
+        <div class="banner-content col-lg-6 col-sm-12">
         {% else %}
         <div class="banner-content">
         {% endif %}
           <div class="container">
             <div class="row">
               {% if content.field_provus_image_position[0]['#markup'] == 'full' %}
-                <div class="col-sm-12 col-md-8 col-lg-6">
+                <div class="col-sm-12 col-lg-6">
               {% else %}
-                <div class="col-md-12">
+                <div class="col-sm-12">
               {% endif %}
+                <div class="banner-content-body">
                 {% if content.field_provus_sub_title %}
                   <div class="subheading">
                     {{ content.field_provus_sub_title }}
@@ -101,18 +101,18 @@
                 {% if content.field_provus_links %}
                   <div class="banner-links">{{ content.field_provus_links }}</div>
                 {% endif %}
+                </div>
             </div>
           </div>
         </div>
       </div>
-      {% if content.field_provus_image_position[0]['#markup'] == 'left' or  content.field_provus_image_position[0]['#markup'] == 'right' %}
+      {% if content.field_provus_image_position[0]['#markup'] == 'left' or content.field_provus_image_position[0]['#markup'] == 'right' %}
         </div>
       {% endif %}
     </div>
     </div>
-    {% if content.field_provus_short_banner.value == 'true' %}
+    {% if content.field_provus_short_banner[0]['#markup'] == 'true' %}
       </div>
     {% endif %}
   {% endblock %}
 </div>
-

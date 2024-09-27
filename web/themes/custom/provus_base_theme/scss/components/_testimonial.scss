@@ -4,7 +4,7 @@
   border-radius: 2px;
   background: $primary-shade;
 
-  >.row {
+  > .row {
     @include media-breakpoint-down (lg) {
       flex-direction: column-reverse;
     }
@@ -34,7 +34,7 @@
   }
 
   .testimonial-body {
-    @include text-style-headline-h-3;
+   @include text-style-headline-h-3;
     margin-bottom: rem-calc(40);
 
     &:before {
@@ -68,7 +68,6 @@
 
     .field--name-field-provus-media-image {
       width: inherit;
-
       img {
         height: auto;
         width: 100%;
@@ -115,7 +114,6 @@
     >.row {
       .col-lg-6:first-child {
         order: 2;
-
         @include media-breakpoint-up(lg) {
           order: unset;
         }

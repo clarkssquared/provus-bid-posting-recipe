@@ -80,6 +80,31 @@
     background-size: 16px;
     padding-left: 30px;
   }
+
+  .form-type-textfield {
+    .form-control {
+      border: 1px solid $card-border-color;
+      @include effect-style-elevation-xs();
+      @include text-style-body-body-1();
+      color: $body-color;
+      padding-left: $padding-padding-xlg;
+
+      &:hover {
+        background-color: rgba(16, 26, 35, 0.10);
+      }
+
+      &:focus,
+      &:active {
+        border: 1.6px solid $primary-colors-primary;
+      }
+    }
+  }
+}
+
+#searchCollapse {
+  top: 0.35rem !important;
+  right: $padding-padding-xxlg;
+  margin-right: $padding-padding-xxxs;
 }
 
 .region-header-form {

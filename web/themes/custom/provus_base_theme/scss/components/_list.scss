@@ -144,3 +144,35 @@
     }
   }
 }
+
+.list-wrapper {
+  .list-style {
+    &.icon-left, &.icon-right, &.icon-top {
+      ul {
+        padding-left: 0;
+        div {
+          li {
+            padding-left: 0;
+            &::marker {
+              color: transparent;
+            }
+          }
+        }
+      }
+    }
+    &.column-row {
+      ul {
+        padding-left: 0;
+        div {
+          li {
+            width: auto;
+            padding-left: 0;
+            &::marker {
+              color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}

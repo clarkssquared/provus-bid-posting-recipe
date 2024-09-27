@@ -88,11 +88,11 @@
     }
   }
   &.alert-warning {
-    color: $black;
+    color: $text-primary;
     background-color: $warning-primary;
     border-color: $warning-primary;
     &::before {
-      color: $black;
+      color: $text-primary;
       font-family: "Font Awesome 5 Free";
       font-size: $font-size-base;
       content: "\f0f3";
@@ -150,21 +150,25 @@
   &.alert-dismissible {
     .btn-close {
       opacity: 1;
-      padding: 0 $padding-padding-sm;
-      height: 100%;
+      padding: 0;
       font-size: 12px;
-      background: none;
+      color: $white;
+      background: url('../images/close-white.svg') no-repeat;
+      background-size: 14px;
+      top: 50%;
+      right:  $padding-padding-sm;
+      margin-top: -7px;
+      width: 14px;
+      height: 14px;
       
       &::before {
-        color: $white;
-        font-family: "Font Awesome 5 Free";
-        font-size: 12px;
-        content: "\f057";
+        display: none;
       }
     }
     &.alert-warning, &.alert-light {
-      .btn-close::before {
-        color: $text-primary;
+      .btn-close {
+        color: #000000;
+        background-image: url('../images/close.svg');
       }
     }
   }

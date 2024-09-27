@@ -1,7 +1,6 @@
-// Files list styles.
 .list-wrapper {
-  >.field__items {
-    >.field__item {
+  > .field__items {
+    > .field__item {
       background: $background-colors-background-lightblue;
       border: .5px solid $background-colors-background-grey;
       color: $primary;
@@ -31,8 +30,7 @@
             content: '';
             background: url('../images/download.svg') no-repeat;
             background-size: 16px 16px;
-            width: 16px;
-            height: 16px;
+            width: 16px; height: 16px;
             position: absolute;
             right: 0;
             top: 50%;
@@ -40,8 +38,7 @@
 
             @include media-breakpoint-up(lg) {
               background-size: 20px 20px;
-              width: 20px;
-              height: 20px;
+              width: 20px; height: 20px;
               margin-top: -10px;
             }
           }
@@ -70,8 +67,7 @@
 
             @include media-breakpoint-up(lg) {
               background-size: 24px 32px;
-              width: 24px;
-              height: 32px;
+              width: 24px; height: 32px;
               margin-top: -16px;
             }
           }
@@ -96,5 +92,20 @@
   .card-title {
     margin-bottom: $padding-padding-lg;
     @include text-style-headline-h-4;
+  }
+  .list-wrapper {
+    > .field__items {
+      > .field__item {
+        .field--type-file:hover {
+          a {
+            color: $primary-colors-primary-hover;
+          }
+          a:after {
+            background-image: url('../images/download-hover.svg');
+          }
+        }
+
+      }
+    }
   }
 }

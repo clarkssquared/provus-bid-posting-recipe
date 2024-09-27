@@ -36,7 +36,7 @@
   'block-' ~ plugin_id|clean_class,
 ]
 %}
-{%  set rowclass = 'row row-cols-1 row-cols-sm-' ~ group_number  %}
+{% set rowclass = 'row row-cols-1 row-cols-sm-' ~ group_number %}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
@@ -46,13 +46,17 @@
   {% block content %}
   <div class="list-wrapper">
     <div class="list-style {{ content.field_provus_list_style.0 }} {{ group_display }}">
-      <div{{ content_attributes.addClass(rowclass) }}>
-        {% for block in blocks %}
-          <div class="{% if group_number is not null %}col{% endif %}">
-            {{ block }}
-          </div>
-        {% endfor %}
-      </div>
+      <ul>
+        <div{{ content_attributes.addClass(rowclass) }}>
+          {% for block in blocks %}
+            <li>
+              <div class="{% if group_number is not null %}col{% endif %}">
+                {{ block }}
+              </div>
+            </li>
+          {% endfor %}
+        </div>
+      </ul>
     </div>
   </div>
   {% endblock %}

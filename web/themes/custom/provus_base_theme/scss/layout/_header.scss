@@ -55,6 +55,7 @@
     z-index: 99;
     width: rem-calc(50);
     padding: rem-calc(8 16);
+    top: $padding-padding-xs;
     .fa-xmark {
       display: none;
     }
@@ -71,7 +72,7 @@
     height: 40px;
     a[aria-expanded="false"] {
       width: 100%;
-      text-align: center;
+      text-align: right;
     }
   }
 }

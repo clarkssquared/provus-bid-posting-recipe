@@ -494,6 +494,7 @@ function _provus_preprocess_group(&$vars, $block) {
   $vars['group_number'] = !empty($display_type[1]) ? $display_type[1] : NULL;
   // Get item display.
   $vars['display_content'] = $block->get('field_provus_item_display')->value;
+  $vars['group_display'] = $group_display;
   // Get content.
   $id_array = $block->get('field_provus_block_items')->getValue();
   // Format content.
@@ -514,6 +515,7 @@ function _provus_preprocess_group_auto(&$vars, $block) {
   $vars['group_number'] = !empty($display_type[1]) ? $display_type[1] : NULL;
   // Get item display.
   $vars['display_content'] = $block->get('field_provus_item_display')->value;
+  $vars['group_display'] = $group_display;
   // Get content.
   $content_type = $block->get('field_provus_content_type')->value;
   $options['count'] = $block->get('field_provus_count')->value;

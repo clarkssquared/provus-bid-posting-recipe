@@ -7,11 +7,13 @@ $color-heading: $text-primary;
 
 @mixin heading-xl($color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $margin: 0) {
   @include text-style-headline-h-1;
-
+  
   color: $color;
-  margin: 1rem $margin;
+  margin-left: $margin;
+  margin-right: $margin;
   width: auto;
-
+  
+  
   &__link {
     color: $color-link;
 
@@ -25,7 +27,8 @@ $color-heading: $text-primary;
   @include text-style-headline-h-2;
 
   color: $color;
-  margin: 1rem $margin;
+  margin-left: $margin;
+  margin-right: $margin;
   width: auto;
 
   &__link {
@@ -41,7 +44,8 @@ $color-heading: $text-primary;
   @include text-style-headline-h-3;
 
   color: $color;
-  margin: 1rem $margin;
+  margin-left: $margin;
+  margin-right: $margin;
   width: auto;
 
   &__link {
@@ -57,7 +61,8 @@ $color-heading: $text-primary;
   @include text-style-headline-h-4;
 
   color: $color;
-  margin: 1rem $margin;
+  margin-left: $margin;
+  margin-right: $margin;
   width: auto;
 
   &__link {
@@ -73,8 +78,8 @@ $color-heading: $text-primary;
   @include text-style-headline-h-5;
 
   color: $color;
-  margin: $margin;
-  margin-bottom: $margin;
+  margin-left: $margin;
+  margin-right: $margin;
   width: auto;
 
   &__link {

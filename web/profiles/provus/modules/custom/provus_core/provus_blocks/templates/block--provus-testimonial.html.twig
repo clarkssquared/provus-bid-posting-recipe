@@ -54,9 +54,7 @@
         {% endif %}
           <div class="testimonial-content">
             {% if content.field_provus_testimonial_body.0 %}
-              <div class="testimonial-body">
-                {{ content.field_provus_testimonial_body.0|raw }}
-              </div>
+              <div class="testimonial-body">{{ content.field_provus_testimonial_body.0|raw }}</div>
             {% endif %}
             {% if content.field_provus_testimonial_name.0 %}
               <div class="testimonial-name">

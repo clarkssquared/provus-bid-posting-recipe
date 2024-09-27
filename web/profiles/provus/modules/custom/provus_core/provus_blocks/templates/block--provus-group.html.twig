@@ -34,6 +34,8 @@
   'block',
   'block-' ~ configuration.provider|clean_class,
   'block-' ~ plugin_id|clean_class,
+  'block-group-' ~ group_display|clean_class,
+  'block-item-' ~ display_content|clean_class
 ]
 %}
 {%  set rowclass = 'row row-cols-1 row-cols-md-' ~ group_number  %}

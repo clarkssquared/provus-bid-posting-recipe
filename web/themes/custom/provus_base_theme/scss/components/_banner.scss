@@ -1,5 +1,5 @@
-$banner-height-desktop-lg: 584px;
-$banner-height-desktop-sm: 420px;
+$banner-height-desktop-lg: 740px;
+$banner-height-desktop-sm: 584px;
 
 $banner-height-tablet-lg: 480px;
 $banner-height-tablet-sm: 400px;
@@ -7,27 +7,47 @@ $banner-height-tablet-sm: 400px;
 $banner-height-mobile-lg: 282px;
 $banner-height-mobile-sm: 232px;
 
-@mixin banner-background() {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: 0;
-  opacity: 1;
-  transition: all 0.3s linear;
-  background-size: cover;
+@mixin adjust-full-banner-height() {
+  height: $banner-height-mobile-lg;
+
+  @include media-breakpoint-up(sm) {
+    height: $banner-height-tablet-lg;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: $banner-height-desktop-lg;
+  }
 }
 
-.banner-background, 
-.smaller-banner .banner-background {
+@mixin adjust-l-r-banner-height() {
+  @include media-breakpoint-down(sm) {
+    height: 274px;
+  }
+  @include media-breakpoint-up(sm) {
+    height: 400px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 740px;
+  }
+}
+
+@mixin adjust-short-banner-height() {
+  height: $banner-height-mobile-sm;
+
+  @include media-breakpoint-up(sm) {
+    height: $banner-height-tablet-sm;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: $banner-height-desktop-sm;
+  }
+}
+
+.banner-background {
   overflow: hidden;
-  
+
   .banner-title {
-    @include text-style-display-headline-display;
+    @include text-style-display-headline-display-banner;
     margin: 0 0 $padding-padding-xxs 0;
   }
 
@@ -41,6 +61,7 @@ $banner-height-mobile-sm: 232px;
 
   .banner-links {
     margin-top: 48px;
+
     .field--name-field-provus-links {
       display: flex;
       column-gap: $padding-padding-xxlg;
@@ -51,7 +72,10 @@ $banner-height-mobile-sm: 232px;
     background-color: $primary;
 
     .banner-content {
-      h1, p, .subheading {
+
+      h1,
+      p,
+      .subheading {
         color: $text-contrast;
       }
     }
@@ -65,7 +89,10 @@ $banner-height-mobile-sm: 232px;
     background-color: $secondary;
 
     .banner-content {
-      h1, p, .subheading {
+
+      h1,
+      p,
+      .subheading {
         color: $text-contrast;
       }
     }
@@ -87,7 +114,10 @@ $banner-height-mobile-sm: 232px;
     background-color: $primary-accent;
 
     .banner-content {
-      h1, p, .subheading {
+
+      h1,
+      p,
+      .subheading {
         color: $text-contrast;
       }
     }
@@ -97,37 +127,115 @@ $banner-height-mobile-sm: 232px;
     }
   }
 
-  &.image-full {
-    .banner-image-container {
-      @include banner-background();
-    }
-  }
-
+  // All banners.
   .banner-image-container {
-    height: $banner-height-mobile-lg;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    overflow: hidden;
+    @include adjust-l-r-banner-height();
 
-    @include media-breakpoint-up(sm) {
-      height: $banner-height-tablet-lg;
+    // Needed for admin side.
+    > div,
+    .contextual-region,
+    .field--name-thumbnail {
+      height: 100%;
+      width: 100%;
+      position: unset;
+    }
+
+    img {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 100%;
+      }
     }
 
     @include media-breakpoint-up(lg) {
-      height: 100%;
-      @include banner-background();
 
       &.position-left {
         width: 50%;
-        height: 100%;
       }
 
       &.position-right {
         width: 50%;
         right: 0;
         left: unset;
-        height: 100%;
       }
+    }
+  }
+
+  // Full banner.
+  &.image-full {
+    .banner-image-container {
+      position: absolute;
+      @include adjust-full-banner-height();
+
+      img {
+        @include adjust-full-banner-height();
+      }
+    }
+
+    .banner-image-container,
+    .banner-content {
+      display: flex;
+      align-items: center;
+      @include adjust-full-banner-height();
+    }
+  }
+
+  // Left - Right banners {
+  &.image-left,
+  &.image-right {
+    display: flex;
+    align-items: center;
+
+    .container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .banner-image-container {
+      height: 100%;
+      @include adjust-l-r-banner-height;
+
+      > div,
+      .field--name-thumbnail {
+        img {
+          @include media-breakpoint-up(lg) {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  // Right banner.
+  &.image-right {
+    .banner-image-container {
+      order: 2;
+
+      img {
+        left: unset;
+        right: 0;
+      }
+    }
+    .banner-content {
+      order: 1;
+    }
+  }
+
+  // Left banner.
+  &.image-left {
+    .banner-image-container {
+      left: 0;
     }
   }
 }
@@ -142,12 +250,9 @@ $banner-height-mobile-sm: 232px;
   .banner-inner {
     display: flex;
     align-items: center;
+
     .banner-img {
       height: unset;
-
-      @include media-breakpoint-up(lg) {
-        height: $banner-height-desktop-lg;
-      }
     }
   }
 
@@ -155,52 +260,35 @@ $banner-height-mobile-sm: 232px;
     .banner-inner {
       height: unset;
 
-      @include media-breakpoint-up(sm) {
-        height: $banner-height-tablet-lg;
-      }
-
-      @include media-breakpoint-up(lg) {
-        height: $banner-height-desktop-lg;
-      }
-      
       .banner-content {
-        padding: $padding-padding-xxlg;
+        padding: $padding-padding-xs $padding-padding-xxs;
+
         @include media-breakpoint-up(lg) {
           padding: 0;
         }
 
         position: relative;
         width: 100%;
-        h1, p, .subheading {
+
+        h1,
+        p,
+        .subheading {
           color: $text-contrast;
           text-shadow: 0px 0px 10px #00000025;
         }
       }
-      .banner-img {
-        position: absolute;
-        right: 0;
-        left: 0;
-      }
-    }
-  }
-
-  &.image-left, &.image-right {
-    .banner-inner {
-      height: auto;
-
-      @include media-breakpoint-up(lg) {
-        height: $banner-height-desktop-lg;
-      }
-    }
-    .banner-img {
-      position: relative;
-      overflow: hidden;
     }
   }
 
   &.image-left {
+    .banner-inner {
+      @include media-breakpoint-up(lg) {
+        justify-content: flex-end;
+      }
+    }
+
     .banner-content-body {
-      padding: $padding-padding-xxlg;
+      padding: $padding-padding-xs $padding-padding-xlg;
 
       @include media-breakpoint-up(lg) {
         padding: $padding-padding-md;
@@ -211,7 +299,7 @@ $banner-height-mobile-sm: 232px;
 
   &.image-right {
     .banner-content-body {
-      padding: $padding-padding-xxlg;
+      padding: $padding-padding-xs $padding-padding-xlg;
 
       @include media-breakpoint-up(lg) {
         padding-left: 0px;
@@ -231,23 +319,12 @@ $banner-height-mobile-sm: 232px;
   }
 
   .banner-image-container {
-    height: $banner-height-mobile-sm;
-
-    @include media-breakpoint-up(sm) {
-      height: $banner-height-tablet-sm;
-    }
+    @include adjust-short-banner-height;
   }
 
   .banner-inner {
     display: flex;
     align-items: center;
-    .banner-img {
-      height: auto;
-
-      @include media-breakpoint-up(lg) {
-        height: $banner-height-desktop-sm;
-      }
-    }
   }
 
   .banner-links {
@@ -259,42 +336,10 @@ $banner-height-mobile-sm: 232px;
 
   &.image-full {
     .banner-inner {
-      height: unset;
-      
-      @include media-breakpoint-up(md) {
-        height: $banner-height-tablet-sm;
-      }
+      @include adjust-short-banner-height;
 
       @include media-breakpoint-up(lg) {
-        height: $banner-height-desktop-sm;
         padding: 0;
-      }
-    }
-  }
-
-  &.image-left, &.image-right {
-    .banner-inner {
-      height: unset;
-
-      @include media-breakpoint-up(lg) {
-        height: auto;
-      }
-
-      .banner-img {
-        height: unset;
-      }
-    }
-    
-    .banner-img {
-      position: relative;
-      overflow: hidden;
-
-      @include media-breakpoint-up(sm) {
-        height: $banner-height-tablet-sm;
-      }
-
-      @include media-breakpoint-up(lg) {
-        height: $banner-height-desktop-sm;
       }
     }
   }

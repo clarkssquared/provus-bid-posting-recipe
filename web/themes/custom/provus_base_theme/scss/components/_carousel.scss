@@ -24,60 +24,11 @@
       margin-left: rem-calc(40);
       margin-right: rem-calc(40);
       .lSAction {
-        a {
-          width: rem-calc(20);
-          height: (40);
-          top: calc(50% - 25px);
-          background: none;
-          opacity: .5;
-          text-decoration: none;
-          &:before {
-            color: $black;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            background: none;
-            font-size: rem-calc(40);
-          }
-          &:hover {
-            opacity: .9;
-          }
-        }
-        .lSPrev {
-          left: 4px;
-          &:before {
-            content: "\f104";
-          }
-        }
-        .lSNext {
-          right: 4px;
-          &:before {
-            content: "\f105";
-          }
-        }
+        @include carousel-controls;
       }
     }
     .lSPager.lSpg {
-      li {
-        padding: 0;
-        &::before {
-          display: none !important;
-        }
-      }
-      li > a {
-        width: 9px;
-        height: 9px;
-        border: 1px solid $primary-shade;
-        background: transparent;
-        border-radius: 100%;
-        box-sizing: content-box;
-        margin-right: 3px;
-        margin-left: 3px;
-      }
-      li:hover a,
-      li.active > a {
-        border: 1px solid $secondary-shade;
-        background: $secondary-shade;
-      }
+      @include carousel-pager;
     }
   }
 }

@@ -1,3 +1,74 @@
+// Tabs color changes
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  background: $primary-shade;
+  color: $white;
+}
+
+.nav-item {
+  .nav-link {
+    color: $secondary-shade;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $primary-shade;
+    }
+  }
+}
+
+// Admin nav
+nav.tabs ul {
+  background: $background-colors-background-white;
+  li.nav-item {
+    color: $primary-colors-primary;
+    border: 0.5px solid $background-grey;
+    overflow: hidden;
+    border-radius: $padding-padding-xxs $padding-padding-xxs 0 0;
+    @include text-style-headline-h-5();
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    &.active {
+      a {
+        background: $background-colors-background-lightblue;
+        color: $primary-colors-primary;
+        overflow: hidden;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 100%;
+          background: $primary-shade;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 8px;
+          transform: rotate(0deg);
+        }
+
+        &:hover::before {
+          content: '';
+          height: 0;
+        }
+
+        &:hover {
+          background: $background-colors-background-white;
+          text-decoration: underline;
+          color: $primary-colors-primary;
+        }
+      }
+    }
+
+    .nav-link {
+      color: $primary-colors-primary;
+      padding: $padding-padding-xs $padding-padding-xlg;
+      &:hover,
+      &:focus {
+        border-color: $background-colors-background-white;
+      }
+    }
+  }
+}
+
 // Vertical Tabs
 
 .vertical-tabs {
@@ -48,7 +119,7 @@
             background: $background-colors-background-white;
             text-decoration: underline;
           }
-
+         
           &:before {
             content: '';
             width: $padding-padding-xxs;
@@ -130,7 +201,7 @@
             background: $background-colors-background-lightblue;
             color: $primary-colors-primary;
             border: 0.5px solid $background-colors-background-grey;
-
+            
             &:before {
               content: '';
               width: 100%;

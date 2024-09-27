@@ -114,7 +114,10 @@ function provus_preprocess_node(&$vars) {
     if ($vars['node']->field_provus_media_image) {
       $fid = $vars['node']->field_provus_media_image->target_id;
       $file = \Drupal\file\Entity\File::load($fid);
-      $vars['content_image_uri'] = $file->getFileUri();
+      $vars['content_image_uri'] = '';
+      if ($file) {
+        $vars['content_image_uri'] = $file->getFileUri();
+      }
     }
   }
 

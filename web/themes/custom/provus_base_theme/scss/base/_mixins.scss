@@ -105,3 +105,72 @@ $rem-base: 16px;
 @mixin img-bg-title-width() {
   max-width: 245px;
 }
+
+@mixin carousel-arrows() {
+  color: $primary;
+  font-weight: 900;
+  background: none;
+  font-size: 1.25rem;
+  font-family: "Font Awesome 5 Free";
+}
+
+@mixin carousel-controls() {
+  a {
+    width: rem-calc(20);
+    height: (40);
+    top: calc(50% - 25px);
+    background: none;
+    opacity: .5;
+    text-decoration: none;
+    &:before {
+      color: $black;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      background: none;
+      font-size: rem-calc(40);
+    }
+    &:hover {
+      opacity: .9;
+    }
+  }
+  .lSPrev {
+    left: 4px;
+    &:before {
+      content: "\f104";
+    }
+  }
+  .lSNext {
+    right: 4px;
+    &:before {
+      content: "\f105";
+    }
+  }
+}
+
+@mixin carousel-pager($color: $primary-shade, $hover-color: $secondary-shade, $size: 9px, $border-width: 1px, $dot-spacing: 3px) {
+  li {
+    padding: 0;
+    &::before {
+      display: none !important;
+    }
+  }
+  li > a {
+    width: #{$size};
+    height: #{$size};
+    border-width: #{$border-width};
+    border-style: solid;
+    border-color: #{$color};
+    background: transparent;
+    border-radius: 100%;
+    box-sizing: content-box;
+    margin-right: calc(#{$dot-spacing} / 2);
+    margin-left: calc(#{$dot-spacing} / 2);
+  }
+  li:hover a,
+  li.active > a {
+    border-width: #{$border-width};
+    border-style: solid;
+    border-color: #{$hover-color};
+    background: #{$hover-color};
+  }
+}

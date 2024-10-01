@@ -1,6 +1,10 @@
 .list-wrapper {
-  > .field__items {
-    > .field__item {
+  > ul {
+    padding-left: 0;
+    > li {
+      &::marker {
+        color: transparent;
+      }
       background: $background-colors-background-lightblue;
       border: .5px solid $background-colors-background-grey;
       color: $primary;
@@ -13,7 +17,7 @@
       a {
         color: $primary;
         text-decoration: none;
-      }
+        }
 
       .file {
         padding-left: $padding-padding-xxs;
@@ -94,17 +98,23 @@
     @include text-style-headline-h-4;
   }
   .list-wrapper {
-    > .field__items {
-      > .field__item {
+    > ul {
+      padding-left: 0;
+      > li {
+        &::marker {
+          color: transparent;
+        }
+        &:hover {
+          background: $background-white;
+        }
         .field--type-file:hover {
           a {
-            color: $primary-colors-primary-hover;
+                color: $primary-colors-primary-hover;
           }
           a:after {
             background-image: url('../images/download-hover.svg');
           }
         }
-
       }
     }
   }

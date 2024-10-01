@@ -7,13 +7,13 @@ $color-heading: $text-primary;
 
 @mixin heading-xl($color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $margin: 0) {
   @include text-style-headline-h-1;
-  
+
   color: $color;
   margin-left: $margin;
   margin-right: $margin;
   width: auto;
-  
-  
+
+
   &__link {
     color: $color-link;
 
@@ -159,6 +159,35 @@ a {
   }
 }
 
+// Heading block in colored section.
+.bg-primary {
+  .block-provus-heading {
+    .line-on {
+      h1,h2,h3,h4,h5,h6 {
+        &::before {
+          background: $primary-accent;
+        }
+      }
+    }
+  }
+}
+
+.bg-secondary {
+  .block-provus-heading {
+    h1,h2,h3,h4,h5, h6,.subheading {
+      color: $secondary-colors-secondary-contrast;
+    }
+
+    .line-on {
+      h1,h2,h3,h4,h5,h6 {
+        &::before {
+          background: $secondary-accent;
+        }
+      }
+    }
+  }
+}
+
 // Heading block.
 .block-provus-heading {
   h1,h2,h3,h4,h5,h6 {
@@ -174,6 +203,7 @@ a {
   .line-on {
     h1,h2,h3,h4,h5,h6 {
       background: $white;
+      color: $text-colors-body-color;
       &:before {
         width: 100%;
         height: rem-calc(2);

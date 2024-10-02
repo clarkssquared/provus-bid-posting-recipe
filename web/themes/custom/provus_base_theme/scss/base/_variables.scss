@@ -194,6 +194,6 @@ $radius-radius-xxl: 40px;
 $radius-radius-xxxl: 100px;
 
 // Pagination
-$focus-ring-color: rgba($primary, .6);
+$focus-ring-color: $primary;
 $focus-ring-width: 2px;
 $pagination-focus-box-shadow: 0 0 0 $focus-ring-width $focus-ring-color;

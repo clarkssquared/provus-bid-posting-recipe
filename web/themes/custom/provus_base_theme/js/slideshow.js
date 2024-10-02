@@ -5,6 +5,27 @@
       console.log('Each slideshow');
       const sliderSpeed = $(this).attr('data-slide-speed');
       const sliderAutoplay = $(this).attr('data-autoplay');
+      $(this).on('init reInit beforeChange', function(event, slick){
+        let dots = $(this).find('.slick-dots')
+        let dot = dots.find('li');
+        let dotBtn = dot.find('button');
+        let slickTrack = $(this).find('.slick-track');
+        let currentSlide = $(this).find('.slick-current');
+        setTimeout( function() {
+          $(dots).removeAttr('role');
+          $(dot).removeAttr('role aria-controls aria-hidden aria-selected');
+          $(dotBtn).removeAttr('role');
+          $(dotBtn).removeAttr('tabindex');
+          $(slickTrack).attr('aria-label', 'Slideshow');
+          $(dot).each(function(index) {
+            $(this).attr('aria-label', 'Slide ' + (index + 1));
+          });
+          slick.$slides.each( function(index) {
+            $(this).attr('title', 'Slide ' + (index + 1));
+            $(this).removeAttr('aria-hidden, tabindex');
+          });
+        }, 60);
+      });
       $(this).slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -16,26 +37,6 @@
         autoplay: sliderAutoplay == 'true' ? true : false,
         autoplaySpeed: sliderSpeed,
         infinite: true
-      });
-      $(this).on('init reInit afterChange beforeChange', function(event, slick){
-        let dots = $(this).find('.slick-dots')
-        let dot = dots.find('li');
-        let dotBtn = dot.find('button');
-        let slickTrack = $(this).find('.slick-track');
-        let currentSlide = $(this).find('.slick-current');
-        setTimeout(function() {
-          $(dots).removeAttr('role');
-          $(dot).removeAttr('role');
-          $(dot).removeAttr('aria-controls');
-          $(dot).removeAttr('aria-hidden');
-          $(dot).removeAttr('aria-selected');
-          $(dotBtn).removeAttr('role');
-          $(dotBtn).removeAttr('tabindex');
-          $(slickTrack).attr('aria-label', 'Slideshow');
-          slick.$slides.each(function(index){
-            $(this).attr('title', 'slide-' + index);
-          });
-        }, 10);
       });
     });
 

@@ -13,7 +13,7 @@
         allowMediaOverlap: true,
         toggleThumb: false,
         mobileSettings: {
-          download: false,
+          download: true,
           rotate: false,
         },
       })

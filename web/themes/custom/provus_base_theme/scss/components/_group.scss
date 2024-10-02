@@ -1,6 +1,14 @@
 .block-inline-blockprovus-group,
 .block-inline-blockprovus-group-automatic {
 
+  h3 > a {
+    text-decoration: none;
+    color: var(--bs-card-title-color);
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
   // Column row.
   &.block-group-column {
     .col {
@@ -21,7 +29,9 @@
     padding-right: $padding-padding-sm;
     padding-left: $padding-padding-sm;
     @include media-breakpoint-down(lg) {
-      @include breakout;
+      width: 100vw;
+      position: relative;
+      left: calc(-1 * (100vw - 100%) / 2);
     }
     @include media-breakpoint-up(lg) {
     }
@@ -159,7 +169,7 @@
           @include media-breakpoint-down(lg) {
             padding-bottom: $padding-padding-xxlg;
             margin-bottom: $padding-padding-xxlg;
-            border-bottom: 1px solid $primary;
+            border-bottom: 2px solid $primary;
           }
           @include media-breakpoint-up(lg) {
             margin-right: $padding-padding-xlg;
@@ -176,7 +186,7 @@
       .content-right {
         $square-image-size: 212px;
         @include media-breakpoint-up(lg) {
-          border-left: 1px solid $primary;
+          border-left: 2px solid $primary;
         }
         .card-wrapper {
           margin-bottom: $padding-padding-xxlg;

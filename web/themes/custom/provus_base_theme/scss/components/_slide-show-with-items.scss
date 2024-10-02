@@ -112,6 +112,10 @@
         &:before {
           display: none;
         }
+        &:hover,
+        &:focus-visible {
+          outline: $focus-ring-color auto 1px;
+        }
       }
       &.slick-active {
         button {
@@ -128,6 +132,13 @@
     margin-right: 0;
     height: rem-calc(16);
     width: rem-calc(16);
+    .play-btn,
+    .pause-btn {
+      &:hover,
+      &:focus-visible {
+        outline: $focus-ring-color auto 1px;
+      }
+    }
     .play-btn {
       width: inherit;
       height: inherit;

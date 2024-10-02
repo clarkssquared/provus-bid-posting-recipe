@@ -31,6 +31,7 @@
       // Custom code here
       $('#searchCollapse').on('shown.bs.collapse', function () {
         $('#searchCollapse .form-search').focus()
+        $('form .form-type-textfield input#edit-keys').focus()
       });
 
       $('#searchCollapse').on('hidden.bs.collapse', function () {
@@ -41,10 +42,19 @@
       $("nav.menu--main ul.navbar-nav li.nav-item.dropdown a").focus(function(){
         $(this).parent().addClass('hovered');
       });
-      
+
       $("nav.menu--main ul.navbar-nav li a.nav-link:not('.dropdown-toggle-main')").focus(function(){
         $('nav.menu--main ul.navbar-nav li.hovered').removeClass('hovered');
       });
+
+      // Grid MatchHeight.
+      let gridComponent = $('.block-group-column, .block-group-grid-2, .block-group-grid-3, .block-group-grid-4');
+      let gridCard = gridComponent.find('.card');
+      let gridTitle = gridCard.find('h3');
+      let gridBody = gridCard.find('.field--name-body');
+      gridCard.matchHeight({byRow: true});
+      gridTitle.matchHeight({byRow: true});
+      gridBody.matchHeight({byRow: true});
     }
   }
 

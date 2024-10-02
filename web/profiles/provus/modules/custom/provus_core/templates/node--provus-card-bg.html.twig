@@ -81,13 +81,19 @@
 <div{{ attributes.addClass(classes) }}>
   <a href="{{ url }}">
     {% block content %}
-      <div{{ content_attributes.addClass('card') }} style="background-image:url('{{ file_url(content.image.0['#item'].entity.uri.value | image_style('provus_square_medium')) }}');">
-        <div class="card-img-overlay">
-          <div class="card-body">
-            <h3 class="card-title">{{ label }}</h3>
+    <div{{ content_attributes.addClass('card') }}>
+      <div class="card-img-wrapper">
+        <div class="card-img-container" style="background-image:url('{{ file_url(content.image.0['#item'].entity.uri.value | image_style('provus_square_medium')) }}');"></div>
+      </div>
+      <div class="card-img-overlay">
+        <div class="card-body">
+          <h3 class="card-title">{{ label }}</h3>
+          <div class="arrow-right">
+            <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
       </div>
+    </div>
     {% endblock %}
   </a>
 </div>

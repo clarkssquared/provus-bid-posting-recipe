@@ -31,6 +31,14 @@
         @extend .btn;
         @extend .btn-outlined;
       }
+      a.btn {
+        &.btn-primary,
+        &.btn-secondary {
+          &:hover {
+            box-shadow: 0 0 0 3px $background-lightblue;
+          }
+        }
+      }
     }
 
     &.Primary, &.Secondary {
@@ -71,7 +79,7 @@
 
     .cta-body {
       @include text-style-body-body-1;
-      
+
       p {
         margin-bottom: $padding-padding-xxlg;
       }

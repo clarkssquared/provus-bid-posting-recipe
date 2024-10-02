@@ -5,21 +5,24 @@
       const breakpointLarge = 980;
       const marginBig = 160;
       once('provus-carousel-3',".carousel-3-items .lightslider",context).forEach(function (value,i) {
-        const items = $(value).find('.provus-card-left').length > 0 ||
-          $(value).find('.provus-card-right').length > 0 ? 2 : 3;
+        const items = 3;
         const slider = $(value).lightSlider({
           onSliderLoad: function maxHeightFunc(el) {
             // MatchHeight.
             const container = $(el);
             const card = container.find('.card');
+            const list = container.find('.list');
             const cardextra = container.find('.card-extra');
             const content = card.find('.card-content');
             const title = card.find('.card-title');
             const body = card.find('.card-text');
+            const body2 = card.find('.card-body');
             content.matchHeight({byRow: true,});
             title.matchHeight({byRow: true,});
             body.matchHeight({byRow: true,});
             cardextra.matchHeight({byRow: true,});
+            card.matchHeight({byRow: true,});
+            list.matchHeight({byRow: true,});
             // Trigger a resize so everything fall in place.
             $(window).trigger('resize');
           },

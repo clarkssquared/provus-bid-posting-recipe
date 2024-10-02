@@ -54,3 +54,8 @@
     }
   }
 }
+
+.webform-submission-form .form-actions .webform-button--submit {
+  @extend .btn;
+  @extend .btn-primary;
+}

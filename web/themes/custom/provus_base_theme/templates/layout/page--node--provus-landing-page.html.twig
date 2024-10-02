@@ -110,13 +110,13 @@
                 {{ page.primary_menu }}
                 {% if page.header_form %}
                   <div class="form-inline navbar-form justify-content-end">
-                    <div class="collapse position-absolute" id="searchCollapse">
-                      {{ page.header_form }}
-                    </div>
                     <a class="nav-link" title="Toggle Search Bar" data-bs-toggle="collapse" href="#searchCollapse" role="button" aria-expanded="false" aria-controls="searchCollapse">
                       <span class="fas fa-search"></span>
                       <span class="fas fa-times"></span>
                     </a>
+                    <div class="collapse position-absolute" id="searchCollapse">
+                      {{ page.header_form }}
+                    </div>
                   </div>
                 {% endif %}
                 {% if navbar_offcanvas %}

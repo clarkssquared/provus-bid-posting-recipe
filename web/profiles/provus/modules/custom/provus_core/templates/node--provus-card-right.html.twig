@@ -78,25 +78,39 @@
   'provus-card-right',
 ]
 %}
+
+{%
+  set backgroundImagePath = ""
+%}
+
+{% if (file_url(content.image.0['#item'].entity.uri.value)) is not empty %}
+  {% set backgroundImagePath = file_url(content.image.0['#item'].entity.uri.value | image_style('provus_card_tall')) %}
+{% endif %}
+
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
     <div{{ content_attributes.addClass('card') }}>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="card-body">
-            <h3 class="card-title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
-            {% if content.body|render %}
-              <div class="card-text">{{ content.body }}</div>
-            {% endif %}
-          </div>
-        </div>
+      <div class="card-content">
         {% if content.image|render %}
-          <div class="col-md-4">
-            <div class="card-img img-fluid rounded-start">
-              {{ content.image }}
-            </div>
+          <div class="card-img img-fluid">
+            {% if backgroundImagePath is not empty %}
+            <div class="card-img-container position-left" style="background-image: url({{ backgroundImagePath }})"></div>
+            {% endif %}
+            {{ content.image }}
           </div>
         {% endif %}
+        <div class="card-body">
+          {% if label|render or content.body|render %}
+            <div class="card-content">
+              {% if label|render %}
+                <h3 class="card-title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
+              {% endif %}
+              {% if content.body|render %}
+                <div class="card-text">{{ content.body }}</div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
   {% endblock %}

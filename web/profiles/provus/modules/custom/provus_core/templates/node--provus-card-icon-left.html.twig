@@ -83,11 +83,15 @@
       <div class="list">
         {% if content.image|render %}
           <div class="list-icon">
-            {{ content.image }}
+            <div class="card-img img-fluid">
+              {{ content.image }}
+            </div>
           </div>
         {% endif %}
         <div class="list-text">
-            <h3 class="list-text-title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
+            {% if label|render %}
+              <h3 class="list-text-title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
+            {% endif %}
             {% if content.body|render %}
               <div class="list-text-text">{{ content.body }}</div>
             {% endif %}

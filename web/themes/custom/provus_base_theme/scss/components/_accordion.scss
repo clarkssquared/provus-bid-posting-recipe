@@ -41,6 +41,10 @@
         padding: $padding-padding-lg 0 $radius-radius-lg $padding-padding-xxlg;
       }
 
+      &:focus {
+        outline: 2px auto $primary;
+      }
+
       &::after {
         display: none;
       }

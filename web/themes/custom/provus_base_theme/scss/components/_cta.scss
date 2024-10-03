@@ -31,14 +31,7 @@
         @extend .btn;
         @extend .btn-outlined;
       }
-      a.btn {
-        &.btn-primary,
-        &.btn-secondary {
-          &:hover {
-            box-shadow: 0 0 0 3px $background-lightblue;
-          }
-        }
-      }
+      @include btn-state-border;
     }
 
     &.Primary, &.Secondary {

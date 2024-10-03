@@ -65,6 +65,7 @@ $banner-height-mobile-sm: 232px;
     .field--name-field-provus-links {
       display: flex;
       column-gap: $padding-padding-xxlg;
+      @include btn-state-border;
     }
   }
 
@@ -107,6 +108,16 @@ $banner-height-mobile-sm: 232px;
 
     .btn-default {
       @include button-primary;
+    }
+  }
+
+  &.banner-color-light,
+  &.banner-color-white {
+    .banner-links {
+      .field--name-field-provus-links {
+        @include btn-state-border($primary-colors-primary-accent);
+        @include btn-state-border($primary-colors-primary-accent, focus);
+      }
     }
   }
 

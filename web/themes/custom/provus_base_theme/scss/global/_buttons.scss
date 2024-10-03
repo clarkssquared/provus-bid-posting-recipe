@@ -8,17 +8,19 @@
   justify-content: center;
   align-items: center;
   &:hover {
+    box-shadow: 0 0 0 3px transparentize($color: $primary, $amount: 0.5);
     background: $primary-hover;
     text-decoration: none;
     color: $white;
   }
   &:focus {
-    box-shadow: 0 0 0 3px $background-lightblue;
+    box-shadow: 0 0 0 3px transparentize($color: $primary, $amount: 0.5);
     background: $primary-hover;
     text-decoration: none;
     color: $white;
   }
   &:active {
+    box-shadow: 0 0 0 3px transparentize($color: $primary, $amount: 0.5);
     background: $primary-colors-primary-accent !important;
     color: $white !important;
     text-decoration: none;
@@ -36,17 +38,19 @@
   align-items: center;
   &:hover,
   &:focus {
+    box-shadow: 0 0 0 3px transparentize($color: $secondary, $amount: 0.5);
     background: $secondary-hover;
     border-color: $secondary-hover;
     text-decoration: none;
     color: $white;
   }
   &:focus {
-    box-shadow: 0 0 0 3px $background-lightteal;
+    box-shadow: 0 0 0 3px transparentize($color: $secondary, $amount: 0.5);
     color: $white;
     text-decoration: none;
   }
   &:active {
+    box-shadow: 0 0 0 3px transparentize($color: $secondary, $amount: 0.5);
     background: $secondary-colors-secondary-contrast !important;
     color: $white !important;
     text-decoration: none;
@@ -275,7 +279,7 @@
             }
 
             &-primary-md {
-              @include text-style-button-medium;                
+              @include text-style-button-medium;
               padding: $padding-padding-xs;
               @include button-primary;
             }
@@ -382,7 +386,7 @@
               padding: $padding-padding-xs;
             }
           }
-        } 
+        }
       }
     }
   }

@@ -49,12 +49,15 @@
 
       // Grid MatchHeight.
       let gridComponent = $('.block-group-column, .block-group-grid-2, .block-group-grid-3, .block-group-grid-4');
-      let gridCard = gridComponent.find('.card');
-      let gridTitle = gridCard.find('h3');
-      let gridBody = gridCard.find('.field--name-body');
-      gridCard.matchHeight({byRow: true});
-      gridTitle.matchHeight({byRow: true});
-      gridBody.matchHeight({byRow: true});
+      if (gridComponent.length > 0) {
+        let gridCard = gridComponent.find('.card');
+        let gridTitle = gridCard.find('h3');
+        let gridBody = gridCard.find('.field--name-body');
+
+        gridCard.matchHeight({byRow: true});
+        gridTitle.matchHeight({byRow: true});
+        gridBody.matchHeight({byRow: true});
+      }
     }
   }
 

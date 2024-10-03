@@ -107,14 +107,14 @@
     background-color: $system-primary;
     border-color: $system-primary;
     &::before {
-      color: $white;
+      color: $black;
       font-family: "Font Awesome 5 Free";
       font-size: $font-size-base;
       content: "\f05a";
       background: none;
     }
     p, h2, h3, h4, h5, h6 {
-      color: $white;
+      color: $black;
     }
   }
   &.alert-light {
@@ -160,15 +160,44 @@
       margin-top: -7px;
       width: 14px;
       height: 14px;
-      
+
+      &:hover {
+        outline: 0;
+        box-shadow: var(--#{$prefix}btn-close-focus-shadow);
+        opacity: var(--#{$prefix}btn-close-focus-opacity);
+      }
+
       &::before {
         display: none;
       }
     }
-    &.alert-warning, &.alert-light {
+    &.alert-warning,
+    &.alert-light,
+    &.alert-info {
       .btn-close {
-        color: #000000;
+        color: $black;
         background-image: url('../images/close.svg');
+
+        &:hover,
+        &:focus {
+          outline: 0;
+          box-shadow: 0 0 0 2px $black;
+          opacity: var(--#{$prefix}btn-close-focus-opacity);
+        }
+      }
+    }
+    &.alert-danger,
+    &.alert-dark,
+    &.alert-primary,
+    &.alert-secondary,
+    &.alert-success {
+      .btn-close {
+        &:hover,
+        &:focus {
+          outline: 0;
+          box-shadow: 0 0 0 2px $white;
+          opacity: var(--#{$prefix}btn-close-focus-opacity);
+        }
       }
     }
   }

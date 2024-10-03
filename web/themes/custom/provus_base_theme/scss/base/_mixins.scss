@@ -174,3 +174,15 @@ $rem-base: 16px;
     background: #{$hover-color};
   }
 }
+
+@mixin btn-state-border($color: $background-lightblue, $state: hover) {
+  a.btn {
+    &.btn-primary,
+    &.btn-secondary,
+    &.btn-default {
+      &:#{$state} {
+        box-shadow: 0 0 0 3px #{$color};
+      }
+    }
+  }
+}

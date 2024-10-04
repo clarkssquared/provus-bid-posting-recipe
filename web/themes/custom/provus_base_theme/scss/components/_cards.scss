@@ -16,7 +16,7 @@
   }
 
   .card-header {
-    @include text-style-headline-h-4;
+    @include text-style-headline-h-5;
     // Layout.
     display: flex;
     padding: $padding-padding-md;
@@ -25,6 +25,8 @@
     gap: $padding-padding-md;
     align-self: stretch;
     background: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
 
     @include media-breakpoint-up(md) {
       padding: $padding-padding-xlg;
@@ -69,7 +71,7 @@
     }
 
     .card-title {
-      @include text-style-headline-h-3;
+      @include text-style-headline-h-4;
       margin: 0;
     }
     .card-text {
@@ -93,8 +95,8 @@
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto;
-  max-width: rem-calc(200);
-  max-height: rem-calc(200);
+  max-width: rem-calc(300);
+  max-height: rem-calc(300);
   width: 100%;
   height: 100%;
   aspect-ratio: 1/1;
@@ -181,6 +183,8 @@
     .card-header {
       padding: $padding-padding-xlg;
       @include text-style-headline-h-5;
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .card-content {
@@ -189,6 +193,8 @@
 
       .card-title {
         @include text-style-headline-h-4;
+        margin-top: 0;
+        margin-bottom: 0;
       }
     }
 
@@ -274,10 +280,14 @@
     }
   }
   .card-title {
-    @include text-style-headline-h-3;
+    @include text-style-headline-h-5;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .card-header {
     @include text-style-headline-h-5;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .card-img-top {
     margin: $padding-padding-sm auto;
@@ -304,12 +314,14 @@
   }
   .card-body {
     padding: $padding-padding-md 0;
+
+    .card-title {
+      @include text-style-headline-h-5;
+      padding-top: $padding-padding-xxs;
+      margin: 0;
+    }
   }
-  .card-title {
-    @include text-style-headline-h-5;
-    padding-top: $padding-padding-xxs;
-    margin: 0;
-  }
+
   .card-date {
     @include text-style-body-body-2;
     color: $text-colors-text-secondary;
@@ -387,13 +399,12 @@
 .provus-card-basic,
 .provus-card-basic-plus {
   .card-title {
-    @include text-style-headline-h-4;
+    @include text-style-headline-h-5;
     margin-bottom: $padding-padding-xxs;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .card-text {
     line-height: 32px;
-  }
-  .field--name-field-provus-links {
-    margin-top: $padding-padding-xlg;
   }
 }

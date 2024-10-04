@@ -49,7 +49,7 @@
     <div{{ content_attributes.addClass('card') }}>
       <div class="card-body">
         {% if content.field_provus_title|render %}
-        <h3 class="card-title">{{ content.field_provus_title }}</h3>
+        <div class="card-title">{{ content.field_provus_title }}</div>
         {% endif %}
         {{ content|without('field_provus_title', 'field_provus_body', 'field_provus_media_image', 'field_provus_header') }}
       </div>

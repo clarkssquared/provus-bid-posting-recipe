@@ -6,7 +6,7 @@ dependencies:
   theme:
     - bootstrap_barrio
 id: provus_bootstrap_breadcrumbs
-theme: provus_bootstrap
+theme: provus_base_theme
 region: breadcrumb
 weight: 0
 provider: null

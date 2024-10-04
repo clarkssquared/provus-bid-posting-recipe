@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - provus_bootstrap
+    - provus_base_theme
 id: provus_bootstrap_branding
-theme: provus_bootstrap
+theme: provus_base_theme
 region: header
 weight: 0
 provider: null

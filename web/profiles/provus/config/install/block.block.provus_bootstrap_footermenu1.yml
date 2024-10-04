@@ -7,9 +7,9 @@ dependencies:
   module:
     - menu_block
   theme:
-    - provus_bootstrap
+    - provus_base_theme
 id: provus_bootstrap_footermenu1
-theme: provus_bootstrap
+theme: provus_base_theme
 region: footer_second
 weight: 0
 provider: null

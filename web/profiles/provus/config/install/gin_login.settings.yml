@@ -1,5 +1,5 @@
 logo:
   use_default: false
-  path: themes/custom/provus_bootstrap/logo.png
+  path: themes/custom/provus_base_theme/logo.png
 brand_image:
   use_default: true

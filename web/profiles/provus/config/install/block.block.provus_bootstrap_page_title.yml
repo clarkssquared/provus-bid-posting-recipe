@@ -4,10 +4,10 @@ dependencies:
   module:
     - system
   theme:
-    - provus_bootstrap
+    - provus_base_theme
 _core:
 id: provus_bootstrap_page_title
-theme: provus_bootstrap
+theme: provus_base_theme
 region: title
 weight: -50
 provider: null

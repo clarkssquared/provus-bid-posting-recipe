@@ -4,9 +4,9 @@ dependencies:
   module:
     - google_translator
   theme:
-    - provus_bootstrap
+    - provus_base_theme
 id: provus_bootstrap_googletranslator
-theme: provus_bootstrap
+theme: provus_base_theme
 region: secondary_menu
 weight: -9
 provider: null

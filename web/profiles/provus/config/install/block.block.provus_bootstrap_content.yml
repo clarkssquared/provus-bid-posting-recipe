@@ -6,7 +6,7 @@ dependencies:
   theme:
     - bootstrap_barrio
 id: provus_bootstrap_content
-theme: provus_bootstrap
+theme: provus_base_theme
 region: content
 weight: 0
 provider: null

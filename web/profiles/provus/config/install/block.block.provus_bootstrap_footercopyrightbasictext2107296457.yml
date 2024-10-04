@@ -7,9 +7,9 @@ dependencies:
   module:
     - block_content
   theme:
-    - provus_bootstrap
+    - provus_base_theme
 id: provus_bootstrap_footercopyrightbasictext2107296457
-theme: provus_bootstrap
+theme: provus_base_theme
 region: footer_fifth
 weight: -7
 provider: null

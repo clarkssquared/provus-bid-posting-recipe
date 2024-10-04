@@ -14,62 +14,62 @@ image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_desktop_1x
-    breakpoint_id: provus_bootstrap.extraextra
+    breakpoint_id: provus_base_theme.extraextra
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_desktop_1x
-    breakpoint_id: provus_bootstrap.extra
+    breakpoint_id: provus_base_theme.extra
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_desktop_2x
-    breakpoint_id: provus_bootstrap.extraextra
+    breakpoint_id: provus_base_theme.extraextra
     multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_desktop_2x
-    breakpoint_id: provus_bootstrap.extra
+    breakpoint_id: provus_base_theme.extra
     multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_tablet_1x
-    breakpoint_id: provus_bootstrap.large
+    breakpoint_id: provus_base_theme.large
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_tablet_2x
-    breakpoint_id: provus_bootstrap.large
+    breakpoint_id: provus_base_theme.large
     multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_tablet_1x
-    breakpoint_id: provus_bootstrap.medium
+    breakpoint_id: provus_base_theme.medium
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_tablet_2x
-    breakpoint_id: provus_bootstrap.medium
+    breakpoint_id: provus_base_theme.medium
     multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_mobile_1x
-    breakpoint_id: provus_bootstrap.small
+    breakpoint_id: provus_base_theme.small
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_mobile_1x
-    breakpoint_id: provus_bootstrap.xs
+    breakpoint_id: provus_base_theme.xs
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_mobile_2x
-    breakpoint_id: provus_bootstrap.small
+    breakpoint_id: provus_base_theme.small
     multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: provus_card_default_mobile_2x
-    breakpoint_id: provus_bootstrap.xs
+    breakpoint_id: provus_base_theme.xs
     multiplier: 2x
-breakpoint_group: provus_bootstrap
+breakpoint_group: provus_base_theme
 fallback_image_style: provus_card_default_tablet_1x

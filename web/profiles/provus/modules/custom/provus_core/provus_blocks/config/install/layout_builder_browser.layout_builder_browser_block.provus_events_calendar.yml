@@ -5,6 +5,6 @@ id: provus_events_calendar
 block_id: fullcalendar_block
 category: provus_views
 label: 'Events Calendar'
-image_path: /themes/custom/provus_bootstrap/images/components/Events-Calendar.svg
+image_path: /themes/custom/provus_base_theme/images/components/Events-Calendar.svg
 image_alt: ''
 weight: 40

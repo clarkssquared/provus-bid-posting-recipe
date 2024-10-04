@@ -7,11 +7,9 @@ dependencies:
     - system
     - views
   theme:
-    - provus_bootstrap
-_core:
-  default_config_hash: Ync8WrrU3x04aS-Y3SE3B7T1el6QeGO8fOPJQhGr8Sk
+    - provus_base_theme
 id: provus_bootstrap_exposedformprovus_basic_searchpage_1
-theme: provus_bootstrap
+theme: provus_base_theme
 region: sidebar_first
 weight: 0
 provider: null

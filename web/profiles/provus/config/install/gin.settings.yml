@@ -6,7 +6,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: themes/custom/provus_bootstrap/provus_icon.png
+  path: themes/custom/provus_base_theme/provus_icon.png
   use_default: false
 third_party_settings:
   shortcut:

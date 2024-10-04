@@ -8,7 +8,7 @@ dependencies:
   theme:
     - bootstrap_barrio
 id: provus_bootstrap_main_menu
-theme: provus_bootstrap
+theme: provus_base_theme
 region: primary_menu
 weight: -7
 provider: null

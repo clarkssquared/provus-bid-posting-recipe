@@ -6,6 +6,6 @@ id: provus_banner
 block_id: 'inline_block:provus_banner'
 category: provus_complex_content
 label: Banner
-image_path: /themes/custom/provus_bootstrap/images/components/banner.svg
+image_path: /themes/custom/provus_base_theme/images/components/banner.svg
 image_alt: ''
 weight: -100

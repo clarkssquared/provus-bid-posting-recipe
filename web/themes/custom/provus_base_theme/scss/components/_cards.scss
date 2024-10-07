@@ -52,7 +52,13 @@
       object-fit: cover;
       margin-bottom: 0;
     }
+
+    &.inset-media {
+      padding: $padding-padding-xlg $padding-padding-xlg 0 $padding-padding-xlg;
+      aspect-ratio: 0 !important;
+    }
   }
+
   .card-body {
     padding: $padding-padding-md $padding-padding-md $padding-padding-xlg $padding-padding-md;
 

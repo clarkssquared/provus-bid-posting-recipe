@@ -25,3 +25,6 @@ displays:
   provus_card_icon_left:
     name: 'Icon Left'
     cardstyle: {  }
+  provus_card_inset_media:
+    name: 'Inset Media'
+    cardstyle: {  }

@@ -32,27 +32,33 @@
 {%
   set classes = [
   'mb-4',
+  'card-wrapper',
+  'provus-card-tall',
 ]
 %}
 
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
-    <div{{ content_attributes.addClass('card card-tall') }}>
-      {% if content.image|render %}
-        <div class="card-img-top">
-          {{ content.image }}
-        </div>
-      {% endif %}
-      <div class="card-body">
-        <h3 class="card-title">{{ label }}</h3>
-        {% if content.body|render or content.titles|render or content.telephone|render %}
-          <div class="card-text">
-            <div>{{ content.titles }}</div>
-            <div>{{ content.body }}</div>
-            <div>{{ content.telephone }}</div>
+    <a href="{{ url }}" rel="bookmark">
+    <div{{ content_attributes.addClass('card') }}>
+      <div class="card-wrapper">
+        {% if content.field_provus_media_image|render %}
+          <div class="card-img-top">
+            <img src="{{ file_url(content.field_provus_media_image.0['#item'].entity.uri.value | image_style('provus_card_tall')) }}" alt="card-image" />
           </div>
         {% endif %}
+        <div class="card-body">
+          <div class="card-title">{{ label }}</div>
+          {% if content.body|render or content.titles|render or content.telephone|render %}
+            <div class="card-text">
+              <div>{{ content.titles }}</div>
+              <div>{{ content.body }}</div>
+              <div>{{ content.telephone }}</div>
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
+    </a>
   {% endblock %}
 </div>

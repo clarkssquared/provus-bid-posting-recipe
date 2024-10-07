@@ -408,3 +408,22 @@
     line-height: 32px;
   }
 }
+
+.node .card {
+  .card-title a {
+    color: $primary;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: $system-info-medium;
+    }
+
+    &:focus {
+      color: $primary-colors-primary-hover;
+    }
+  }
+}

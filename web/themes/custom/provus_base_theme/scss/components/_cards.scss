@@ -402,6 +402,15 @@
   }
 }
 
+.provus-card {
+  .card {
+    .card-body {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
 .provus-card-basic,
 .provus-card-basic-plus {
   .card-title {

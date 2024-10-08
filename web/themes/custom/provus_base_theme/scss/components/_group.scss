@@ -141,6 +141,7 @@
       display: block;
       @include media-breakpoint-up(lg) {
         display: flex;
+        align-items: self-start;
       }
       @include media-breakpoint-up(xl) {
         padding-right: $padding-padding-xxxlg;
@@ -287,6 +288,11 @@
         width: unset;
       }
     }
+  }
+
+  > .field--name-field-provus-links a {
+    @extend .btn;
+    @extend .btn-primary;
   }
 }
 

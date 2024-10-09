@@ -12,13 +12,3 @@
     }
   }
 }
-
-body.node--type-provus-blog, body.node--type-provus-news {
-  main.main-content {
-    @include media-breakpoint-up(md) {
-      margin-left: 8.33333%;
-      width: 83.33333%;
-      max-width: 83.33333%;
-    }
-  }
-}

@@ -27,6 +27,7 @@
     background: transparent;
     margin-top: 0;
     margin-bottom: 0;
+    border-bottom: 0;
 
     @include media-breakpoint-up(md) {
       padding: $padding-padding-xlg;
@@ -398,6 +399,15 @@
       .field--name-field-provus-links {
         margin-top: $padding-padding-xlg;
       }
+    }
+  }
+}
+
+.provus-card {
+  .card {
+    .card-body {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

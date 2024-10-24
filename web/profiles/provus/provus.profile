@@ -68,13 +68,14 @@ function provus_install_extensions(array &$install_state) {
       $install_core_search = FALSE;
     }
   }
-  if ($install_core_search) {
-    $batch['operations'][] = ['provus_install_module', (array) 'search'];
-    // Enable default permissions for system roles.
-    user_role_grant_permissions(AccountInterface::ANONYMOUS_ROLE, [
-      'search content',
-    ]);
-  }
+  // No need to install search & grant permission related to search.
+  // if ($install_core_search) {
+  //   $batch['operations'][] = ['provus_install_module', (array) 'search'];
+  //   // Enable default permissions for system roles.
+  //   user_role_grant_permissions(AccountInterface::ANONYMOUS_ROLE, [
+  //     'search content',
+  //   ]);
+  // }
 
   return $batch;
 }

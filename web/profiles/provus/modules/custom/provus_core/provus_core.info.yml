@@ -25,5 +25,6 @@ dependencies:
   - metatag_ai
   - webform
   - webform_ui
+  - webform_spam_words
   - google_translator
   - layout_builder_reorder

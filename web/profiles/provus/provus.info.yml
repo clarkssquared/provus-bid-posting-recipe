@@ -67,7 +67,6 @@ install:
   - provus_blocks
   - provus_layout_builder
   - responsive_image
-  - search
   - search_api
   - search_api_db
   - serialization

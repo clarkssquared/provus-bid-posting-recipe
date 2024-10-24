@@ -22,5 +22,6 @@ dependencies:
   - layout_builder_browser
   - slick
   - slick_ui
+  - blazy_ui
   - field_image_style
   

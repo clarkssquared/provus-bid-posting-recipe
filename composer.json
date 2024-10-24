@@ -73,61 +73,63 @@
         "composer/installers": "1.12",
         "cweagans/composer-patches": "1.7.3",
         "drupal/addtoany": "2.0.5",
-        "drupal/admin_toolbar": "3.4.2",
+        "drupal/admin_toolbar": "3.5.0",
         "drupal/ala": "2.5",
-        "drupal/auto_entitylabel": "3.0",
+        "drupal/auto_entitylabel": "3.3.0",
         "drupal/better_exposed_filters": "^6.0",
-        "drupal/blazy": "2.25",
-        "drupal/block_form_alter": "2.0",
-        "drupal/bootstrap_barrio": "5.5.16",
-        "drupal/bootstrap_layout_builder": "2.1.2",
-        "drupal/bootstrap_sass": "5.0.10",
+        "drupal/blazy": "3.0.12",
+        "drupal/block_form_alter": "2.1.0",
+        "drupal/bootstrap_barrio": "5.5.17",
+        "drupal/bootstrap_layout_builder": "2.2.1",
+        "drupal/bootstrap_sass": "5.0.11",
         "drupal/bootstrap_site_alert": "2.0.0-beta11",
-        "drupal/bootstrap_styles": "1.1.6",
-        "drupal/core": "10.2.5",
-        "drupal/core-composer-scaffold": "10.2.5",
+        "drupal/bootstrap_styles": "1.2.1",
+        "drupal/core": "10.3.6",
+        "drupal/core-composer-scaffold": "10.3.6",
         "drupal/default_content": "2.0.0-alpha2",
         "drupal/default_content_deploy": "2.0.0",
         "drupal/devel": "5.0.2",
         "drupal/entity": "1.4",
         "drupal/exclude_node_title": "1.4",
         "drupal/field_image_style": "^2.0",
-        "drupal/focal_point": "2.0.3",
+        "drupal/focal_point": "2.1.1",
         "drupal/fontawesome": "2.26",
-        "drupal/form_options_attributes": "2.0",
-        "drupal/fullcalendar_block": "1.0.5",
-        "drupal/gin": "3.0.0-rc10",
-        "drupal/gin_lb": "1.0.0-rc7",
-        "drupal/gin_login": "2.0.4",
-        "drupal/gin_toolbar": "1.0.0-rc5",
-        "drupal/google_tag": "2.0.x-dev@dev",
+        "drupal/form_options_attributes": "2.1.0",
+        "drupal/fullcalendar_block": "1.1.0",
+        "drupal/gin": "3.0.0-rc13",
+        "drupal/gin_lb": "1.0.0-rc8",
+        "drupal/gin_login": "2.1.3",
+        "drupal/gin_toolbar": "1.0.0-rc6",
+        "drupal/google_tag": "2.0.6",
         "drupal/google_translator": "^2.1",
         "drupal/inline_entity_form": "1.0.0-rc17",
         "drupal/layout_builder_block_clone": "^1.3",
-        "drupal/layout_builder_browser": "1.6",
+        "drupal/layout_builder_browser": "1.7.0",
         "drupal/layout_builder_iframe_modal": "1.3",
         "drupal/layout_builder_reorder": "^1.0",
-        "drupal/layout_builder_restrictions": "2.19",
+        "drupal/layout_builder_restrictions": "3.0.0",
         "drupal/lb_copy_section": "^1.0",
-        "drupal/linkit": "6.1.3",
+        "drupal/linkit": "6.1.6",
         "drupal/menu_block": "dev-1.x",
         "drupal/metatag": "^2.0",
         "drupal/metatag_ai": "^1.0",
-        "drupal/pathauto": "1.12",
+        "drupal/pathauto": "1.13.0",
         "drupal/search_api": "^1.30",
-        "drupal/section_library": "1.1.1",
+        "drupal/section_library": "1.2.0",
         "drupal/simple_sitemap": "^4.1",
         "drupal/sitemap": "^2.0@beta",
-        "drupal/slick": "2.11",
-        "drupal/smart_date": "4.0.3",
-        "drupal/smart_trim": "2.1.1",
-        "drupal/toastify": "1.0.0-beta6",
-        "drupal/twig_tweak": "3.3.0",
-        "drupal/views_bootstrap": "4.4",
+        "drupal/slick": "3.0.4",
+        "drupal/smart_date": "4.1.6",
+        "drupal/smart_trim": "2.2.0",
+        "drupal/toastify": "1.0.0",
+        "drupal/tour": "2.0.6",
+        "drupal/twig_tweak": "3.4.0",
+        "drupal/views_bootstrap": "5.5.0-rc3",
         "drupal/webform": "^6.2",
+        "drupal/webform_spam_words": "2.0.3",
         "drupal/webp": "1.0-rc2",
         "drupaloverride/better_normalizers": "dev-master",
-        "drush/drush": "12.5.1",
+        "drush/drush": "13.3.0",
         "fontawesome/fontawesome": "6.1.0",
         "fonticonpicker/fonticonpicker--fonticonpicker": "3.1.1",
         "kenwheeler/slick": "1.6.0",
@@ -139,6 +141,7 @@
         "vlucas/phpdotenv": "5.5",
         "webflo/drupal-finder": "1.2.2",
         "webmozart/path-util": "2.3",
+        "wikimedia/composer-merge-plugin": "^2.1",
         "zaporylie/composer-drupal-optimizations": "1.2"
     },
     "require-dev": {
@@ -178,12 +181,17 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json"
+            ]
+        },
         "patches": {
             "drupal/core": {
-                "2942975: Expose Layout Builder data to REST and JSON:API": "https://www.drupal.org/files/issues/2023-02-08/2942975-230.patch"
+                "2942975: Expose Layout Builder data to REST and JSON:API": "https://www.drupal.org/files/issues/2024-09-06/2942975-10.3.x.patch"
             },
             "drupal/auto_entitylabel": {
-                "3065687: Integration with Layout Builder for custom block types": "https://www.drupal.org/files/issues/2022-12-22/auto_entitylabel-layout_builder_component_title-3065687-17.patch"
+                "3065687: Integration with Layout Builder for custom block types": "https://www.drupal.org/files/issues/2024-08-12/3065687-reroll-17-auto_entitylabel-layout_builder_component_title.patch"
             },
             "drupal/bootstrap_site_alert": {
                 "3481350: The “x” button of a site alert that is shown in the admin pages is not working.": "https://www.drupal.org/files/issues/2024-10-18/3481350-bootstrap_site_alert-02.patch",
@@ -198,10 +206,6 @@
             },
             "drupal/layout_builder_browser": {
                 "Filter block is not working [3456887]": "https://www.drupal.org/files/issues/2024-07-03/layout_builder_browser-search-filter-fix-2.patch"
-            },
-            "drupal/smart_date": {
-                "3381131: Deprecated $dateFormatter property": "https://git.drupalcode.org/project/smart_date/-/merge_requests/63.patch",
-                "3409287: Deprecation in Drupal 10.2: Smart Date List Item allowed values must be passed as array":  "https://git.drupalcode.org/project/smart_date/-/merge_requests/81.patch"
             }
         }
     },
@@ -217,7 +221,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "tbachert/spi": true
+            "tbachert/spi": true,
+            "wikimedia/composer-merge-plugin": true
         }
     }
 }

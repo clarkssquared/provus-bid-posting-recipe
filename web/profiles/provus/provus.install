@@ -13,6 +13,8 @@
  * @see system_install()
  */
 function provus_install() {
+  _provus_init();
+
   _provus_setup_themes();
 
   // Update module weight to fix issue with layout builder's missing styles
@@ -34,5 +36,22 @@ function _provus_setup_themes() {
   \Drupal::configFactory()
     ->getEditable('node.settings')
     ->set('use_admin_theme', TRUE)
+    ->save(TRUE);
+}
+
+/**
+ * Initialized Provus configs.
+ */
+function _provus_init() {
+  // Enable theme blazy.
+  \Drupal::configFactory()
+    ->getEditable('blazy.settings')
+    ->set('use_theme_blazy', TRUE)
+    ->save(TRUE);
+
+  // Add oembed iframe domain.
+  \Drupal::configFactory()
+    ->getEditable('media.settings')
+    ->set('iframe_domain', 'https://www.youtube.com')
     ->save(TRUE);
 }

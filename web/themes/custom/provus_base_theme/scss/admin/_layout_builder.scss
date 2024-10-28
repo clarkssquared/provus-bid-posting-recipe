@@ -1233,7 +1233,7 @@ a > .layout-builder__link-wrapped {
       flex-wrap: wrap;
       padding: 0 !important;
 
-      a {
+      .layout-builder-browser-block-item {
         flex-basis: 33%;
         padding: 1rem 0;
         font-size: rem-calc(12);
@@ -1243,6 +1243,16 @@ a > .layout-builder__link-wrapped {
         color: black;
         text-align: center;
         margin: 0 !important;
+
+        a {
+          color: black;
+          text-decoration: none;
+
+          &:hover, &:focus {
+            color: #7F56D9;
+            background-color: none;
+          }
+        }
 
         &:hover, &:focus {
           box-shadow: 0 0 0 1px $lb-window-summary;

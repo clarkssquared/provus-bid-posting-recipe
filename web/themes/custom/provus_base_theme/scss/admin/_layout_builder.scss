@@ -1247,10 +1247,12 @@ a > .layout-builder__link-wrapped {
         a {
           color: black;
           text-decoration: none;
+          display: block;
 
           &:hover, &:focus {
             color: #7F56D9;
             background-color: none;
+            box-shadow: none;
           }
         }
 

@@ -38,8 +38,6 @@
   ]
 %}
 
-{{ attach_library('provus_base_theme/slideshow') }}
-
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
@@ -47,31 +45,12 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('content') }}>
-      <div class="slide-show-with-items-container" data-autoplay="{{ content.field_provus_slideshow_autoplay.0['#markup'] }}" data-slide-speed="{{content.field_provus_slideshow_speed.0}}">
-      {% for key, item in content.field_provus_slide_item %}
-        {%  if key|first != '#' %}
-          <div class="slide-show-item-content">
-            <div class="image-container">
-              <picture>
-                <source srcset="{{ file_url(item.field_provus_media.0['#item'].entity.uri.value| image_style('provus_slideshow_block_mobile')) }}" media="(max-width: 978px)" />
-                <img src="{{ file_url(item.field_provus_media.0['#item'].entity.uri.value | image_style('provus_slideshow_block')) }}" alt="{{item.field_provus_title.0}}">
-              </picture>
-            </div>
-            <div class="text-container">
-              <div class="container">
-                <div class="title">
-                  {{ item.field_provus_title.0 }}
-                </div>
-                {% if item.field_provus_url_slide_show_item.0 is not empty %}
-                  <a href="{{ item.field_provus_url_slide_show_item[0]['#url'] }}" class="btn btn-primary">{{ item.field_provus_button_text.0 }}</a>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        {% endif %}
-      {% endfor %}
-      </div>
-    </div>
+    {% embed 'provus_blocks:slideshow' with {
+      content_attributes: content_attributes,
+      slide_items: content.field_provus_slide_item,
+      autoplay: content.field_provus_slideshow_autoplay.0['#markup'],
+      speed: content.field_provus_slideshow_speed.0
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

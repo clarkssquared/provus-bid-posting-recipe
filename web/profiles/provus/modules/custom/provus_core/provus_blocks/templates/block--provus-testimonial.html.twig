@@ -45,37 +45,15 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('card card-testimonial') }}>
-      <div class="row">
-        {% if content.field_provus_media_image.0 %}
-          <div class="col-lg-6">
-        {% else %}
-          <div class="col-lg-12">
-        {% endif %}
-          <div class="testimonial-content">
-            {% if content.field_provus_testimonial_body.0 %}
-              <div class="testimonial-body">{{ content.field_provus_testimonial_body.0|raw }}</div>
-            {% endif %}
-            {% if content.field_provus_testimonial_name.0 %}
-              <div class="testimonial-name">
-                {{ content.field_provus_testimonial_name }}
-              </div>
-            {% endif %}
-            {% if content.field_provus_testimonial_role.0 %}
-              <div class="testimonial-role">
-                {{ content.field_provus_testimonial_role }}
-              </div>
-            {% endif %}
-          </div>
-        </div>
-        {% if content.field_provus_media_image.0 %}
-          <div class="col-lg-6">
-              <div class="testimonial-image">
-                {{ content.field_provus_media_image }}
-              </div>
-          </div>
-        {% endif %}
-      </div>
-    </div>
+    {% embed 'provus_blocks:testimonial' with {
+      content_attributes: content_attributes,
+      image: content.field_provus_media_image|render,
+      body: content.field_provus_testimonial_body.0|raw,
+      name: content.field_provus_testimonial_name,
+      role: content.field_provus_testimonial_role|render
+    } only %}
+    {% endembed %}
+
+    
   {% endblock %}
 </div>

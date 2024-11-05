@@ -45,26 +45,15 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('card') }}>
-      {% if content.field_provus_header|render %}
-        <div class="card-header">
-          {{ content.field_provus_header }}
-        </div>
-      {% endif %}
-      {% if content.field_provus_media_image|render %}
-        <div class="card-img-top">
-          {{ content.field_provus_media_image }}
-        </div>
-      {% endif %}
-      <div class="card-body">
-        {% if content.field_provus_title|render %}
-        <div class="card-title">{{ content.field_provus_title }}</div>
-        {% endif %}
-        {% if content.field_provus_body|render %}
-          <div class="card-text">{{ content.field_provus_body }}</div>
-        {% endif %}
-        {{ content|without('field_provus_title', 'field_provus_body', 'field_provus_media_image', 'field_provus_header') }}
-      </div>
-    </div>
+    {% embed 'provus_blocks:card_image_top' with {
+      content_attributes: content_attributes,
+      title: content.field_provus_title|render,
+      body: content.field_provus_body|render,
+      image: content.field_provus_media_image|render,
+      header: content.field_provus_header|render,
+      more_content: content|without('field_provus_title', 'field_provus_body', 'field_provus_media_image', 'field_provus_header'),
+      is_image_circle: false
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

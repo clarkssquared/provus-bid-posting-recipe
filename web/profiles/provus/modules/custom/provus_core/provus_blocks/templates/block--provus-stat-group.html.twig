@@ -44,15 +44,11 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {% if content.field_provus_title|render %}
-      <h2 class="card-title">{{ content.field_provus_title }}</h2>
-    {% endif %}
-    <div{{ content_attributes.addClass(rowclass) }}>
-      {% for block in blocks %}
-        <div class="col">
-          {{ block }}
-        </div>
-      {% endfor %}
-    </div>
+    {% embed 'provus_blocks:stat' with {
+      content_attributes: content_attributes,
+      title: content.field_provus_title|render,
+      blocks: blocks
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

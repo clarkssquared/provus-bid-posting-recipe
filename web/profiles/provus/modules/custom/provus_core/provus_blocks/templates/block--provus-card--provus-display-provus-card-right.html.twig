@@ -39,14 +39,6 @@
   ]
 %}
 
-{%
-  set backgroundImagePath = ""
-%}
-
-{% if (file_url(content.field_provus_media_image.0['#item'].entity.uri.value)) is not empty %}
-  {% set backgroundImagePath = file_url(content.field_provus_media_image.0['#item'].entity.uri.value | image_style('provus_card_tall')) %}
-{% endif %}
-
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
@@ -54,38 +46,15 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('card') }}>
-    {% if content.field_provus_header|render %}
-      <div class="card-header">
-        {{ content.field_provus_header }}
-      </div>
-    {% endif %}
-      <div class="card-content">
-        {% if content.field_provus_media_image|render %}
-          <div class="card-img img-fluid">
-            {% if backgroundImagePath is not empty %}
-            <div class="card-img-container position-left" style="background-image: url({{ backgroundImagePath }})"></div>
-            {% endif %}
-            {{ content.field_provus_media_image }}
-          </div>
-        {% endif %}
-        <div class="card-body">
-          {% if content.field_provus_title|render or content.field_provus_body|render %}
-            <div class="card-content">
-              {% if content.field_provus_title|render %}
-                <div class="card-title">{{ content.field_provus_title }}</div>
-              {% endif %}
-              {% if content.field_provus_body|render %}
-                <div class="card-text">{{ content.field_provus_body }}</div>
-              {% endif %}
-            </div>
-          {% endif %}
-          <div class="card-extra">
-            {{ content|without('field_provus_title', 'field_provus_body', 'field_provus_media_image', 'field_provus_header') }}
-          </div>
-        </div>
-        
-      </div>
-    </div>
+    {% embed 'provus_blocks:card_image_side' with {
+      content_attributes: content_attributes,
+      title: content.field_provus_title|render,
+      image: content.field_provus_media_image|render,
+      bg_image_path: (file_url(content.field_provus_media_image.0['#item'].entity.uri.value)) is not empty ? file_url(content.field_provus_media_image.0['#item'].entity.uri.value | image_style('provus_card_tall')) : '',
+      header: content.field_provus_header|render ? content.field_provus_header : '',
+      body: content.field_provus_body|render,
+      more_content: content|without('field_provus_title', 'field_provus_body', 'field_provus_media_image', 'field_provus_header')
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

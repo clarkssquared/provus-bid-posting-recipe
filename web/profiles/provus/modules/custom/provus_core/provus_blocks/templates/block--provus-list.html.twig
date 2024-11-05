@@ -44,20 +44,13 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-  <div class="list-wrapper">
-    <div class="list-style {{ content.field_provus_list_style.0 }} {{ group_display }}">
-      <ul>
-        <div{{ content_attributes.addClass(rowclass) }}>
-          {% for block in blocks %}
-            <li>
-              <div class="{% if group_number is not null %}col{% endif %}">
-                {{ block }}
-              </div>
-            </li>
-          {% endfor %}
-        </div>
-      </ul>
-    </div>
-  </div>
+    {% embed 'provus_blocks:list' with {
+        style: content.field_provus_list_style.0|render,
+        group_display: group_display,
+        content_attributes: content_attributes,
+        blocks: blocks,
+        group_number: group_number
+      } only %}
+      {% endembed %}
   {% endblock %}
 </div>

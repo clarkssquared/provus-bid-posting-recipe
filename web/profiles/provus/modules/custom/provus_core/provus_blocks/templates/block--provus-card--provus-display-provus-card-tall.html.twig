@@ -46,26 +46,14 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <a href="{{ content.field_provus_links[0]['#url'] }}" rel="bookmark">
-    <div{{ content_attributes.addClass('card') }}>
-      <div class="card-wrapper">
-        {% if content.field_provus_media_image|render %}
-          <div class="card-img-top">
-            <img src="{{ file_url(content.field_provus_media_image.0['#item'].entity.uri.value | image_style('provus_card_tall')) }}" alt="card-image" />
-          </div>
-        {% endif %}
-        <div class="card-body">
-          {% if content.date is not empty %}
-            <div class="card-date">{{ content.date }}</div>
-          {% elseif content.field_provus_header|render %}
-            <div class="card-date">{{ content.field_provus_header }}</div>
-          {% endif %}
-          {% if content.field_provus_title|render %}
-            <div class="card-title">{{ content.field_provus_title }}</div>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    </a>
+    {% embed 'provus_blocks:card_tall' with {
+      content_attributes: content_attributes,
+      title: content.field_provus_title|render,
+      link: content.field_provus_links[0]['#url'],
+      image_url: content.field_provus_media_image|render ? file_url(content.field_provus_media_image.0['#item'].entity.uri.value | image_style('provus_card_tall')) : '',
+      content_date: content.date|render ? content.date : '',
+      header: content.field_provus_header|render ? content.field_provus_header : '',
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

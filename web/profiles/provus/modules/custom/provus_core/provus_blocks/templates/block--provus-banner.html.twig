@@ -53,66 +53,17 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {% if content.field_provus_short_banner[0]['#markup'] == 'true' %}
-      <div class="smaller-banner">
-    {% endif %}
-    {% if content.field_provus_image_position[0]['#markup'] == 'full' %}
-      <div class="banner-color-{{ content.field_provus_background_color[0]['#markup'] }} banner-background image-full">
-    {% elseif content.field_provus_image_position[0]['#markup'] == 'left' %}
-      <div class="banner-color-{{ content.field_provus_background_color[0]['#markup'] }} banner-background image-left">
-    {% elseif content.field_provus_image_position[0]['#markup'] == 'right' %}
-      <div class="banner-color-{{ content.field_provus_background_color[0]['#markup'] }} banner-background image-right">
-    {% endif %}
-      {% if content.field_provus_image_position[0]['#markup'] == 'left' or content.field_provus_image_position[0]['#markup'] == 'right' %}
-        <div class="container">
-          <div{{ content_attributes.addClass('banner-inner row') }}>
-      {% else %}
-        <div{{ content_attributes.addClass('banner-inner') }}>
-      {% endif %}
-          {% if content.field_provus_media_image|render %}
-            <div class="banner-image-container position-{{ content.field_provus_image_position[0]['#markup'] }}">
-              {{ content.field_provus_media_image.0 }}
-            </div>
-          {% endif %}
-        {% if content.field_provus_image_position[0]['#markup'] == 'left' or content.field_provus_image_position[0]['#markup'] == 'right' %}
-        <div class="banner-content col-lg-6 col-sm-12">
-        {% else %}
-        <div class="banner-content">
-        {% endif %}
-          <div class="container">
-            <div class="row">
-              {% if content.field_provus_image_position[0]['#markup'] == 'full' %}
-                <div class="col-sm-12 col-lg-6">
-              {% else %}
-                <div class="col-sm-12">
-              {% endif %}
-                <div class="banner-content-body">
-                {% if content.field_provus_sub_title %}
-                  <div class="subheading">
-                    {{ content.field_provus_sub_title }}
-                  </div>
-                {% endif %}
-                {% if content.field_provus_title %}
-                  <h1 class="banner-title">{{ content.field_provus_title }}</h1>
-                {% endif %}
-                {% if content.field_provus_body %}
-                  <div class="banner-body">{{ content.field_provus_body }}</div>
-                {% endif %}
-                {% if content.field_provus_links %}
-                  <div class="banner-links">{{ content.field_provus_links }}</div>
-                {% endif %}
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% if content.field_provus_image_position[0]['#markup'] == 'left' or content.field_provus_image_position[0]['#markup'] == 'right' %}
-        </div>
-      {% endif %}
-    </div>
-    </div>
-    {% if content.field_provus_short_banner[0]['#markup'] == 'true' %}
-      </div>
-    {% endif %}
+    {% embed 'provus_blocks:hero_banner' with {
+      is_short_banner: content.field_provus_short_banner[0]['#markup'],
+      image_position: content.field_provus_image_position[0]['#markup'],
+      background_color: content.field_provus_background_color[0]['#markup'],
+      subtitle: content.field_provus_sub_title,
+      title: content.field_provus_title,
+      body: content.field_provus_body,
+      links: content.field_provus_links,
+      image: content.field_provus_media_image|render ? content.field_provus_media_image.0 : '',
+      content_attributes: content_attributes
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

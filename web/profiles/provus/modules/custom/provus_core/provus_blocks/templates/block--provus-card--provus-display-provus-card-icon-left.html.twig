@@ -46,23 +46,12 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-      <div class="list">
-        {% if content.field_provus_media_image|render %}
-          <div class="list-icon">
-            <div class="card-img img-fluid">
-              {{ content.field_provus_media_image }}
-            </div>
-          </div>
-        {% endif %}
-        <div class="list-text">
-            {% if content.field_provus_title|render %}
-              <div class="list-text-title">{{ content.field_provus_title }}</div>
-            {% endif %}
-            {% if content.field_provus_body|render %}
-              <div class="list-text-text">{{ content.field_provus_body }}</div>
-            {% endif %}
-            {{ content|without('field_provus_title', 'field_provus_body', 'field_provus_media_image', 'field_provus_header') }}
-        </div>
-    </div>
+    {% embed 'provus_blocks:card_icon' with {
+      title: content.field_provus_title|render,
+      body: content.field_provus_body|render,
+      image: content.field_provus_media_image|render,
+      more_content: content|without('field_provus_title', 'field_provus_body', 'field_provus_media_image', 'field_provus_header')
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

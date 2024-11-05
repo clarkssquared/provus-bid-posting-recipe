@@ -45,14 +45,11 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div class="stat-group-icon">
-      {{ content.field_provus_icon }}
-    </div>
-    <div class="stat-group-number">
-      {{ content.field_provus_title }}
-    </div>
-    <div class="stat-group-text">
-      {{ content.field_provus_description }}
-    </div>
+    {% embed 'provus_blocks:stat_item' with {
+      icon: content.field_provus_icon|render,
+      title: content.field_provus_title|render,
+      body: content.field_provus_description
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

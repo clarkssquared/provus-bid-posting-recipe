@@ -46,16 +46,12 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('card') }}>
-      <div class="card-body">
-        {% if content.field_provus_title|render %}
-        <div class="card-title">{{ content.field_provus_title }}</div>
-        {% endif %}
-        {% if content.field_provus_body|render %}
-          <div class="card-text">{{ content.field_provus_body }}</div>
-        {% endif %}
-        {{ content|without('field_provus_title', 'field_provus_body', 'field_provus_media_image', 'field_provus_header') }}
-      </div>
-    </div>
+    {% embed 'provus_blocks:card_text' with {
+      content_attributes: content_attributes,
+      title: content.field_provus_title|render,
+      more_content: content|without('field_provus_title', 'field_provus_body', 'field_provus_media_image', 'field_provus_header'),
+      body: content.field_provus_body|render
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

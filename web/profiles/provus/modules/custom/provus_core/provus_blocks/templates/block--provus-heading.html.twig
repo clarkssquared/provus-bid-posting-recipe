@@ -44,10 +44,12 @@
     {% endif %}
     {{ title_suffix }}
     {% block content %}
-      <div class="subheading">
-        {{ content.field_provus_sub_title }}
-      </div>
-      <{{ content.field_provus_heading_level[0]['#markup'] }} class="title">{{ content.field_provus_title }}</{{ content.field_provus_heading_level[0]['#markup'] }}>
+      {% embed 'provus_blocks:heading' with {
+        subtitle: content.field_provus_sub_title|render,
+        title: content.field_provus_title|render,
+        level_tag: content.field_provus_heading_level[0]['#markup']|render
+      } only %}
+      {% endembed %}
     {% endblock %}
   </div>
 </div>

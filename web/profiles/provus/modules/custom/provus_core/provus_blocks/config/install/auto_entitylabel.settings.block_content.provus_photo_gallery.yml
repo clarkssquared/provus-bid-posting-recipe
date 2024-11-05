@@ -1,4 +1,4 @@
-status: 1
+status: 2
 pattern: '(Photo Gallery) - [random:number]'
 escape: false
 preserve_titles: false
@@ -7,3 +7,4 @@ chunk: 50
 dependencies:
   config:
     - block_content.type.provus_photo_gallery
+new_content_behavior: 0

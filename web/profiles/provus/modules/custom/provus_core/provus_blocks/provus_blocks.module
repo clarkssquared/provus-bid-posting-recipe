@@ -275,7 +275,7 @@ function provus_blocks_preprocess_field(&$variables, $hook) {
  */
 function provus_blocks_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Use name and label from normal block admin screen to match.
-  $new_label = t('Block description');
+  $new_label = t('Administrative Title');
   $new_description = t('A brief description of your block.');
   // Alter blocks on layout builder form.
   $form_ids_blockcontent = [
@@ -292,6 +292,10 @@ function provus_blocks_form_alter(&$form, FormStateInterface $form_state, $form_
       $form['settings']['label_display']['#default_value'] = FALSE;
       $form['settings']['label_display']['#access'] = FALSE;
       $form['settings']['view_mode']['#access'] = FALSE;
+
+      if (isset($form['settings']['admin_label'])) {
+        $form['settings']['admin_label']['#title'] = 'Block Type';
+      }
     }
   }
   // Alter duplicate form to fix styles and format.

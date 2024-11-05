@@ -1,4 +1,4 @@
-status: 1
+status: 2
 pattern: '[block_content:field_provus_testimonial_name] (Testimonial) - [random:number]'
 escape: false
 preserve_titles: false
@@ -7,3 +7,4 @@ chunk: 50
 dependencies:
   config:
     - block_content.type.provus_testimonial
+new_content_behavior: 0

@@ -1,9 +1,10 @@
-status: 1
+status: 2
 pattern: '[block_content:field_provus_title] (Group) - [random:number]'
 escape: false
 preserve_titles: false
+save: false
 dependencies:
   config:
     - block_content.type.provus_group
-save: 0
 chunk: '50'
+new_content_behavior: 0

@@ -205,7 +205,8 @@
                 "3033241: Cannot update the order weight using complex form widget": "https://www.drupal.org/files/issues/2021-02-15/cannot-update-weight-order-complex-widget-3033241-4.patch"
             },
             "drupal/layout_builder_browser": {
-                "Filter block is not working [3456887]": "https://www.drupal.org/files/issues/2024-07-03/layout_builder_browser-search-filter-fix-2.patch"
+                "Filter block is not working [3456887]": "https://www.drupal.org/files/issues/2024-07-03/layout_builder_browser-search-filter-fix-2.patch",
+                "Filter by block name does not hide elements with layout-builder-browser-block-item [3485031]" : "https://www.drupal.org/files/issues/2024-11-01/layout_builder_browser-search-filter-fix-empty-item.patch"
             }
         }
     },

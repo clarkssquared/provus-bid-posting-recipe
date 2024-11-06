@@ -36,7 +36,6 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
-{% set hide_title = (content.field_provus_hide_title[0] is not empty) ? content.field_provus_hide_title[0]['#markup'] : 0 %}
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
@@ -45,7 +44,7 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    {% if content.field_provus_title|render and hide_title != true %}
+    {% if content.field_provus_title|render %}
       <h2 class="title">{{ content.field_provus_title }}</h2>
     {% endif %}
     {% if content.field_provus_body|render %}

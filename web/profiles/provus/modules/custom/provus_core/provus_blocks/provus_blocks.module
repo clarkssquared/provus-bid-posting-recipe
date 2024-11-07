@@ -479,10 +479,13 @@ function _provus_preprocess_tabs(&$vars, $block) {
         if (!empty($blocks_id_array)) {
           foreach ($blocks_id_array as $block_key => $block_id) {
             $block_entity = $storage->load($block_id['target_id']);
-            if (!empty($entity)) {
+            if (!empty($block_entity) && $block_entity instanceof \Drupal\Core\Entity\EntityInterface) {
               $block_build['content'] = $view_builder->view($block_entity, 'default');
               provus_blocks_get_block($block_build, $block_entity);
               $blocks[] = $block_build;
+            }
+            else {
+              \Drupal::logger('provus_blocks')->error('Block entity is not valid.');
             }
           }
         }

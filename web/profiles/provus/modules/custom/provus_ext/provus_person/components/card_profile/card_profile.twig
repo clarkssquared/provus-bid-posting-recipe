@@ -12,7 +12,13 @@
           <div class="card-text">
             <div>{{ job_title }}</div>
             <div>{{ content }}</div>
-            <div>{{ phone }}</div>
+            <div>
+            {% if phone %}
+              <p>
+                <a href="tel:{{ phone|render|striptags|trim }}" aria-label="Telephone Number: {{ phone|render|striptags|trim }}">{{ phone|render|striptags }}</a>
+              </p>
+            {% endif %}
+            </div>
           </div>
         {% endif %}
       </div>

@@ -80,22 +80,13 @@
 %}
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
-    <a href="{{ url }}" rel="bookmark">
-    <div{{ content_attributes.addClass('card') }}>
-      {% if content.image %}
-        <div class="card-img-top">
-          {{ content.image }}
-        </div>
-      {% endif %}
-      <div class="card-body">
-        {% if content_date %}
-          <div class="card-date">{{ content_date }}</div>
-        {% elseif content.date|render %}
-          <div class="card-date">{{ content.date }}</div>
-        {% endif %}
-        <h3 class="card-title">{{ label }}</h3>
-      </div>
-    </div>
-    </a>
+    {% embed 'provus_core:card_tall' with {
+      content_attributes: content_attributes,
+      title: label,
+      link: url,
+      image: content.image,
+      content_date: content_date ? content_date : content.date|render
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

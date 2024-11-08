@@ -89,29 +89,15 @@
 
 <div{{ attributes.addClass(classes) }}>
   {% block content %}
-    <div{{ content_attributes.addClass('card') }}>
-      <div class="card-content">
-        {% if content.image|render %}
-          <div class="card-img img-fluid">
-            {% if backgroundImagePath is not empty %}
-            <div class="card-img-container position-left" style="background-image: url({{ backgroundImagePath }})"></div>
-            {% endif %}
-            {{ content.image }}
-          </div>
-        {% endif %}
-        <div class="card-body">
-          {% if label|render or content.body|render %}
-            <div class="card-content">
-              {% if label|render %}
-                <h3 class="card-title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
-              {% endif %}
-              {% if content.body|render %}
-                <div class="card-text">{{ content.body }}</div>
-              {% endif %}
-            </div>
-          {% endif %}
-        </div>
-      </div>
-    </div>
+    {% embed 'provus_core:card_image_side' with {
+      content_attributes: content_attributes,
+      title: label,
+      image: content.image,
+      bg_image_path: backgroundImagePath,
+      header: content.field_provus_header|render ? content.field_provus_header : '',
+      body: content.body|render,
+      url: url
+    } only %}
+    {% endembed %}
   {% endblock %}
 </div>

@@ -9,13 +9,13 @@ props:
       title: Unique identifier
       description: The ID of the accordion wrapper
     items:
-      type: array
+      type: ['array', 'null']
       title: Accordion Items
       description: An array of accordion items
       items:
         type: object
     openfirst:
-      type: string
+      type: ['string', 'null', 'integer']
       title: Open first tab item
       description: Boolean to determine if the first tab item should be open
   required:

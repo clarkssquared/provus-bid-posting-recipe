@@ -1,3 +1,4 @@
+{% if items %}
 <div class="accordion" id="accordion{{ id }}">
   {% for key, item in items %}
     <div class="accordion-item">
@@ -19,3 +20,4 @@
     </div>
   {% endfor %}
 </div>
+{% endif %}

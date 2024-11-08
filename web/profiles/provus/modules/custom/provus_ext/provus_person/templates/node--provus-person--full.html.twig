@@ -86,30 +86,15 @@
   </header>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
     <div class="article-body-wrapper person-node">
-      <div class="person-header">
-        <div class="row">
-          <div class="col-md-8">
-                <h1>{{ label }}</h1>
-                <h2>{{ content.field_provus_titles }}</h2>
-                <div class="node__content clearfix">
-                  <div class="content-body">
-                    {{ content.body }}
-                  </div>
-                </div>
-              </div>
-          <div class="col-md-4">
-            <div class="person-image">
-                    {{ content.field_provus_media_image }}
-              </div>
-              <div class="email">
-                <div class="email-wrapper"><span class="far fa-envelope"></span></div>{{ content.field_provus_email }}
-            </div>
-            <div class="phone">
-              <div class="phone-wrapper"><span class="fas fa-phone"></span></div>{{ content.field_provus_telephone }}
-            </div>
-          </div>
-        </div>
-      </div>
+      {% embed 'provus_person:person' with {
+        name: label,
+        job_title: content.field_provus_titles,
+        about: content.body|render,
+        image: content.field_provus_media_image,
+        email: content.field_provus_email,
+        phone: content.field_provus_telephone
+      } only %}
+      {% endembed %}
     </div>
   </div>
 </article>

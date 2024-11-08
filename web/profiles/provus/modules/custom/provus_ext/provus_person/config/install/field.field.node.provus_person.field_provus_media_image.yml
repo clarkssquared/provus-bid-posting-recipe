@@ -11,7 +11,7 @@ entity_type: node
 bundle: provus_person
 label: Image
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

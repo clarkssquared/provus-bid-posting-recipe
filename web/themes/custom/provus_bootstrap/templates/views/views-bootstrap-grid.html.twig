@@ -24,7 +24,7 @@
   <div class="row g-4">
     {% for row in rows %}
       <div {{ row_attributes.addClass(options.row_class) }}>
-        {{ row }}
+        {{ row.content }}
       </div>
     {% endfor %}
   </div>

@@ -79,24 +79,14 @@
     {{ title_prefix }}
     {{ title_suffix }}
   </header>
-  <div class="mini-date">
-    <div class="mini-date-left">
-      <div class="mini-date-top">
-        {{ node.field_provus_dates.value | date('U') | format_date('provus_month_short') }}
-      </div>
-      <div class="mini-date-bottom">
-        {{ node.field_provus_dates.value | date('U') | format_date('provus_date_only') }}
-      </div>
-    </div>
-    <div class="mini-date-right">
-      <div class="mini-date-title">
-        <h3>
-          <a href="{{ url }}">{{ label }}</a>
-        </h3>
-      </div>
-      <div class="mini-date-fulldate">
-        {{ node.field_provus_dates.value | date('U') | format_date('provus_event_date') }}
-      </div>
-    </div>
-  </div>
+  {% embed 'provus_events:mini' with {
+    start_date: node.field_provus_dates.value | date('U') | format_date('provus_month_short'),
+    end_date: node.field_provus_dates.value | date('U') | format_date('provus_date_only'),
+    dates: content.field_provus_dates|render,
+    url: url,
+    event_title: label,
+    full_dates: node.field_provus_dates.value | date('U') | format_date('provus_event_date'),
+    body: content.body
+  } only %}
+  {% endembed %}
 </article>

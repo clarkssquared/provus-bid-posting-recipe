@@ -82,21 +82,12 @@
     {% endif %}
     {{ title_suffix }}
   </header>
-  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-    <div class="row">
-      <div class="col-md-6">
-        {% if content.field_provus_smartdate %}
-          <h2>{{ 'Dates'|t }}</h2>
-          {{ content.field_provus_smartdate }}
-        {% endif %}
-      </div>
-      <div class="col-md-6">
-
-      </div>
-    </div>
-    <div class="row">
-      <h2>{{ 'Event details'|t }}</h2>
-      {{ content.body }}
-    </div>
-  </div>
+  {% embed 'provus_events:event' with {
+    content_attributes: content_attributes,
+    card_title_top: 'Dates'|t,
+    card_title_bottom: 'Event details'|t ,
+    event_title: content.field_provus_smartdate,
+    body: content.body
+  } only %}
+  {% endembed %}
 </article>

@@ -74,26 +74,17 @@
     'clearfix',
   ]
 %}
-<div class="card card-event-mini" {{ attributes.addClass(classes) }}>
-  <div class="card-body">
-    <div class="card-date">
-      <div class="card-date-top">
-        {{ node.field_provus_dates.value | date('U') | format_date('provus_month_short') }}
-      </div>
-      <div class="card-date-bottom">
-        {{ node.field_provus_dates.value | date('U') | format_date('provus_date_only') }}
-      </div>
-    </div>
-    <div class="card-title">
-      <h3>
-        <a href="{{ url }}" class="fullclick">{{ label }}</a>
-      </h3>
-    </div>
-    <div class="card-full-date">
-      {{ node.field_provus_dates.value | date('U') | format_date('provus_event_date') }}
-    </div>
-    <div class="card-body-text">
-      {{ content.body['#object'].body.summary }}
-    </div>
-  </div>
+
+{% embed 'provus_events:list_item' with {
+    extra_classes: attributes.addClass(classes),
+    start_date: node.field_provus_dates.value | date('U') | format_date('provus_month_short'),
+    end_date: node.field_provus_dates.value | date('U') | format_date('provus_date_only'),
+    dates: content.field_provus_dates|render,
+    url: url,
+    event_title: label,
+    body: content.body,
+    full_dates: node.field_provus_dates.value | date('U') | format_date('provus_event_date'),
+    summary: content.body['#object'].body.summary
+  } only %}
+  {% endembed %}
 </div>

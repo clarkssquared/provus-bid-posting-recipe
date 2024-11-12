@@ -50,7 +50,7 @@
       title: content.field_provus_title|render,
       body: content.field_provus_body|render,
       links: content.field_provus_links|render,
-      background_image_path: (file_url(content.field_provus_cta_background_img['#items'].entity.uri.value)) is not empty ? file_url(content.field_provus_cta_background_img['#items'].entity.uri.value|image_style('provus_large_banner')) : '',
+      background_image_path: background_img_path,
       wrapper_class: content.field_provus_cta_background_clr.0
     } only %}
     {% endembed %}

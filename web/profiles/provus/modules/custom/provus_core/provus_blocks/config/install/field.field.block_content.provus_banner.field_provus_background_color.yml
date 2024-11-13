@@ -11,7 +11,7 @@ field_name: field_provus_background_color
 entity_type: block_content
 bundle: provus_banner
 label: 'Background Color'
-description: ''
+description: '<strong>Choose a background color for your banner, this background color will be visible when your banner is not set to full image position.</strong>'
 required: false
 translatable: false
 default_value:

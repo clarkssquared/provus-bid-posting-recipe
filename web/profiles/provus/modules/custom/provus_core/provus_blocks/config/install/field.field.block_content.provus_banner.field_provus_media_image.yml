@@ -10,7 +10,7 @@ field_name: field_provus_media_image
 entity_type: block_content
 bundle: provus_banner
 label: 'Banner image'
-description: ''
+description: "<strong>The Banner is generally going to be a long image across your site. <br>\r\n\r\nPlease add an image that reflects that and is either 1440×500 or 2880×1000 pixels.<br>\r\n\r\nTo further choose a focal point for cropping, head to the media section after upload. </strong>"
 required: true
 translatable: false
 default_value: {  }

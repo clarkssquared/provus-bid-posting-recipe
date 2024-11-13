@@ -11,7 +11,7 @@ field_name: field_provus_image_position
 entity_type: block_content
 bundle: provus_banner
 label: 'Image position'
-description: ''
+description: '<strong>Image position determines how the banner image will be displayed. So, take a moment to choose the position that suits you best.</strong>'
 required: true
 translatable: false
 default_value:

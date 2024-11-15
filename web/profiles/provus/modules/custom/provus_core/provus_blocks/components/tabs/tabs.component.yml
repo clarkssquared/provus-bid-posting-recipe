@@ -13,7 +13,7 @@ props:
       title: 'Orientation'
       description: 'Sub title'
     items:
-      type: array
+      type: ['array', 'null']
       title: Blocks
       description: An array of blocks
       items:

@@ -26,6 +26,9 @@ props:
       description: An array of blocks
       items:
         type: object
+    rowclass:
+      type: string
+      title: 'Class attribute'
   required:
     - content_attributes
     - blocks

@@ -48,6 +48,137 @@ function provus_layout_builder_preprocess(&$vars) {
 }
 
 /**
+ * Alter form block forms rendered by Layout Builder browser.
+ *
+ * E.g. Alter block forms for 'block_content' and 'inline_block' plugins.
+ *
+ * @param array $form
+ *   Nested array of form elements that comprise the form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state.
+ * @param string $form_id
+ *   The form_id of the custom block.
+ */
+function provus_layout_builder_form_alter(
+  array &$form,
+  FormStateInterface &$form_state,
+  string &$form_id) {
+
+  if ($form_id == 'layout_builder_browser_block_edit_form') {
+    $block_id = $form['id']['#default_value'];
+    $radio_config_fields =  \Drupal::service('config.factory')
+      ->getEditable('provus_layout_builder.browser.config')
+      ->get('radio_fields');
+    $fields = $radio_config_fields ? $radio_config_fields[$block_id] : '';
+
+    if ($fields) {
+      $fields_definition =  \Drupal::service('entity_field.manager')
+        ->getFieldDefinitions('block_content', $block_id);
+
+      $config_id = 'provus_layout_builder.browser.' . $block_id . '.config';
+      $config = \Drupal::service('config.factory')
+        ->getEditable($config_id);
+
+      foreach ($fields as $field) {
+        $field_settings = $fields_definition[$field]->getSettings();
+        $form['field_img_path'][$field] = [
+          '#type' => 'details',
+          '#title' => $fields_definition[$field]->label(),
+          '#open' => TRUE
+        ];
+        if ($field_settings['allowed_values']) {
+          foreach ($field_settings['allowed_values'] as $allowed_value_key => $allowed_value) {
+            $form['field_img_path'][$field][$allowed_value_key] = [
+              '#type' => 'textfield',
+              '#title' => $allowed_value,
+              '#description' => t('Preview image path. E.g. /path-to/images/@img.jpg', [
+                '@img' => $allowed_value_key
+              ]),
+              '#maxlength' => 256,
+              '#default_value' => $config->get($field) ?
+                $config->get($field)[$allowed_value_key] : '',
+            ];
+          }
+        }
+        if ($field_settings['allowed_values_function']) {
+          $allowed_values = call_user_func($field_settings['allowed_values_function']);
+          foreach ($allowed_values as $allowed_value_key => $allowed_value) {
+            $form['field_img_path'][$field][$allowed_value_key] = [
+              '#type' => 'textfield',
+              '#title' => $allowed_value,
+              '#description' => t('Preview image path. E.g. /path-to/images/@img.jpg', [
+                '@img' => $allowed_value_key
+              ]),
+              '#maxlength' => 256,
+             '#default_value' => $config->get($field) ?
+                $config->get($field)[$allowed_value_key] : '',
+            ];
+          }
+        }
+      }
+      $form['#tree'] = TRUE;
+      $form['actions']['submit']['#validate'][] = '_provus_layout_builder_validate_handler';
+      $form['actions']['submit']['#submit'][] = '_provus_layout_builder_submit_handler';
+    }
+  }
+}
+
+/**
+ * Validate handler of layout_builder_browser_block_edit_form.
+ */
+function _provus_layout_builder_validate_handler(
+  array &$form,
+  FormStateInterface &$form_state) {
+  $img_flag = FALSE;
+  $field_img_paths = $form_state->getValue('field_img_path');
+  foreach ($field_img_paths as $field_key => $field_img_path) {
+    foreach ($field_img_path as $key => $path) {
+      $img_path = \Drupal::root() . $path;
+      // Let empty path saved.
+      if (empty($path)) {
+        continue;
+      }
+      // Check if path exists.
+      if (\file_exists($img_path)) {
+        $mime_type = mime_content_type($img_path);
+        // If path exists, validate file is image.
+        if (!str_contains($mime_type, 'image')) {
+          $img_flag = TRUE;
+        }
+      } else {
+        $img_flag = TRUE;
+      }
+    }
+  }
+  if ($img_flag) {
+    $form_state->setErrorByName('field_img_path', 'Image not valid.');
+  }
+}
+
+/**
+ * Submit handler of layout_builder_browser_block_edit_form.
+ */
+function _provus_layout_builder_submit_handler(
+  array &$form,
+  FormStateInterface &$form_state) {
+  $block_id = $form_state->getValue('id');
+  $field_img_paths = $form_state->getValue('field_img_path');
+
+  $config_id = 'provus_layout_builder.browser.' . $block_id . '.config';
+  $dependency_config = 'provus_layout_builder.browser.config';
+
+  $config = \Drupal::service('config.factory')
+  ->getEditable($config_id);
+  foreach ($field_img_paths as $field_key => $field_img_path) {
+    $config->set($field_key, $field_img_path);
+  }
+  // Add dependency config.
+  $config->set('dependencies', [
+    'config' => [$dependency_config]
+  ])->save();
+}
+
+/**
  * Alter custom block forms rendered by Block Content and Layout Builder.
  *
  * E.g. Alter block forms for 'block_content' and 'inline_block' plugins.
@@ -64,84 +195,57 @@ function provus_layout_builder_block_type_form_alter(
   FormStateInterface &$form_state, 
   string $block_type) {
 
-  $radio_fields = [
-    [
-      'parent_block' => 'provus_button',
-      'name' => 'field_provus_button_arrangement',
-    ],
-    [
-      'parent_block' => 'provus_banner',
-      'name' => 'field_provus_image_position',
-    ],
-    [
-      'parent_block' => 'provus_card',
-      'name' => 'field_provus_item_display',
-    ],
-    [
-      'parent_block' => 'provus_testimonial',
-      'name' => 'field_provus_image_position',
-    ],
-    [
-      'parent_block' => 'provus_list',
-      'name' => 'field_provus_list_orientation',
-    ],
-    [
-      'parent_block' => 'provus_list',
-      'name' => 'field_provus_list_style',
-    ],
-    [
-      'parent_block' => 'provus_group',
-      'name' => 'field_provus_group_display',
-    ],
-    [
-      'parent_block' => 'provus_group',
-      'name' => 'field_provus_item_display',
-    ],
-    [
-      'parent_block' => 'provus_group_automatic',
-      'name' => 'field_provus_group_display',
-    ],
-    [
-      'parent_block' => 'provus_group_automatic',
-      'name' => 'field_provus_item_display',
-    ],
-  ];
+  $radio_config_fields =  \Drupal::service('config.factory')
+    ->getEditable('provus_layout_builder.browser.config')
+    ->get('radio_fields');
 
-  foreach ($radio_fields as $field) {
-    if (isset($form[$field['name']]['widget']['#options']) && $block_type == $field['parent_block']) {
-      // Enforce field widget to radios.
-      $form[$field['name']]['widget']['#type'] = 'radios';
-      if (is_array($form[$field['name']]['widget']['#default_value']) &&
-        !empty($form[$field['name']]['widget']['#default_value'])) {
-        $form[$field['name']]['widget']['#default_value'] = reset($form[$field['name']]['widget']['#default_value']);
-      }
-
-      $form[$field['name']]['#attributes']['class'][] = 'provus-image-radio';
-      $options = $form[$field['name']]['widget']['#options'];
-      $new_options = [];
-      $img_path = \Drupal::service('extension.list.module')->getPath('provus_layout_builder');
-      foreach ($options as $key => $value) {
-        // Skip none.
-        if ($value == "- None -") {
-          continue;
+  foreach ($radio_config_fields as $parent_block => $field_names) {
+    foreach ($field_names as $field_name) {
+      if (isset($form[$field_name]['widget']['#options']) && $block_type == $parent_block) {
+        // Enforce field widget to radios.
+        $form[$field_name]['widget']['#type'] = 'radios';
+        if (is_array($form[$field_name]['widget']['#default_value']) &&
+          !empty($form[$field_name]['widget']['#default_value'])) {
+          $form[$field_name]['widget']['#default_value'] = reset($form[$field_name]['widget']['#default_value']);
         }
-        $parent_block_name = str_replace(
-          'provus_group_automatic', 
-          'provus_group', 
-          $field['parent_block']
-        );
-        $img_src = implode(
-          "--",
-          [
-            $parent_block_name,
-            $field['name'],
-            $value,
-          ]
-        );
-        $markup = Markup::create('<img src="/'. $img_path . '/images/' . $img_src .'.svg"/>');
-        $new_options[$key] = '<div>' . $value . '</div>' . $markup;
+
+        $form[$field_name]['#attributes']['class'][] = 'provus-image-radio';
+        $options = $form[$field_name]['widget']['#options'];
+        $new_options = [];
+
+        $config_id = 'provus_layout_builder.browser.' . $parent_block . '.config';
+        $config = \Drupal::service('config.factory')->getEditable($config_id);
+
+        foreach ($options as $key => $value) {
+          // Skip none.
+          if ($value == "- None -") {
+            continue;
+          }
+          $img_path = $config->get($field_name)[$key];
+          // Set default img path if config img path is empty.
+          if (empty($img_path)) {
+            $module_path = \Drupal::service('extension.list.module')
+              ->getPath('provus_layout_builder');
+            $parent_block_name = str_replace(
+              'provus_group_automatic',
+              'provus_group',
+              $parent_block
+            );
+            $img_src = implode(
+              "--",
+              [
+                $parent_block_name,
+                $field_name,
+                $value,
+              ]
+            );
+            $img_path = '/'. $module_path . '/images/' . $img_src .'.svg';
+          }
+          $markup = Markup::create('<img src="'. $img_path . '"/>');
+          $new_options[$key] = '<div>' . $value . '</div>' . $markup;
+        }
+        $form[$field_name]['widget']['#options'] = $new_options;
       }
-      $form[$field['name']]['widget']['#options'] = $new_options;
     }
   }
 }

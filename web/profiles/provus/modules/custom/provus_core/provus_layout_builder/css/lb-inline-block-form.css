@@ -8,7 +8,7 @@
 }
 .provus-image-radio img {
   width: 200px;
-  height: auto;
+  height: 200px;
   margin-top: 5px;
   background: var(--gin-bg-item-hover);
 }

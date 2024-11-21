@@ -38,11 +38,14 @@
       padding-right: $padding-padding-lg;
       position: absolute;
       z-index: 2;
+      max-height: 85%;
+      overflow: hidden;;
       @include media-breakpoint-up(md) {
         bottom: rem-calc(40);
         padding-left: $padding-padding-xxlg;
         padding-right: $padding-padding-xxlg;
         padding-bottom: 0;
+        max-height: none;
       }
       .container {
         display: flex;
@@ -60,6 +63,12 @@
           margin: 0;
           text-align: left;
           width: 100%;
+          &.title-padding-bottom {
+            margin-bottom: rem-calc(25);
+            @include media-breakpoint-up(md) {
+              margin-bottom: rem-calc(70);
+            }
+          }
         }
         .btn {
           margin-top: $padding-padding-lg;

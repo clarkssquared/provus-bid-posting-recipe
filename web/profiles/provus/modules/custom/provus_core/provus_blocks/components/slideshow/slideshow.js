@@ -22,7 +22,7 @@
           });
           slick.$slides.each( function(index) {
             $(this).attr('title', 'Slide ' + (index + 1));
-            $(this).removeAttr('aria-hidden, tabindex');
+            $(this).removeAttr('tabindex');
           });
         }, 60);
       });

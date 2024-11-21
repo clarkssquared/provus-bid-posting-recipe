@@ -11,7 +11,11 @@
         </div>
         <div class="text-container">
           <div class="container">
+            {% if item.field_provus_url_slide_show_item.0 is not empty %}
             <div class="title">
+            {% else %}
+            <div class="title title-padding-bottom">
+            {% endif %}
               {{ item.field_provus_title.0 }}
             </div>
             {% if item.field_provus_url_slide_show_item.0 is not empty %}

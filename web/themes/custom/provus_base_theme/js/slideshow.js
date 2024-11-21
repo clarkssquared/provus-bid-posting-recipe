@@ -1,8 +1,6 @@
 (function ($, Drupal) {
   if ($('.slide-show-with-items-container').length > 0) {
-    console.log('start slider')
     $('.slide-show-with-items-container').each(function() {
-      console.log('Each slideshow');
       const sliderSpeed = $(this).attr('data-slide-speed');
       const sliderAutoplay = $(this).attr('data-autoplay');
       $(this).on('init reInit beforeChange', function(event, slick){
@@ -19,6 +17,7 @@
           $(slickTrack).attr('aria-label', 'Slideshow');
           $(dot).each(function(index) {
             $(this).attr('aria-label', 'Slide ' + (index + 1));
+            $(this).find('button').text('Slide ' + (index + 1) + ' button');
           });
           slick.$slides.each( function(index) {
             $(this).attr('title', 'Slide ' + (index + 1));
@@ -42,7 +41,6 @@
 
     // Slideshow.
     window.addEventListener('load',function(){
-      console.log('on loaded');
       $(".slide-show-with-items-container").each(function(){
         let playPauseContainer = document.createElement('ul');
         let playBtn = document.createElement('li');

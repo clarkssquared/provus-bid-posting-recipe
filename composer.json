@@ -201,6 +201,9 @@
             "drupal/default_content_deploy": {
                 "3376835: Fix layout builder references to inline blocks": "https://www.drupal.org/files/issues/2023-07-25/default_content_deploy-layout-builder-inline-blocks-reference-3376835-2.patch"
             },
+            "drupal/google_tag": {
+                "3488123: Processing commands config ID missing": "https://git.drupalcode.org/project/google_tag/-/merge_requests/96.diff"
+            },
             "drupal/inline_entity_form": {
                 "3033241: Cannot update the order weight using complex form widget": "https://www.drupal.org/files/issues/2021-02-15/cannot-update-weight-order-complex-widget-3033241-4.patch"
             },

@@ -1,0 +1,53 @@
+uuid: 4ca729ed-9ca6-4990-8ddc-2f2d870b1dc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.provus_location_address
+    - field.field.node.provus_location.body
+    - field.field.node.provus_location.field_provus_address
+    - field.field.node.provus_location.field_provus_email
+    - field.field.node.provus_location.field_provus_hours
+    - field.field.node.provus_location.field_provus_media_image
+    - field.field.node.provus_location.field_provus_tax_cat_location
+    - field.field.node.provus_location.field_provus_telephone
+    - node.type.provus_location
+  module:
+    - address
+    - address_map_link
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: WCTD85olkkrRw0rlphdZE6yUjb23HGccAxOjPu7y1CA
+id: node.provus_location.provus_location_address
+targetEntityType: node
+bundle: provus_location
+mode: provus_location_address
+content:
+  field_provus_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      address_map_link:
+        link_address: true
+        map_link_type: google_maps
+        map_link_position: address
+        map_link_text: 'Open Map'
+        map_link_new_window: true
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  field_provus_email: true
+  field_provus_hours: true
+  field_provus_media_image: true
+  field_provus_tax_cat_location: true
+  field_provus_telephone: true
+  links: true
+  search_api_excerpt: true

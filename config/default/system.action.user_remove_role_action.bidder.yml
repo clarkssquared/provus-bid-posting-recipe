@@ -1,0 +1,14 @@
+uuid: 29f8bc3a-9fc7-4ec6-8c83-848cc873e9b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bidder
+  module:
+    - user
+id: user_remove_role_action.bidder
+label: 'Remove the Bidder role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bidder

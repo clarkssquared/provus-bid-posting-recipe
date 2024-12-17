@@ -1,0 +1,14 @@
+uuid: 44dcd532-737e-42a3-8c66-2362fc56c28d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bidder
+  module:
+    - user
+id: user_add_role_action.bidder
+label: 'Add the Bidder role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bidder

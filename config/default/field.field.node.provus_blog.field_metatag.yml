@@ -1,0 +1,23 @@
+uuid: 8efca345-ba6e-4387-ae4d-768f02b6749e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.provus_blog
+  module:
+    - metatag
+_core:
+  default_config_hash: wmYYjRG9PQvITCrOxTugiLEAWbSa6zEezBo2SeXnW7U
+id: node.provus_blog.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: provus_blog
+label: Metatag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

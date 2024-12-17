@@ -1,0 +1,31 @@
+uuid: 3f23d9de-761e-4d3b-9314-d36dbf7c4739
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.provus_person_list
+    - field.storage.block_content.field_provus_people
+    - node.type.provus_person
+_core:
+  default_config_hash: ZVhw-okOc90Q7v02Dhcm0tKikH-YIR-S-ZgL7biUEmE
+id: block_content.provus_person_list.field_provus_people
+field_name: field_provus_people
+entity_type: block_content
+bundle: provus_person_list
+label: People
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      provus_person: provus_person
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

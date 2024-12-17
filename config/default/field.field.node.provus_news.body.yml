@@ -1,0 +1,31 @@
+uuid: e0d6e716-b390-47af-8919-4e0acb48067f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.provus_news
+  module:
+    - linkchecker
+    - text
+third_party_settings:
+  linkchecker:
+    scan: true
+    extractor: html_link_extractor
+_core:
+  default_config_hash: WrfQ8cyRD_HuM5aF9J7w2MfGSeHraBlHCRxiO6r6oe8
+id: node.provus_news.body
+field_name: body
+entity_type: node
+bundle: provus_news
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

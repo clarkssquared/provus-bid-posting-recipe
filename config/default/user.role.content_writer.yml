@@ -1,0 +1,74 @@
+uuid: 0327e40f-15d0-4105-9162-91cfb484602f
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.document
+    - media.type.image
+    - media.type.local_video
+    - media.type.remote_video
+    - node.type.provus_blog
+    - node.type.provus_event
+    - node.type.provus_faq_page
+    - node.type.provus_landing_page
+    - node.type.provus_news
+    - node.type.provus_person
+    - workflows.workflow.basic
+  module:
+    - content_moderation
+    - contextual
+    - media
+    - node
+    - pathauto
+    - system
+    - toastify
+    - toolbar
+    - tour
+_core:
+  default_config_hash: Lfjh409yXnx-d6jXO-nIByLnVlNrz6JRPUFdqRmowsU
+id: content_writer
+label: 'Content Writer'
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create document media'
+  - 'create image media'
+  - 'create local_video media'
+  - 'create media'
+  - 'create provus_blog content'
+  - 'create provus_event content'
+  - 'create provus_faq_page content'
+  - 'create provus_landing_page content'
+  - 'create provus_news content'
+  - 'create provus_person content'
+  - 'create remote_video media'
+  - 'delete own provus_blog content'
+  - 'delete own provus_event content'
+  - 'delete own provus_faq_page content'
+  - 'delete own provus_landing_page content'
+  - 'delete own provus_news content'
+  - 'delete own provus_person content'
+  - 'edit own image media'
+  - 'edit own local_video media'
+  - 'edit own provus_blog content'
+  - 'edit own provus_event content'
+  - 'edit own provus_faq_page content'
+  - 'edit own provus_landing_page content'
+  - 'edit own provus_news content'
+  - 'edit own provus_person content'
+  - 'edit own remote_video media'
+  - 'notify of path changes'
+  - 'show toastify messages'
+  - 'update media'
+  - 'use basic transition create_new_draft'
+  - 'use basic transition send_to_draft'
+  - 'use basic transition send_to_needs_review'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'

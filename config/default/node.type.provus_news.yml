@@ -1,0 +1,19 @@
+uuid: ede300e5-ccf5-4aea-b1c0-d5be989eec3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: Yv77cbIj0J3jUZWW95lj4x1WAv5bveY7-NXSlKcbFic
+name: News
+type: provus_news
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

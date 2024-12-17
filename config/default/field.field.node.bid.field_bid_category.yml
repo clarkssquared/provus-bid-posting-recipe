@@ -1,0 +1,29 @@
+uuid: 05f8bebf-f57c-4f61-b369-e8268fa426e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bid_category
+    - node.type.bid
+    - taxonomy.vocabulary.category_bid
+id: node.bid.field_bid_category
+field_name: field_bid_category
+entity_type: node
+bundle: bid
+label: 'Bid Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      category_bid: category_bid
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

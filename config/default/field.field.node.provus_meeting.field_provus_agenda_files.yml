@@ -1,0 +1,31 @@
+uuid: ad3e2117-5921-4102-b868-e31be313f159
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_agenda_files
+    - media.type.document
+    - node.type.provus_meeting
+_core:
+  default_config_hash: sRx0shM60yxp2kCky93VPfYf9c_YVK02eM0lTJkerPs
+id: node.provus_meeting.field_provus_agenda_files
+field_name: field_provus_agenda_files
+entity_type: node
+bundle: provus_meeting
+label: 'Agenda Files'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

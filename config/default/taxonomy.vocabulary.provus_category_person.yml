@@ -1,0 +1,11 @@
+uuid: 6c54c306-79e9-4d6a-a921-eb2fc1a22333
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: W2awoBN3on1z1657wyPTLnCh2_JPozIpNfEsf25cGpM
+name: 'Category: Person'
+vid: provus_category_person
+description: null
+weight: 0
+new_revision: false

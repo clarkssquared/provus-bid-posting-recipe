@@ -1,0 +1,22 @@
+uuid: fb91a857-e92a-440e-9898-fcf724772a34
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - provus_meridian_v2
+_core:
+  default_config_hash: n_B1aXRC4JxBe1Nn3HHvTZg5s9yHrqeV7wQLBWdf6kM
+id: provus_meridian_v2_provus_bootstrap_help
+theme: provus_meridian_v2
+region: title
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,72 @@
+uuid: c38e2ae1-6369-4207-8f6b-7f9c4a7668a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.provus_news.body
+    - field.field.node.provus_news.field_metatag
+    - field.field.node.provus_news.field_provus_media_files
+    - field.field.node.provus_news.field_provus_media_image
+    - field.field.node.provus_news.field_provus_publish_date
+    - node.type.provus_news
+  module:
+    - datetime
+    - metatag
+    - text
+    - user
+_core:
+  default_config_hash: bXRXrsT4oe76cKZwWr2OO68X5Ex4SjyXuADgGJaL57Y
+id: node.provus_news.default
+targetEntityType: node
+bundle: provus_news
+mode: default
+content:
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_provus_media_files:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_provus_media_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_provus_publish_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  links: true
+  search_api_excerpt: true

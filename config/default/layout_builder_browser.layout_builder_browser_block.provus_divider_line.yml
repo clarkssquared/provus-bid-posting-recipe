@@ -1,0 +1,13 @@
+uuid: bedf2f0b-86e2-48b2-a335-6290c75e46c2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rOEufto8hlVb47DjgL6C7ApoReEzZxvq-rBqErzmvrc
+id: provus_divider_line
+block_id: 'inline_block:provus_divider_line'
+category: provus_simple_content
+label: 'Divider Line'
+weight: -60
+image_path: /themes/custom/provus_base_theme/images/components/divider.svg
+image_alt: ''

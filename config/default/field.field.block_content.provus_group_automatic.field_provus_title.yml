@@ -1,0 +1,21 @@
+uuid: 2cc7fa9f-f251-4d4d-af2f-4f4f3a6a9440
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.provus_group_automatic
+    - field.storage.block_content.field_provus_title
+_core:
+  default_config_hash: fL9xp3_xaG-N0DenNgMEgJ48kjDUr5CLOqC0Ij8BAwU
+id: block_content.provus_group_automatic.field_provus_title
+field_name: field_provus_title
+entity_type: block_content
+bundle: provus_group_automatic
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: UcBB1cBv1dK8XKUIH_B9536r4WbAGxeNrP1Vc1uCcvA
+field_provus_image_position:
+  full: /profiles/provus/modules/custom/provus_core/provus_layout_builder/images/provus_testimonial--field_provus_image_position--full.svg
+  left: /profiles/provus/modules/custom/provus_core/provus_layout_builder/images/provus_testimonial--field_provus_image_position--left.svg
+  right: /profiles/provus/modules/custom/provus_core/provus_layout_builder/images/provus_testimonial--field_provus_image_position--right.svg
+dependencies:
+  config:
+    - provus_layout_builder.browser.config

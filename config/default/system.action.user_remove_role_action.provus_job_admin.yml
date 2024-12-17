@@ -1,0 +1,16 @@
+uuid: 64a398fe-8ed7-44fb-b569-12a29ebaa50d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.provus_job_admin
+  module:
+    - user
+_core:
+  default_config_hash: EG024W9kSVWWgY9ABzSpBChaXyLn9ThrNm50bVaNb6M
+id: user_remove_role_action.provus_job_admin
+label: 'Remove the Job Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: provus_job_admin

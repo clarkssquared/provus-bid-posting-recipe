@@ -1,0 +1,26 @@
+uuid: 7ca031cf-5478-48ef-b6ed-e5f886f0deaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - provus_meridian_v2
+_core:
+  default_config_hash: 0A5nCTI_TO4V3zCuxiOHbQ0vWMmFNnL7_R9EPPZO1R4
+id: provus_meridian_v2_provus_bootstrap_page_title
+theme: provus_meridian_v2
+region: title
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/people/*'

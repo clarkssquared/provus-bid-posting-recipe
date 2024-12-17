@@ -1,0 +1,21 @@
+uuid: 67716663-4b6a-4436-b180-77bc55cc5287
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - smart_date
+_core:
+  default_config_hash: OSK9Gmd7kUpWAu285PF8VjrENE_HuYSP393_SvQze2w
+id: node.field_provus_smartdate
+field_name: field_provus_smartdate
+entity_type: node
+type: smartdate
+settings: {  }
+module: smart_date
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

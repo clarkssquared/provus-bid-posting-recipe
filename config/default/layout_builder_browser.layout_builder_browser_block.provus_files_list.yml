@@ -1,0 +1,13 @@
+uuid: 97a7a245-ca1c-4e3f-a9fe-92cd560638d7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cckxDwman2SXLc83XBtegPh548C0qqEKIEi-f9emE2E
+id: provus_files_list
+block_id: 'inline_block:provus_files_list'
+category: provus_grouped_content
+label: 'Files List'
+weight: -99
+image_path: /themes/custom/provus_base_theme/images/components/files-list.svg
+image_alt: ''

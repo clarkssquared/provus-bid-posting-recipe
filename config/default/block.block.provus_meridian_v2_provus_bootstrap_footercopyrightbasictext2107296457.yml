@@ -1,0 +1,27 @@
+uuid: a21f94b2-5290-4645-a6e0-5081ba6099fa
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:provus_basic_text:37b57104-3a1d-49cf-9200-e9670499ed60'
+  module:
+    - block_content
+  theme:
+    - provus_meridian_v2
+_core:
+  default_config_hash: ar_KgUeGJsP9ibuPbWefHI0PkZDXe1fNDfcoaU8G-5U
+id: provus_meridian_v2_provus_bootstrap_footercopyrightbasictext2107296457
+theme: provus_meridian_v2
+region: footer_fifth
+weight: -7
+provider: null
+plugin: 'block_content:37b57104-3a1d-49cf-9200-e9670499ed60'
+settings:
+  id: 'block_content:37b57104-3a1d-49cf-9200-e9670499ed60'
+  label: 'Footer Copyright (Basic Text) - 2107296457'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

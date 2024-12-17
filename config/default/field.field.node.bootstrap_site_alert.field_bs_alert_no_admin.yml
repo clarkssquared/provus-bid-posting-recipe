@@ -1,0 +1,25 @@
+uuid: 54886b3c-e32b-46c1-bd88-14f8fadbfec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bs_alert_no_admin
+    - node.type.bootstrap_site_alert
+_core:
+  default_config_hash: WT8A4mzu2jWoZoMuSnHGty4Jvvrz6RLP14LuI4yzVGc
+id: node.bootstrap_site_alert.field_bs_alert_no_admin
+field_name: field_bs_alert_no_admin
+entity_type: node
+bundle: bootstrap_site_alert
+label: 'Hide this alert on admin pages?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

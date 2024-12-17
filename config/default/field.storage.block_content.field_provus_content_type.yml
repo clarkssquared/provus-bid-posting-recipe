@@ -1,0 +1,23 @@
+uuid: 66091f11-303d-4c49-ad6e-7d3c3d38e98c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: K577F6qDmdFQZCVXKRscIGnRufRHkf0-G6dsUNx7mNc
+id: block_content.field_provus_content_type
+field_name: field_provus_content_type
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: provus_blocks_group_content_type_allowed_values
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

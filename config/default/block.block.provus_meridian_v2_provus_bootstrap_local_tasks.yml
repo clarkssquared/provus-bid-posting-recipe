@@ -1,0 +1,22 @@
+uuid: 6a7d4722-a438-439a-abd6-3090e7ee1d2b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - provus_meridian_v2
+_core:
+  default_config_hash: GX2NDKJ1XnW7w42MnN_HPcSwCPN3Wo5aPuFUplaV6DY
+id: provus_meridian_v2_provus_bootstrap_local_tasks
+theme: provus_meridian_v2
+region: title
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,157 @@
+uuid: 3a55d57f-ed2a-4de3-9910-6f86b0716a5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.provus_meeting.body
+    - field.field.node.provus_meeting.field_provus_agenda_files
+    - field.field.node.provus_meeting.field_provus_location
+    - field.field.node.provus_meeting.field_provus_media_files
+    - field.field.node.provus_meeting.field_provus_media_video
+    - field.field.node.provus_meeting.field_provus_minutes_files
+    - field.field.node.provus_meeting.field_provus_smartdate
+    - field.field.node.provus_meeting.field_provus_tax_cat_meeting
+    - field.field.node.provus_meeting.field_provus_telephone
+    - node.type.provus_meeting
+  module:
+    - date_augmenter
+    - layout_builder
+    - smart_date
+    - telephone
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: 10IQOuteXxsEnxjx0zUd_dx9hcBbiprYnKE7z4Jlzc4
+id: node.provus_meeting.default
+targetEntityType: node
+bundle: provus_meeting
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_provus_agenda_files:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_provus_location:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: provus_location_address
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_provus_media_files:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_provus_media_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_provus_minutes_files:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_provus_smartdate:
+    type: smartdate_custom
+    label: hidden
+    settings:
+      separator: ' - '
+      time_diff:
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: '2'
+        refresh: '60'
+        enabled: 0
+        description: ''
+      date_format: 'l, F j Y'
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      join: '<div class="divider"></div><span class="time-icon"></span>'
+      time_format: 'g:i a'
+      time_hour_format: 'g:i a'
+      allday_label: 'All day'
+      date_first: '1'
+      ampm_reduce: '1'
+      site_time_toggle: '1'
+    third_party_settings:
+      date_augmenter:
+        status:
+          addtocal: '1'
+        weights:
+          order:
+            addtocal:
+              weight: '0'
+        settings:
+          addtocal:
+            label: 'Add to Calendar'
+            event_title: '[current-page:title]'
+            location: ''
+            description: '[node:body]'
+            max_desc: '60'
+            target: ''
+            retain_spacing: 0
+            ellipsis: 0
+            past_events: 0
+        augmenter_settings:
+          fields__field_provus_smartdate__settings_edit_form__third_party_settings__date_augmenter__augmenter_settings__active_tab: ''
+    weight: 1
+    region: content
+  field_provus_tax_cat_meeting:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_provus_telephone:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  addtoany: true
+  search_api_excerpt: true

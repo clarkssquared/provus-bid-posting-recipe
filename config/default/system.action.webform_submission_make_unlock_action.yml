@@ -1,0 +1,13 @@
+uuid: beb193ba-e818-47e3-86be-03c0275a8b04
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform
+_core:
+  default_config_hash: IgQRzl6pK-SYcTB3CqUbJYvvQzxUCgR8F7FX1cbrIxc
+id: webform_submission_make_unlock_action
+label: 'Unlock submission'
+type: webform_submission
+plugin: webform_submission_make_unlock_action
+configuration: {  }

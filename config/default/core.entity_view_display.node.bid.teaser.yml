@@ -1,0 +1,51 @@
+uuid: 138cbce2-871e-464f-8b9a-4f5c270956c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bid.field_additional_submission_info
+    - field.field.node.bid.field_address
+    - field.field.node.bid.field_bid_category
+    - field.field.node.bid.field_bid_type
+    - field.field.node.bid.field_budget_range
+    - field.field.node.bid.field_contact_person
+    - field.field.node.bid.field_deadline
+    - field.field.node.bid.field_department
+    - field.field.node.bid.field_description
+    - field.field.node.bid.field_document
+    - field.field.node.bid.field_method_of_contact
+    - field.field.node.bid.field_submission_channels
+    - node.type.bid
+  module:
+    - user
+id: node.bid.teaser
+targetEntityType: node
+bundle: bid
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_additional_submission_info: true
+  field_address: true
+  field_bid_category: true
+  field_bid_type: true
+  field_budget_range: true
+  field_contact_person: true
+  field_deadline: true
+  field_department: true
+  field_description: true
+  field_document: true
+  field_method_of_contact: true
+  field_submission_channels: true
+  search_api_excerpt: true

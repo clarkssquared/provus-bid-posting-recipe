@@ -1,0 +1,21 @@
+uuid: b4da8ccf-5142-4353-b3c4-4bb467c46908
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_lname
+    - node.type.provus_person
+_core:
+  default_config_hash: MX7xIrk4P746SwKV8iu0MQOCFhf5X-FKuNbIp5GHNuk
+id: node.provus_person.field_provus_lname
+field_name: field_provus_lname
+entity_type: node
+bundle: provus_person
+label: 'Last Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

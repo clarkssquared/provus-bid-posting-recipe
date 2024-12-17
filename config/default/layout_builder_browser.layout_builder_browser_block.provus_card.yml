@@ -1,0 +1,13 @@
+uuid: 3bcdc398-0c55-4461-a678-00adcf06dbee
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7QET0jWMycuKquy8AGQbJkV2E6PA7R1u_CZjoneZZE0
+id: provus_card
+block_id: 'inline_block:provus_card'
+category: provus_complex_content
+label: Card
+weight: -100
+image_path: /themes/custom/provus_base_theme/images/components/card.svg
+image_alt: ''

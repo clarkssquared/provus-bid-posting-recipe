@@ -1,0 +1,36 @@
+uuid: 76c274d9-da1b-4560-a0ba-0bae39b6961f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_provus_manager
+  module:
+    - user
+_core:
+  default_config_hash: qK-0w_3vmMOlnWZrWwhinjJ0u3HhBlzCCLNu3Swj0Uo
+id: user.user.field_provus_manager
+field_name: field_provus_manager
+entity_type: user
+bundle: user
+label: Manager
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: role
+      role:
+        content_approver: content_approver
+        administrator: '0'
+        content_writer: '0'
+    include_anonymous: false
+field_type: entity_reference

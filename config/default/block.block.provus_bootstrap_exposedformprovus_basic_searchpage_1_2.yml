@@ -1,0 +1,25 @@
+uuid: 21379893-775f-407b-9eb1-55bc5619d4f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.provus_basic_search
+  module:
+    - views
+  theme:
+    - provus_base_theme
+_core:
+  default_config_hash: tVcABmNv_n4pNpGjswRatmwotzCfB8SgepOWILB0zHQ
+id: provus_bootstrap_exposedformprovus_basic_searchpage_1_2
+theme: provus_base_theme
+region: header_form
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:provus_basic_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:provus_basic_search-page_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility: {  }

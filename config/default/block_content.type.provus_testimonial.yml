@@ -1,0 +1,10 @@
+uuid: dd1c03bd-e2ec-4ebd-95fa-532187ce2773
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: H84aD0lkWJCW11_MB1rP1bbPwK3rvwzJHyt6Ts_naMY
+id: provus_testimonial
+label: Testimonial
+revision: 0
+description: ''

@@ -1,0 +1,26 @@
+uuid: 9b98bcf6-769d-4eb8-a5ca-d91e938e2e76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.provus_meeting
+  module:
+    - text
+_core:
+  default_config_hash: csulpFoMlXjEspwDPAWEhCJ7ho0nAClYhIaQ6qcQ7DU
+id: node.provus_meeting.body
+field_name: body
+entity_type: node
+bundle: provus_meeting
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

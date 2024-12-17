@@ -1,0 +1,22 @@
+uuid: a190c7da-4675-4e74-8629-3becf881dc1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - google_translator
+  theme:
+    - provus_meridian_v2
+_core:
+  default_config_hash: zmc0M3gO5PkDl1OAAobZe2huffXzlhB8yBgbMZeqh7M
+id: provus_meridian_v2_provus_bootstrap_googletranslator
+theme: provus_meridian_v2
+region: secondary_menu
+weight: -9
+provider: null
+plugin: google_translator
+settings:
+  id: google_translator
+  label: 'Translate this page'
+  label_display: ''
+  provider: google_translator
+visibility: {  }

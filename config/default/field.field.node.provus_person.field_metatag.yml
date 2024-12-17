@@ -1,0 +1,23 @@
+uuid: abdaad5d-a83e-42a5-8045-b2d39992710c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.provus_person
+  module:
+    - metatag
+_core:
+  default_config_hash: OSRfPNuwFIdx3lf96bNWCiJJOXSn1lKH7lZYLgaZzW8
+id: node.provus_person.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: provus_person
+label: Metatag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

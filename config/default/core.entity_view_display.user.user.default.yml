@@ -1,0 +1,30 @@
+uuid: b012f567-c801-4296-af22-6aa9f235f0b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_provus_manager
+  module:
+    - user
+_core:
+  default_config_hash: Uj5lkM7jCtq_XxO0zI0rZ4E39y--oFnA7uGBcTADXbc
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_provus_manager:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: 0feb53bc-8852-42f5-a2d9-7d90a930c881
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bid
+    - workflows.workflow.bid_workflow
+  module:
+    - content_moderation
+    - node
+id: bid_poster
+label: 'Bid Poster'
+weight: 6
+is_admin: null
+permissions:
+  - 'create bid content'
+  - 'delete own bid content'
+  - 'edit own bid content'
+  - 'use bid_workflow transition approved'
+  - 'use bid_workflow transition create_new_draft'
+  - 'use bid_workflow transition publish'
+  - 'use bid_workflow transition rejected'
+  - 'view bid revisions'

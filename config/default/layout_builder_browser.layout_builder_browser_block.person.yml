@@ -1,0 +1,13 @@
+uuid: b6a8342e-213b-4f55-8359-0d41b95accd2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: E0pOZCyqhy4NlfcigwBK6YkYesb1dXw9jzvSwxSn9vo
+id: person
+block_id: 'views_block:provus_people-block_2'
+category: provus_views
+label: Person
+weight: -9
+image_path: /themes/custom/provus_meridian/images/components/Person.svg
+image_alt: ''

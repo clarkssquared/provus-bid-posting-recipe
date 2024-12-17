@@ -1,0 +1,22 @@
+uuid: 9702ade9-cc95-4fb4-8512-9900a36cd438
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: tBllY-s4cXQ5l3RbAmxFwNwqgMiLbFRe4-IaSdHEyj0
+id: node.field_provus_job_department
+field_name: field_provus_job_department
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

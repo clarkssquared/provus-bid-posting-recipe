@@ -1,0 +1,13 @@
+uuid: 1d6b751c-6157-4639-9beb-61cbab93af6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: jmvUFg19lthF1h5l6E86N4n5l3lr4HdeYQu9NpyhHzQ
+id: node.provus_location_address
+label: 'Location Address'
+description: ''
+targetEntityType: node
+cache: true

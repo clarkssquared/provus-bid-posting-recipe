@@ -1,0 +1,25 @@
+uuid: 8f1e9a3b-6af3-44fd-8f85-cc03dadd49cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bs_alert_dismiss
+    - node.type.bootstrap_site_alert
+_core:
+  default_config_hash: 6owfnPw9zJgHjpcrFiwOjO70bjZf4AoG42Z1MijQRD4
+id: node.bootstrap_site_alert.field_bs_alert_dismiss
+field_name: field_bs_alert_dismiss
+entity_type: node
+bundle: bootstrap_site_alert
+label: 'Make this alert dismissable?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

@@ -1,0 +1,31 @@
+uuid: e98d71a2-d258-4312-8460-b6710d4029d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_tax_cat_location
+    - node.type.provus_location
+    - taxonomy.vocabulary.provus_category_location
+_core:
+  default_config_hash: XrnBvod8wtr6nH4AMXSpyhSaweNgAfe07jm1YTtkGsM
+id: node.provus_location.field_provus_tax_cat_location
+field_name: field_provus_tax_cat_location
+entity_type: node
+bundle: provus_location
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provus_category_location: provus_category_location
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: location
+field_type: entity_reference

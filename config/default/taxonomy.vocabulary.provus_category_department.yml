@@ -1,0 +1,11 @@
+uuid: 021ba1f4-f095-4902-8d6c-dafc3fad13c8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Tdi7BL3Wg23DYstOgC6eYnxKhdQfzEhcjXb2Wl8Oxk8
+name: 'Category: Department'
+vid: provus_category_department
+description: null
+weight: 0
+new_revision: false

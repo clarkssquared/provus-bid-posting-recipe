@@ -1,0 +1,19 @@
+uuid: 79ac6cf2-e095-4966-97e0-6aaef3622fd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: 8OPBGXfIgjBKtGwS26pwBJ7tMOnPGBQNiBqrcvpMiEU
+name: provus_card_background_mobile_1x
+label: 'Card Background | Mobile | 1x'
+effects:
+  60046fc1-92af-4c0b-875e-93c3cf0d9667:
+    uuid: 60046fc1-92af-4c0b-875e-93c3cf0d9667
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 318
+      height: 240
+      crop_type: focal_point

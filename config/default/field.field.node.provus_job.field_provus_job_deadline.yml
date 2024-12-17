@@ -1,0 +1,23 @@
+uuid: d56509f1-adea-4d9a-ba5e-52d4788993c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_job_deadline
+    - node.type.provus_job
+  module:
+    - datetime
+_core:
+  default_config_hash: FVEykLVHXGUbyUiYLx86nMbho4STd0_fPyqrT4xObQ8
+id: node.provus_job.field_provus_job_deadline
+field_name: field_provus_job_deadline
+entity_type: node
+bundle: provus_job
+label: 'Application Deadline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

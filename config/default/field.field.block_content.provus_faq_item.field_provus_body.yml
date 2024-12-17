@@ -1,0 +1,26 @@
+uuid: e121ffe7-d503-4b1b-9ed2-7df949178273
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.provus_faq_item
+    - field.storage.block_content.field_provus_body
+  module:
+    - text
+_core:
+  default_config_hash: xFO-UR9McjlOTaNkSZskgolLOsv7l2l7xiNcdTGlLok
+id: block_content.provus_faq_item.field_provus_body
+field_name: field_provus_body
+entity_type: block_content
+bundle: provus_faq_item
+label: Answer
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

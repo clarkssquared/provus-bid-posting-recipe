@@ -1,0 +1,20 @@
+uuid: 18a18b8e-3bbd-40af-beef-a04e54348c1f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aERMMLSH4xBH3wuIa_BQ-IFSAmubgONyhvhM3lfNudA
+id: remote_video
+label: 'Remote video'
+description: 'A remotely hosted video from YouTube or Vimeo.'
+source: 'oembed:video'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_oembed_video
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers:
+    - YouTube
+    - Vimeo
+field_map:
+  title: name

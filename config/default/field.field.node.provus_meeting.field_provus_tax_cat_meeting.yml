@@ -1,0 +1,31 @@
+uuid: 07a42bc8-74db-4396-b7c0-32ffded7224e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_tax_cat_meeting
+    - node.type.provus_meeting
+    - taxonomy.vocabulary.provus_category_meeting
+_core:
+  default_config_hash: ih6hMQvRFwFqmyD036vDuaFw7sQiHWJfPLxDDadFDvM
+id: node.provus_meeting.field_provus_tax_cat_meeting
+field_name: field_provus_tax_cat_meeting
+entity_type: node
+bundle: provus_meeting
+label: Group
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provus_category_meeting: provus_category_meeting
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

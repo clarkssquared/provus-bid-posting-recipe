@@ -1,0 +1,13 @@
+uuid: 8ca84e9e-3907-4f5e-bd2c-d2a1230e0547
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YExGghQ-CeCLstQyilocZV76nfMHfLmEoGK-QUc3AT0
+id: provus_person_list
+block_id: 'inline_block:provus_person_list'
+category: provus_grouped_content
+label: 'Person List'
+weight: -98
+image_path: /themes/custom/provus_base_theme/images/components/list.svg
+image_alt: ''

@@ -1,0 +1,35 @@
+uuid: d202f8aa-2b9c-4a29-b2ec-86a1ad8cd264
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.provus_person.body
+    - field.field.node.provus_person.field_metatag
+    - field.field.node.provus_person.field_provus_email
+    - field.field.node.provus_person.field_provus_fname
+    - field.field.node.provus_person.field_provus_lname
+    - field.field.node.provus_person.field_provus_media_image
+    - field.field.node.provus_person.field_provus_tax_cat_person
+    - field.field.node.provus_person.field_provus_telephone
+    - field.field.node.provus_person.field_provus_titles
+    - node.type.provus_person
+  module:
+    - metatag
+    - telephone
+    - text
+    - user
+_core:
+  default_config_hash: U7yHWfJLDBftstqjSX252-luiD3Wn1SLTFUkuVjLHV8
+id: node.provus_person.default
+targetEntityType: node
+bundle: provus_person
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+hidden:
+  addtoany: true
+  search_api_excerpt: true

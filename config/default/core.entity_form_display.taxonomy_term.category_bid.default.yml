@@ -1,0 +1,51 @@
+uuid: ba26a50f-624c-4403-a411-ec4e567b5b4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.category_bid
+  module:
+    - path
+    - text
+id: taxonomy_term.category_bid.default
+targetEntityType: taxonomy_term
+bundle: category_bid
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

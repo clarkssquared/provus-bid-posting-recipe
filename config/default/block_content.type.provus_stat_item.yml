@@ -1,0 +1,10 @@
+uuid: 166fda49-0aee-475c-b1ae-c59b6f8c450b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UX91gX1dRLu-cMnPrBvfn3aEKdMCoda41WYZNfgwYWs
+id: provus_stat_item
+label: 'Stat Item'
+revision: 0
+description: ''

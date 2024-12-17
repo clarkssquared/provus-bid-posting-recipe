@@ -1,0 +1,21 @@
+uuid: 114373a6-0a0c-4248-b8a8-fbb4dae84286
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: mI6o_LC-Mmmy1q0pC4FjrrhCVC5yQx--CZfTGMq4gdM
+id: node.field_provus_hours
+field_name: field_provus_hours
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: b0451521-39ea-4492-a308-19ca7409b5cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bid_poster
+  module:
+    - user
+id: user_add_role_action.bid_poster
+label: 'Add the Bid Poster role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bid_poster

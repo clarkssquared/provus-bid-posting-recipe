@@ -1,0 +1,22 @@
+uuid: 17c4be5a-8e7e-4291-8eec-daedd924d90c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: vydJ4S_Kks8uaCaqEoWzhVy-qZs0XChQYDA_7IBe0lg
+id: node.field_provus_tax_cat_meeting
+field_name: field_provus_tax_cat_meeting
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

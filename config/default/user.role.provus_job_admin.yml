@@ -1,0 +1,11 @@
+uuid: b100d719-4bd6-4385-96e9-b8f6d96ae074
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AMwwT0BhmUGy83rXZLxqWgiShannPsaKKm6B7ULk6cQ
+id: provus_job_admin
+label: 'Job Admin'
+weight: 5
+is_admin: null
+permissions: {  }

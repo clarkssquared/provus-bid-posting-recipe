@@ -1,0 +1,21 @@
+uuid: 6c846742-e1cf-4c8d-9c10-094d7a58e920
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - range
+id: node.field_budget_range
+field_name: field_budget_range
+entity_type: node
+type: range_decimal
+settings:
+  precision: 10
+  scale: 2
+module: range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

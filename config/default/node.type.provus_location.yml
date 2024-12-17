@@ -1,0 +1,19 @@
+uuid: 631bff8d-ca8a-447f-93fa-9b5c920be4c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: Wq6Ls5NPFtUo0-T3NDpHDm4bH6VMxpMuRoHldz2smnQ
+name: Location
+type: provus_location
+description: 'Used for shared locations.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

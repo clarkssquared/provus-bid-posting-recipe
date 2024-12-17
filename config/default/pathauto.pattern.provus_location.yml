@@ -1,0 +1,24 @@
+uuid: b6603080-bd0d-4352-8712-43b8112be4d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: db2QL8zO7o9T8E-6zPxBJIQxck6rpmBcfbE4fQsdmyE
+id: provus_location
+label: Location
+type: 'canonical_entities:node'
+pattern: 'locations/[node:title]'
+selection_criteria:
+  56f89ad8-2829-48fb-bb82-648f6396c61b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 56f89ad8-2829-48fb-bb82-648f6396c61b
+    context_mapping:
+      node: node
+    bundles:
+      provus_location: provus_location
+selection_logic: and
+weight: -2
+relationships: {  }

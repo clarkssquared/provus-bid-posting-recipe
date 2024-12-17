@@ -1,0 +1,51 @@
+uuid: 153097d2-278e-469e-ad02-183fd6b45bf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.provus_faq_page.body
+    - field.field.node.provus_faq_page.field_metatag
+    - field.field.node.provus_faq_page.field_provus_faq_groups
+    - node.type.provus_faq_page
+  module:
+    - metatag
+    - text
+    - user
+_core:
+  default_config_hash: '-61gXNnqKfayCsFhKC8829n54NrsIiVg-lCHpAIphRQ'
+id: node.provus_faq_page.default
+targetEntityType: node
+bundle: provus_faq_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_provus_faq_groups:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  search_api_excerpt: true

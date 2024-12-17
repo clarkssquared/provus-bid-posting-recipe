@@ -1,0 +1,19 @@
+uuid: f05a9e47-117b-4049-974c-c2e50cd2e93f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_method_of_contact
+    - node.type.bid
+id: node.bid.field_method_of_contact
+field_name: field_method_of_contact
+entity_type: node
+bundle: bid
+label: 'Method of Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

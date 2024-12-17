@@ -1,0 +1,23 @@
+uuid: 981de61f-3a34-4c86-8e26-feaa387d8fb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_telephone
+    - node.type.provus_location
+  module:
+    - telephone
+_core:
+  default_config_hash: 4-6n9XNZTN5_SJQuak9K-Q0fcKPePTjDxFgmcYFB5YQ
+id: node.provus_location.field_provus_telephone
+field_name: field_provus_telephone
+entity_type: node
+bundle: provus_location
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

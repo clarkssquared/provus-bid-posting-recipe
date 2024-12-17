@@ -1,0 +1,19 @@
+uuid: 5778e6fb-d583-4c78-99e3-6a60b57fdddc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: Tl5G0csnzuJWXglC4Za8R7D9K339985dMCIsr9FKh-U
+name: Meeting
+type: provus_meeting
+description: 'Used for dated meetings with options for agendas and minutes.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

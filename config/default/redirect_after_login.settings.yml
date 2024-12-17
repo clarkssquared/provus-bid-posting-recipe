@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: dIMHr1Q3-cswkUQibG1K-XZ-Lg4fzXEmJ3hASlI6Zzs
+login_redirection:
+  anonymous: null
+  authenticated: /admin/content-planner/dashboard
+  administrator: /admin/content-planner/dashboard
+  content_writer: /admin/content-planner/dashboard
+  content_approver: /admin/content-planner/dashboard
+exclude_urls: ''

@@ -1,0 +1,20 @@
+uuid: 5e1e63cf-b1fe-403b-9bf4-2fd7bcdda755
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: OjEGH9yUwoTBIi0Fx1WZLKJSdlnh3hVNizHt9PfBlyQ
+id: node.field_provus_email
+field_name: field_provus_email
+entity_type: node
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 242ae438-54c4-4502-88db-e03537477fc4
+langcode: en
+status: true
+dependencies:
+  module:
+    - bootstrap_site_alert
+    - exclude_node_title
+    - media
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'use exclude node title'
+  - 'view bootstrap site alerts'
+  - 'view media'

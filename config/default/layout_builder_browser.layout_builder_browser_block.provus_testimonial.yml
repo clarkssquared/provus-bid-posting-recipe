@@ -1,0 +1,13 @@
+uuid: b88c6274-bbe8-462c-a324-1f53f253bb10
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ljsesgPQ-6cBYlp84FZ1xLq6ItnSTMFnuZbsSi8LNfU
+id: provus_testimonial
+block_id: 'inline_block:provus_testimonial'
+category: provus_complex_content
+label: Testimonial
+weight: -100
+image_path: /themes/custom/provus_base_theme/images/components/testimonial.svg
+image_alt: ''

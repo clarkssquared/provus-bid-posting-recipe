@@ -1,0 +1,25 @@
+uuid: 6a780bf9-93f0-471c-9add-b5621e323881
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.provus_banner
+    - field.storage.block_content.field_provus_background_color
+  module:
+    - options
+_core:
+  default_config_hash: Uv_j54o7bgjYlEiuF4juUBZlta7KCPidi_uNg7Vi2Xw
+id: block_content.provus_banner.field_provus_background_color
+field_name: field_provus_background_color
+entity_type: block_content
+bundle: provus_banner
+label: 'Background Color'
+description: '<strong>Choose a background color for your banner, this background color will be visible when your banner is not set to full image position.</strong>'
+required: false
+translatable: false
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string

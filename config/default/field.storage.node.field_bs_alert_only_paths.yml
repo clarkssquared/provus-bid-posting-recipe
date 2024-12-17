@@ -1,0 +1,21 @@
+uuid: d4752706-bd2f-4dad-b603-68a455e5cf6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: olb0BtsUMAZASRVfUXQ0_qQyZENllUkwHT7VUlGRwf0
+id: node.field_bs_alert_only_paths
+field_name: field_bs_alert_only_paths
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

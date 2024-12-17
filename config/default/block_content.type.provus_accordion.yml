@@ -1,0 +1,10 @@
+uuid: 43f7fac3-ec66-4b78-9800-5b393bf9cc1f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-fjFzTKSv_iy77tCvhmxgpQ9dL5PH0s3kergUNu-H24'
+id: provus_accordion
+label: Accordion
+revision: 0
+description: ''

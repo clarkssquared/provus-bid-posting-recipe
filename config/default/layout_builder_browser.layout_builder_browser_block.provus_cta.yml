@@ -1,0 +1,13 @@
+uuid: 89f188e9-a350-4583-ab70-ddbc5e2eb711
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OyqnG2JywA6XuMBLYfhXlt60V7eLm8a8hXDuTFpIQLc
+id: provus_cta
+block_id: 'inline_block:provus_cta'
+category: provus_complex_content
+label: CTA
+weight: -90
+image_path: /themes/custom/provus_base_theme/images/components/cta.svg
+image_alt: ''

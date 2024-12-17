@@ -1,0 +1,23 @@
+uuid: 70e2d864-8fa5-4779-839e-22586bc494ba
+langcode: en
+status: true
+dependencies:
+  theme:
+    - provus_base_theme
+_core:
+  default_config_hash: ar_KgUeGJsP9ibuPbWefHI0PkZDXe1fNDfcoaU8G-5U
+id: provus_bootstrap_footercopyrightbasictext2107296457
+theme: provus_base_theme
+region: footer_fifth
+weight: -7
+provider: null
+plugin: 'block_content:37b57104-3a1d-49cf-9200-e9670499ed60'
+settings:
+  id: 'block_content:37b57104-3a1d-49cf-9200-e9670499ed60'
+  label: 'Footer Copyright (Basic Text) - 2107296457'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

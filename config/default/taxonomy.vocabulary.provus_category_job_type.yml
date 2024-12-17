@@ -1,0 +1,11 @@
+uuid: a9e5e815-20de-40d5-bd80-031201fe6ee7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wWtfE9PpNnQ7e3kXaRVJkkn4B_i4l1cb6DnUwh5usVI
+name: 'Category: Job Type'
+vid: provus_category_job_type
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,31 @@
+uuid: 03d5a5f3-8d37-418d-8c4a-c3f31c4ef6f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_tax_cat_event
+    - node.type.provus_event
+    - taxonomy.vocabulary.provus_category_event
+_core:
+  default_config_hash: BquAGyS66Ul38EQ5IbVe1jGjT5q6984LcCsy4-7Xl3A
+id: node.provus_event.field_provus_tax_cat_event
+field_name: field_provus_tax_cat_event
+entity_type: node
+bundle: provus_event
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provus_category_event: provus_category_event
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

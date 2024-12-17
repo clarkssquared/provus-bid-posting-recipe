@@ -1,0 +1,29 @@
+uuid: 29c4d0d4-80b2-47e5-bd29-ba133a4d18da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department
+    - node.type.bid
+    - taxonomy.vocabulary.department
+id: node.bid.field_department
+field_name: field_department
+entity_type: node
+bundle: bid
+label: Department
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      department: department
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

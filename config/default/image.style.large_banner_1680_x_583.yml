@@ -1,0 +1,17 @@
+uuid: 5c629627-9b11-4b17-963a-c80b5477eea5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dmNyTmu0Q4JB-imct8vM5hLFujkidypN3-sFERjhVAI
+name: large_banner_1680_x_583
+label: 'Large Banner (1680 x 583)'
+effects:
+  caadd273-19c7-4be4-b651-83a5116c0a41:
+    uuid: caadd273-19c7-4be4-b651-83a5116c0a41
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1680
+      height: 583
+      anchor: center-center

@@ -1,0 +1,35 @@
+uuid: 337920f4-26ed-4956-99d8-20f9134d878b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_smartdate
+    - node.type.provus_meeting
+  module:
+    - smart_date
+    - smart_date_recur
+third_party_settings:
+  smart_date_recur:
+    allow_recurring: false
+    month_limit: 12
+_core:
+  default_config_hash: gXQFPosJitJsLFr691vKpywB2AB03DtC3C46zSBthpw
+id: node.provus_meeting.field_provus_smartdate
+field_name: field_provus_smartdate
+entity_type: node
+bundle: provus_meeting
+label: Date
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_duration: 60
+    default_duration_increments: "30\r\n60|1 hour\r\n90\r\n120|2 hours\r\ncustom"
+    default_date_type: ''
+    default_date: ''
+    min: ''
+    max: ''
+default_value_callback: ''
+settings: {  }
+field_type: smartdate

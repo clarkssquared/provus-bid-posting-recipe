@@ -1,0 +1,9 @@
+uuid: 023b191b-69a0-4a4d-b796-fdff9838eada
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qIDP5FZZvPoeF6xDSNzbS6HHPMjl4Xy3YiwLwrRNltY
+id: provus_blog
+label: Blog
+color: '#0074bd'

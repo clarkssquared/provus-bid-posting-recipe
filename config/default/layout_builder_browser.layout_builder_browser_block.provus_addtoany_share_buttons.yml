@@ -1,0 +1,13 @@
+uuid: 5d5c8c1a-2307-43a2-9537-e6c6de0fad16
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EjD1wLNtyuCpTyDlSOB9JJ_-35wKR4TBa0VgVxYPNws
+id: provus_addtoany_share_buttons
+block_id: addtoany_block
+category: provus_system_blocks
+label: 'AddToAny Share Buttons'
+image_path: /themes/custom/provus_meridian/images/components/Add-To-Any-Share-Button.svg
+image_alt: ''
+weight: -100

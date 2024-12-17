@@ -1,0 +1,21 @@
+uuid: a91dda4b-f724-4334-b31a-a984fc4a3a6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: z01dXR-jrnKeg-F5b99mMG_BQJMCtkO9lc_rDtk8_RU
+id: node.field_provus_location
+field_name: field_provus_location
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

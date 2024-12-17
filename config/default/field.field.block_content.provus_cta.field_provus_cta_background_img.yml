@@ -1,0 +1,31 @@
+uuid: aedccf1d-9302-41c8-bfc7-45499e5bf45d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.provus_cta
+    - field.storage.block_content.field_provus_cta_background_img
+    - media.type.image
+_core:
+  default_config_hash: h_lJAElmx9IehIMY0Z7Y_T-B0YjeJQNaoUphXEN1xyI
+id: block_content.provus_cta.field_provus_cta_background_img
+field_name: field_provus_cta_background_img
+entity_type: block_content
+bundle: provus_cta
+label: Background-image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

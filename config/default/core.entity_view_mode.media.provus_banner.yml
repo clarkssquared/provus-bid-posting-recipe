@@ -1,0 +1,13 @@
+uuid: 24bb4bc7-b4d7-4d08-9f7a-508de2dec218
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: gJ57eafGfhdLQzLPtAYWmgw37t_q8AXYkBFM8vABE84
+id: media.provus_banner
+label: Banner
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,9 @@
+uuid: cb579e51-5968-4f6a-af46-8bb1658ac023
+langcode: en
+status: true
+dependencies: {  }
+id: bidder
+label: Bidder
+weight: 7
+is_admin: null
+permissions: {  }

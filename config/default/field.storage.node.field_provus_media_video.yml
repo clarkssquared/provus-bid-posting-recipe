@@ -1,0 +1,22 @@
+uuid: b8af6c5e-0017-41eb-86dd-df2b9f69a215
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+_core:
+  default_config_hash: Wgn9rINcYni_08EnwgdLMMYr2MRIPcT8yXSTBBK3JEU
+id: node.field_provus_media_video
+field_name: field_provus_media_video
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

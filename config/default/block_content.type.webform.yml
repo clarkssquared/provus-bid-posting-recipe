@@ -1,0 +1,10 @@
+uuid: 5bbc6b56-9bc7-424f-8a78-6604cdb38de0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-mWVzoAXrO2ws74ef-rM2KvrjBCTcNP3BNri5Y-naWM'
+id: webform
+label: Webform
+revision: 0
+description: ''

@@ -1,0 +1,21 @@
+uuid: bf8ce3e6-b8d2-4316-9a9b-3789385196ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - telephone
+_core:
+  default_config_hash: V-6xDdLUTbob4gXhFmaP_yPiBgoNJA7aZRayjzurMik
+id: node.field_provus_telephone
+field_name: field_provus_telephone
+entity_type: node
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

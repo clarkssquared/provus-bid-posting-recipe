@@ -1,0 +1,27 @@
+uuid: f6fc4607-fc83-4eac-8876-127022ebfb0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - provus_meridian_v2
+_core:
+  default_config_hash: nQ2XkQs-828wcvR73UPc3tJSt5MEkuQ28hwKdS2nCko
+id: provus_meridian_v2_provus_bootstrap_account_menu
+theme: provus_meridian_v2
+region: secondary_menu
+weight: -8
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

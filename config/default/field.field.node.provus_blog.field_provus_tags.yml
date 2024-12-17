@@ -1,0 +1,31 @@
+uuid: 76250b22-a389-46b9-88cf-0daef3a7e20f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_tags
+    - node.type.provus_blog
+    - taxonomy.vocabulary.provus_tags
+_core:
+  default_config_hash: 4Ym9skp47jQD1k-mOWHCEsvrZUIDJrRMFjggYHyaV6c
+id: node.provus_blog.field_provus_tags
+field_name: field_provus_tags
+entity_type: node
+bundle: provus_blog
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provus_tags: provus_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

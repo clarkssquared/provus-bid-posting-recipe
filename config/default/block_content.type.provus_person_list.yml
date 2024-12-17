@@ -1,0 +1,10 @@
+uuid: 1e52ff29-4c7d-4748-a189-d57c7cb7914a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rh73vh0SvS_yhyQiQspU5ATaFtM2hIxmJI9b-3b2omM
+id: provus_person_list
+label: 'Person List'
+revision: 0
+description: ''

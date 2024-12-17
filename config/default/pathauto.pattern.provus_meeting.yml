@@ -1,0 +1,24 @@
+uuid: 183be7ad-7f65-4beb-ba49-a9c0410abf59
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: zZOiG--Mx5m6HW5Q0rNCdX_XWOlRoMOwNCa7yF1akAI
+id: provus_meeting
+label: Meeting
+type: 'canonical_entities:node'
+pattern: 'meetings/[node:title]'
+selection_criteria:
+  bff37d37-096a-41fa-8bfe-704ffc31dcc2:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: bff37d37-096a-41fa-8bfe-704ffc31dcc2
+    context_mapping:
+      node: node
+    bundles:
+      provus_meeting: provus_meeting
+selection_logic: and
+weight: -3
+relationships: {  }

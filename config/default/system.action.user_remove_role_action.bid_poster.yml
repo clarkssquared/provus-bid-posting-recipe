@@ -1,0 +1,14 @@
+uuid: 484af95e-1706-49bf-bd06-2d6d21ca4f2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bid_poster
+  module:
+    - user
+id: user_remove_role_action.bid_poster
+label: 'Remove the Bid Poster role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bid_poster

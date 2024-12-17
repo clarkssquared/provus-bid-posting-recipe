@@ -1,0 +1,23 @@
+uuid: fc5d0565-9ab2-47be-a162-9d4c2f51fa75
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.provus_media
+    - field.storage.block_content.field_provus_media_style
+  module:
+    - field_image_style
+_core:
+  default_config_hash: kByMh8SLlcwdFHSEWxE4FYJwdK1bcof4sHDtjC4TwC0
+id: block_content.provus_media.field_provus_media_style
+field_name: field_provus_media_style
+entity_type: block_content
+bundle: provus_media
+label: 'Media Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: image_style

@@ -1,0 +1,22 @@
+uuid: e5d06e66-b85c-46f1-b302-4307bd8d2220
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - provus_base_theme
+_core:
+  default_config_hash: MCUwImsGLMlU0tE-LtLDhVGpBjJixzNTFNGZJ1h-YPU
+id: provus_bootstrap_breadcrumbs
+theme: provus_base_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

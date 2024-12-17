@@ -1,0 +1,24 @@
+uuid: 20fb1f05-0991-42c4-9ed7-f15fddbe362a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_qualifications
+    - node.type.provus_job
+  module:
+    - text
+_core:
+  default_config_hash: ZmkdHY_DbMM2PuxtfSxsVOLbp2LVlhX_UI-QhQ4_H_Q
+id: node.provus_job.field_provus_qualifications
+field_name: field_provus_qualifications
+entity_type: node
+bundle: provus_job
+label: Qualifications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

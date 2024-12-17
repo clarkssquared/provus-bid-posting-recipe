@@ -1,0 +1,29 @@
+uuid: 0dc954c6-601c-485a-bb8d-e73e003e3819
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.webform_default
+  module:
+    - bootstrap_site_alert
+    - content_planner
+    - exclude_node_title
+    - filter
+    - fontawesome
+    - media
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'administer content planner dashboard settings'
+  - 'use exclude node title'
+  - 'use text format webform_default'
+  - 'view bootstrap site alerts'
+  - 'view content planner dashboard'
+  - 'view media'

@@ -1,0 +1,16 @@
+uuid: 7878ac15-1938-484d-8030-617ab3351bda
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.provus_job_admin
+  module:
+    - user
+_core:
+  default_config_hash: 3P7uTSE8OGNmq5GbdDJczAWp8vZMDjFlibUgAkcP6_o
+id: user_add_role_action.provus_job_admin
+label: 'Add the Job Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: provus_job_admin

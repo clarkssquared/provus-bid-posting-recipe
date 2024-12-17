@@ -1,0 +1,17 @@
+uuid: bc5d63c4-4276-4df0-9d4f-ca058da20436
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5WkmSB1S4jUDF4OcZJf-tYt-3tuRNS9FDlGo1ghoPKg
+name: provus_icon
+label: Icon
+effects:
+  e8fec326-07b8-4fdf-8eb9-11f25f331413:
+    uuid: e8fec326-07b8-4fdf-8eb9-11f25f331413
+    id: image_scale
+    weight: 1
+    data:
+      width: 50
+      height: 50
+      upscale: false

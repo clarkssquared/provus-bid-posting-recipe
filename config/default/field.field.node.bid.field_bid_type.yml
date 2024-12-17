@@ -1,0 +1,29 @@
+uuid: fe345e1f-fe63-4ba1-8236-fac34516e053
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bid_type
+    - node.type.bid
+    - taxonomy.vocabulary.bid_type
+id: node.bid.field_bid_type
+field_name: field_bid_type
+entity_type: node
+bundle: bid
+label: 'Bid Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bid_type: bid_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

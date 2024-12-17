@@ -1,0 +1,36 @@
+uuid: ef014659-c23a-4557-8bb6-1f68768cf244
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.webform
+    - field.field.block_content.webform.field_title
+    - field.field.block_content.webform.field_webform
+  module:
+    - webform
+_core:
+  default_config_hash: Snvod6uxu9jAYv8JvfadOvL16WWNf7niLEjt8TuuEYg
+id: block_content.webform.default
+targetEntityType: block_content
+bundle: webform
+mode: default
+content:
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_webform:
+    type: webform_entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 8863a4c6-4e83-44c7-9963-72773ca6a071
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: ODMlLuy8J6jT7k5pBs0Hph2krdNPcP7vciJ7AP9L4d0
+name: 'Bootstrap Site Alert'
+type: bootstrap_site_alert
+description: 'Used to create site alerts via Bootstrap.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

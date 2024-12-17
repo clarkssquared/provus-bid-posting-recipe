@@ -1,0 +1,34 @@
+uuid: 369112a2-d347-400a-9ef9-c1cbc5ca785b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.provus_faq_item
+    - field.field.block_content.provus_faq_item.field_provus_body
+    - field.field.block_content.provus_faq_item.field_provus_title
+  module:
+    - text
+_core:
+  default_config_hash: hYTOqKsQyZPRWmoQmGoFd5hj3-BGu488bn-Wqfm0Vkc
+id: block_content.provus_faq_item.default
+targetEntityType: block_content
+bundle: provus_faq_item
+mode: default
+content:
+  field_provus_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_provus_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

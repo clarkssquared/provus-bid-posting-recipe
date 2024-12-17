@@ -1,0 +1,11 @@
+uuid: cf007479-58bb-43cb-83fa-8afecf71d632
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NkJvxb1ENLCVex45AuVATogKYPyOkIQzjWaH9I93sBM
+name: 'Category: Meeting'
+vid: provus_category_meeting
+description: null
+weight: 0
+new_revision: false

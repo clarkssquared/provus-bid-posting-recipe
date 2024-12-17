@@ -1,0 +1,19 @@
+uuid: 5c14e904-977d-4e5a-9570-304d9099a042
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: _di7SUNZOsI8SltO2pGFXJIjfKeK-0UTHKfYI5q5z-k
+name: provus_slideshow_block_thumbnail
+label: 'Slideshow Block | thumbnail'
+effects:
+  e921420e-1d62-4811-98b5-3d4f2fdf2189:
+    uuid: ''
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 150
+      crop_type: focal_point

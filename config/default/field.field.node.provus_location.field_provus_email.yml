@@ -1,0 +1,21 @@
+uuid: 86e9f495-b038-4748-9b64-eafd287601a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_email
+    - node.type.provus_location
+_core:
+  default_config_hash: AaMERoBCD9kWEHDAiCFaKSayPysF3lQYf-EpaAsw00A
+id: node.provus_location.field_provus_email
+field_name: field_provus_email
+entity_type: node
+bundle: provus_location
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

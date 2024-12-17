@@ -1,0 +1,13 @@
+uuid: 8a4dc1ec-df84-4643-942c-6764e750cb1b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aFX0kw1aYTFmFkpTXKnTybajcGpa1pLtBtI5g43Z1Yo
+id: provus_stat_group
+block_id: 'inline_block:provus_stat_group'
+category: provus_grouped_content
+label: 'Stat Group'
+weight: -70
+image_path: /themes/custom/provus_base_theme/images/components/stat.svg
+image_alt: ''

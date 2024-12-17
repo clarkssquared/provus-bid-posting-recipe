@@ -1,0 +1,11 @@
+uuid: e583ec73-0ec2-4182-a160-55edd7e75fc8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: H1jehjIniKPg4eDkOaiVAW2DQSrkVxUFpSvQpzrd1CA
+name: 'Category: Event'
+vid: provus_category_event
+description: null
+weight: 0
+new_revision: false

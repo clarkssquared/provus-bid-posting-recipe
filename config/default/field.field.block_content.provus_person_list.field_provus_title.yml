@@ -1,0 +1,21 @@
+uuid: ff5d2b52-f4b7-4629-9210-fafb30e7bd1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.provus_person_list
+    - field.storage.block_content.field_provus_title
+_core:
+  default_config_hash: NsXHjLJZ7rmkc0fPtCoPIMzPqT0_0C2I7i-YAc1KGDI
+id: block_content.provus_person_list.field_provus_title
+field_name: field_provus_title
+entity_type: block_content
+bundle: provus_person_list
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

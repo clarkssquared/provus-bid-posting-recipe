@@ -1,0 +1,24 @@
+uuid: 2d732677-4017-4565-b497-8b918bc9b659
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 1vF3zCqO_3d1G9QBFBlHisrubfpcEpiTYUyfa1p_dVg
+id: provus_job
+label: Job
+type: 'canonical_entities:node'
+pattern: 'jobs/[node:title]'
+selection_criteria:
+  bbc48883-77f4-4eb7-bcce-fcc1919522cc:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: bbc48883-77f4-4eb7-bcce-fcc1919522cc
+    context_mapping:
+      node: node
+    bundles:
+      provus_job: provus_job
+selection_logic: and
+weight: -5
+relationships: {  }

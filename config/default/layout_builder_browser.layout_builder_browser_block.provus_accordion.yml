@@ -1,0 +1,13 @@
+uuid: b3b7f1ea-6e49-4cd1-921e-9fd3aec7ad2f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: E5gjN6zFb0PNAdNobecUMtPkXnYrsJAy83nFvnqlbKU
+id: provus_accordion
+block_id: 'inline_block:provus_accordion'
+category: provus_grouped_content
+label: Accordion
+weight: -98
+image_path: /themes/custom/provus_base_theme/images/components/accordion.svg
+image_alt: ''

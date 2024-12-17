@@ -1,0 +1,31 @@
+uuid: 0baa175c-21cf-4b51-8c30-b5775f793f70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_location
+    - node.type.provus_location
+    - node.type.provus_meeting
+_core:
+  default_config_hash: EUQiMIx7gdcz6_rOBbCDsm_ilVFGpalwIYs3K5CIyj0
+id: node.provus_meeting.field_provus_location
+field_name: field_provus_location
+entity_type: node
+bundle: provus_meeting
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      provus_location: provus_location
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

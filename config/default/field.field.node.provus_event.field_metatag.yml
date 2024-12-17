@@ -1,0 +1,23 @@
+uuid: 9f5ee5e2-7b1a-4eab-abb7-45b560929a65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.provus_event
+  module:
+    - metatag
+_core:
+  default_config_hash: iVnwHTc2k5Gjz_fzT5cDY0ds1z7ZcZeE-U-e1un7NFk
+id: node.provus_event.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: provus_event
+label: Metatag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

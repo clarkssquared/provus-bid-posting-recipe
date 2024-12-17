@@ -1,0 +1,31 @@
+uuid: 3a259022-c634-4b1b-b34f-00a3a544c125
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.provus_faq_page
+  module:
+    - linkchecker
+    - text
+third_party_settings:
+  linkchecker:
+    scan: true
+    extractor: html_link_extractor
+_core:
+  default_config_hash: wT478qlP6vuhqDPLtgtQcYF07BSg9BubduKgYGVTIBg
+id: node.provus_faq_page.body
+field_name: body
+entity_type: node
+bundle: provus_faq_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

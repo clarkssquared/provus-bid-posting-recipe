@@ -1,0 +1,35 @@
+uuid: f001bcfb-bfc6-45fc-aa7b-1eddf63e7af9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.provus-footer-menu-1
+  module:
+    - menu_block
+  theme:
+    - provus_meridian_v2
+_core:
+  default_config_hash: niOcpFEu9m7QKj6wlnLJgdmGIxVCkJ-b7xKxSWFmRAI
+id: provus_meridian_v2_provus_bootstrap_footermenu1
+theme: provus_meridian_v2
+region: footer_second
+weight: 0
+provider: null
+plugin: 'menu_block:provus-footer-menu-1'
+settings:
+  id: 'menu_block:provus-footer-menu-1'
+  label: About
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'provus-footer-menu-1:'
+  render_parent: false
+  suggestion: provus_footer_menu_1
+  hide_on_nonactive: false
+visibility: {  }

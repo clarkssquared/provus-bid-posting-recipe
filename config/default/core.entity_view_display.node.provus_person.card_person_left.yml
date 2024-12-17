@@ -1,0 +1,119 @@
+uuid: 11dd430b-4aa3-4ad8-b683-b4dd586a2564
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_person_left
+    - field.field.node.provus_person.body
+    - field.field.node.provus_person.field_metatag
+    - field.field.node.provus_person.field_provus_email
+    - field.field.node.provus_person.field_provus_fname
+    - field.field.node.provus_person.field_provus_lname
+    - field.field.node.provus_person.field_provus_media_image
+    - field.field.node.provus_person.field_provus_tax_cat_person
+    - field.field.node.provus_person.field_provus_telephone
+    - field.field.node.provus_person.field_provus_titles
+    - image.style.provus_portrait_medium
+    - node.type.provus_person
+  module:
+    - layout_builder
+    - media
+    - metatag
+    - telephone
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: rrirJacmkqICiukFkItbv39bwKYyvzJi14lJ_rmkHmY
+id: node.provus_person.card_person_left
+targetEntityType: node
+bundle: provus_person
+mode: card_person_left
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_provus_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_provus_fname:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_provus_lname:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_provus_media_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: provus_portrait_medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_provus_tax_cat_person:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_provus_telephone:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_provus_titles:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: 0b849e1b-3fc7-46fb-a090-99167f6548b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: E9Qb4jtEhoRVwTFUcmrx3rDIdhKqp2PNXUGhjQZs8Dg
+id: node.field_bs_alert_severity
+field_name: field_bs_alert_severity
+entity_type: node
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: bootstrap_site_alert_severity_options
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

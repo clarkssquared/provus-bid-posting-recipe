@@ -1,0 +1,24 @@
+uuid: 7f775d4e-2892-4412-a6d7-43a7815abdc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_alert
+    - node.type.bootstrap_site_alert
+  module:
+    - text
+_core:
+  default_config_hash: 7WMl2yYag8sRYzZk9amddg61ij9SiPmDFGVb8WbxPgY
+id: node.bootstrap_site_alert.field_site_alert
+field_name: field_site_alert
+entity_type: node
+bundle: bootstrap_site_alert
+label: 'Site Alert'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

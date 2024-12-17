@@ -1,0 +1,12 @@
+uuid: 3a54fb3b-6008-4c5b-8df1-3056529044ee
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: uEti1u63diDpsmDpDM7oi-cqY2PDV7BaMKC7eDD572o
+id: provus_views
+label: 'Views (Pre-configured Lists)'
+weight: -7
+opened: true
+image_path: null
+image_alt: null

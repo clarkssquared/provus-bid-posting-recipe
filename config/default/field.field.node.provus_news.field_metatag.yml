@@ -1,0 +1,23 @@
+uuid: 19f3010c-874f-4674-a9c5-6241fca60e3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.provus_news
+  module:
+    - metatag
+_core:
+  default_config_hash: UeyeJs1z48D5dTzj6VugzwkxhSUS6m-NLLpCpYqexjw
+id: node.provus_news.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: provus_news
+label: Metatag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

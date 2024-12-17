@@ -1,0 +1,10 @@
+uuid: f460dc64-312e-4498-9918-d0eb88f8cccb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AZCTDWqBIYRPC1inFll12hu5MqWxD2qaWSNy7I7zpNg
+id: provus_group_automatic
+label: 'Group - Automatic'
+revision: 0
+description: ''

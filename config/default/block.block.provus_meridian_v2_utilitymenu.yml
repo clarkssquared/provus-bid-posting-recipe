@@ -1,0 +1,35 @@
+uuid: 2260b261-dd31-4b95-87a8-fa7b6814078a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.utility-menu
+  module:
+    - menu_block
+  theme:
+    - provus_meridian_v2
+_core:
+  default_config_hash: 70RHkRGAFP4y1Aaym2Uvfb_DoXVwRSnC346A74CKPjg
+id: provus_meridian_v2_utilitymenu
+theme: provus_meridian_v2
+region: top_header
+weight: 0
+provider: null
+plugin: 'menu_block:utility-menu'
+settings:
+  id: 'menu_block:utility-menu'
+  label: 'Utility Menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'utility-menu:'
+  render_parent: false
+  suggestion: utility_menu
+  hide_on_nonactive: false
+visibility: {  }

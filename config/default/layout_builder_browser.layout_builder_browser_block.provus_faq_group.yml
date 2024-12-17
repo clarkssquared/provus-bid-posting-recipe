@@ -1,0 +1,13 @@
+uuid: 3143883e-f96e-4ee3-a79d-babbb8105c72
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sd0XFExbkNTTDtl8ZKz70iZRikjOonrh4VTtiRroa1U
+id: provus_faq_group
+block_id: 'inline_block:provus_faq_group'
+category: provus_grouped_content
+label: 'FAQ Group'
+weight: -98
+image_path: /themes/custom/provus_base_theme/images/components/accordion.svg
+image_alt: ''

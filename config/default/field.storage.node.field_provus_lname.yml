@@ -1,0 +1,23 @@
+uuid: d245d2d0-9517-4468-b14e-d2b8015b4c4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: VTBRnczdLK21DsYXjYbd7erRb54OdiT_2cZ3yUoLn4g
+id: node.field_provus_lname
+field_name: field_provus_lname
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

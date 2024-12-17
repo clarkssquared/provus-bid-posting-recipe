@@ -1,0 +1,31 @@
+uuid: e8b0f6a1-d139-4977-8119-72ff10068b9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_job_type
+    - node.type.provus_job
+    - taxonomy.vocabulary.provus_category_job_type
+_core:
+  default_config_hash: E5pIAAD_8cgvTWwuRaGIlD2rgKlXE4MNbFzKamHvMlw
+id: node.provus_job.field_provus_job_type
+field_name: field_provus_job_type
+entity_type: node
+bundle: provus_job
+label: 'Job Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      provus_category_job_type: provus_category_job_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

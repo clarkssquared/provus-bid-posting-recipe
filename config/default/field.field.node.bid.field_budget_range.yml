@@ -1,0 +1,35 @@
+uuid: a4e4d046-5765-4f5f-8b9e-b7f14eaf4f71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_budget_range
+    - node.type.bid
+  module:
+    - range
+id: node.bid.field_budget_range
+field_name: field_budget_range
+entity_type: node
+bundle: bid
+label: 'Budget Range'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  field:
+    prefix: ''
+    suffix: ''
+  from:
+    prefix: ''
+    suffix: ''
+  to:
+    prefix: ''
+    suffix: ''
+  combined:
+    prefix: ''
+    suffix: ''
+field_type: range_decimal

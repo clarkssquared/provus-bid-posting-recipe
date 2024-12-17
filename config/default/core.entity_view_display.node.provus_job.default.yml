@@ -1,0 +1,69 @@
+uuid: 36a8b907-280a-435a-a514-df3e9429e597
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.provus_job.body
+    - field.field.node.provus_job.field_provus_job_deadline
+    - field.field.node.provus_job.field_provus_job_department
+    - field.field.node.provus_job.field_provus_job_type
+    - field.field.node.provus_job.field_provus_qualifications
+    - node.type.provus_job
+  module:
+    - datetime
+    - text
+    - user
+_core:
+  default_config_hash: AsLt3atjDba-Sh4wT1Gr9sC4qzOhjtcRZfTazfROuPI
+id: node.provus_job.default
+targetEntityType: node
+bundle: provus_job
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_provus_job_deadline:
+    type: datetime_custom
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F d, Y'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_provus_job_department:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_provus_job_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_provus_qualifications:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  search_api_excerpt: true

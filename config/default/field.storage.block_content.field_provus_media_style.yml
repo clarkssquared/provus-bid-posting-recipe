@@ -1,0 +1,50 @@
+uuid: d48abfc5-35e7-4b52-843f-49572c4f6a87
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - field_image_style
+_core:
+  default_config_hash: R8-9lLDYzEmcK0kto_sdU0-CzIlBW3SrNFrythuw6ls
+id: block_content.field_provus_media_style
+field_name: field_provus_media_style
+entity_type: block_content
+type: image_style
+settings:
+  allowed_values:
+    -
+      value: large
+      label: large
+    -
+      value: media_library
+      label: media_library
+    -
+      value: medium
+      label: medium
+    -
+      value: provus_slideshow_block_mobile
+      label: provus_slideshow_block_mobile
+    -
+      value: provus_slideshow_block_thumbnail
+      label: provus_slideshow_block_thumbnail
+    -
+      value: provus_square_medium
+      label: provus_square_medium
+    -
+      value: slick_media
+      label: slick_media
+    -
+      value: thumbnail
+      label: thumbnail
+    -
+      value: wide
+      label: wide
+  sort: 0
+module: field_image_style
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

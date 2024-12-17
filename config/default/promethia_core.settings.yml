@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: uCHxGtRAryMelj2OLf9zuo614e3k5ldnumBEymvcsG8
+llm_solutions:
+  -
+    solution: openai
+    api_key: DGY589W6KzBthCNGnra/U++m8U2Ekw/JggSXxKDtdh7XiCXhOfogfPWpWnQaDMTLOHw3+Jfo9mLxheKUyd851KQXAB+Lce2yo0jw6rxhkhA=
+    model: gpt-4o-2024-05-13
+    custom_model: ''
+    utility_model: gpt-3.5-turbo
+    utility_custom_model: ''
+    status: enabled
+    operations:
+      remove: Remove
+logging_verbosity: all

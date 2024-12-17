@@ -1,0 +1,21 @@
+uuid: 40e03555-d4cd-431d-80d9-66a03ad291b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.webform
+    - field.storage.block_content.field_title
+_core:
+  default_config_hash: B9xLotco6IAcLb78eKQcUBHIxwcPr9BuZrUM3YDQnbo
+id: block_content.webform.field_title
+field_name: field_title
+entity_type: block_content
+bundle: webform
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

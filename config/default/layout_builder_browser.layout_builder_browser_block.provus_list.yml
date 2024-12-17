@@ -1,0 +1,13 @@
+uuid: cb6edd19-b4d7-4e35-b93a-800ed42d42e2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: shBIxbs8Iyld2-rSC1Q5tnVb3fNOtELcVoTdBsSTXNI
+id: provus_list
+block_id: 'inline_block:provus_list'
+category: provus_grouped_content
+label: List
+weight: -100
+image_path: /themes/custom/provus_base_theme/images/components/list.svg
+image_alt: ''

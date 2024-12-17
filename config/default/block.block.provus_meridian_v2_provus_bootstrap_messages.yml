@@ -1,0 +1,22 @@
+uuid: 421f1033-2fbc-4402-af8a-660067b8d8b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - provus_meridian_v2
+_core:
+  default_config_hash: zYwIW0ifcDznZNy5obejUPL4mhh1rYhp6d2SNwTrGdc
+id: provus_meridian_v2_provus_bootstrap_messages
+theme: provus_meridian_v2
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

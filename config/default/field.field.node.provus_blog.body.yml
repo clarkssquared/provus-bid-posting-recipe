@@ -1,0 +1,31 @@
+uuid: 08011602-8f11-4d63-983d-d198b7308d9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.provus_blog
+  module:
+    - linkchecker
+    - text
+third_party_settings:
+  linkchecker:
+    scan: true
+    extractor: html_link_extractor
+_core:
+  default_config_hash: r-ZggM8jkZ8-BBjV_19x_I3-JNH7ZdBcK6JWXsDomkE
+id: node.provus_blog.body
+field_name: body
+entity_type: node
+bundle: provus_blog
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

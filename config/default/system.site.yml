@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: DvEA7qDrbIK2mfmKIFerzdW9yNPa7y4zwQUKTNSVVVs
+langcode: en
+uuid: 98bacc09-353e-4c4f-85fd-ebb4b7f52285
+name: 'Provus Meridian'
+mail: admin@example.com
+slogan: 'Drupal kickstarter by Promet Source'
+page:
+  403: ''
+  404: ''
+  front: /node/31
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

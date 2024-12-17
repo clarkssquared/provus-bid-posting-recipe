@@ -1,0 +1,26 @@
+uuid: fd889e0a-d8e2-4ba8-b750-eb17ff0dfd59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.provus_location
+  module:
+    - text
+_core:
+  default_config_hash: TfD8hqEcxTwmOOwMo783mnwolXSMOfQ5TJG_-gmtdT0
+id: node.provus_location.body
+field_name: body
+entity_type: node
+bundle: provus_location
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

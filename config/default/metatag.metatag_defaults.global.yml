@@ -1,0 +1,13 @@
+uuid: 67f98ef8-0479-440b-89dc-15cefb713e74
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:title] | [site:name]'
+  description: 'Immerse yourself in the captivating landscapes and rich history of Meridian County. From picturesque countryside vistas to bustling town centers, and beautiful lake-view parks, our county offers a harmonious blend of natural beauty and modern living.'
+  robots: 'index, follow'
+  title: '[current-page:title] | [site:name]'

@@ -1,0 +1,13 @@
+uuid: 867ef646-b7ae-4a73-addb-8857d7d9a7a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: tL5d7bsW91Ab6c-W53E4wPq6uhW1KV9mVKdFw4HHOs8
+id: node.provus_event_mini
+label: 'Event Mini'
+description: ''
+targetEntityType: node
+cache: true

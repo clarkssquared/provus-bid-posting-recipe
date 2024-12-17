@@ -1,0 +1,16 @@
+uuid: 87fdf61d-7161-4a1e-89e9-62dd28cb50a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_writer
+  module:
+    - user
+_core:
+  default_config_hash: rwy5kQCSjUiC0ocAVR8H4Xtz_rsUMiPU19jrO4aKRC0
+id: user_remove_role_action.content_writer
+label: 'Remove the Content Writer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: content_writer

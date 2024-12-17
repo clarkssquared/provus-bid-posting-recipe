@@ -1,0 +1,12 @@
+uuid: 82df4096-29af-4a05-bffb-c2a3a7572349
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 0qqwBBHSXxwNX-kjcYsT-6W2zM6b7glB01kddxI9P64
+id: provus_grouped_content
+label: 'Grouped Content'
+weight: -8
+opened: true
+image_path: null
+image_alt: null

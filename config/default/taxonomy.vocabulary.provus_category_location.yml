@@ -1,0 +1,11 @@
+uuid: ac3dbdd2-5684-410f-874a-5e3e927c5537
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JGaKBXVqMzi9gsjPiDIPLSlcaFkeWTFmnNpsko5EwWk
+name: 'Category: Location'
+vid: provus_category_location
+description: null
+weight: 0
+new_revision: false

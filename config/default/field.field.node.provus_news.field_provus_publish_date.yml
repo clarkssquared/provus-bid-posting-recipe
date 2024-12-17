@@ -1,0 +1,23 @@
+uuid: d1cc6f46-0d4b-4702-9f6f-2de7519ef1f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_provus_publish_date
+    - node.type.provus_news
+  module:
+    - datetime
+_core:
+  default_config_hash: z367OvjFgZKJigOx5tp10VoeeTJtvGH0zE5rU5jeMsw
+id: node.provus_news.field_provus_publish_date
+field_name: field_provus_publish_date
+entity_type: node
+bundle: provus_news
+label: 'Publish Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

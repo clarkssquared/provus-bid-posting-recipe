@@ -1,0 +1,31 @@
+uuid: 062acd4e-24f7-4ee9-a69f-e5f6e99148cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.provus_faq_group
+    - block_content.type.provus_faq_item
+    - field.storage.block_content.field_provus_items
+_core:
+  default_config_hash: wYW4pXj7KsY_9GHZcA0VkTkHZf62IADGgtHwZ_tkSeo
+id: block_content.provus_faq_group.field_provus_items
+field_name: field_provus_items
+entity_type: block_content
+bundle: provus_faq_group
+label: 'FAQ Items'
+description: 'Individual frequent questions and answers. They are reusable between different FAQ Groups.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      provus_faq_item: provus_faq_item
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

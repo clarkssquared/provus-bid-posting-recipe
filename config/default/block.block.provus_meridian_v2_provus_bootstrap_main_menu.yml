@@ -1,0 +1,27 @@
+uuid: 1b8ddedc-2ef7-4148-897e-d272dbfd4ad5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - provus_meridian_v2
+_core:
+  default_config_hash: 53XbrgtUWDQ4_aEIKRnugJqVhqDQg9i2I9nzlDl6E10
+id: provus_meridian_v2_provus_bootstrap_main_menu
+theme: provus_meridian_v2
+region: primary_menu
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

@@ -1,0 +1,13 @@
+uuid: 2c6955e4-bdbd-4e64-b4e0-b0ceb10b6d24
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: slGIQ7MlnniohOTYWES-LHKrA-x9NlwWjvDKqRvlajU
+id: node.card_person_left
+label: 'Card Person Left'
+description: ''
+targetEntityType: node
+cache: true
